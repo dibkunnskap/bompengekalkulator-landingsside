@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
-heading: Gjør bokføringen selv
+heading: Betal bompenger med glede
 image: /img/kart.png
 features:
   blurbs:
