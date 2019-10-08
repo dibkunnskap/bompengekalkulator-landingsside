@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 heading: Gjør bokføringen selv
-image: /img/kontohjelp-banner-bg.jpg
+image: /img/untitled.png
 features:
   blurbs:
     - heading: Alt til regnskapet. Kun 900 kr i året.
