@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 heading: Gjør bokføringen selv
-image: /img/untitled.png
+image: /img/kart.png
 features:
   blurbs:
     - heading: Bompenger er fantastisk fint
