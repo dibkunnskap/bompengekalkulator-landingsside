@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 heading: Betal bompenger med glede
-image: /img/kart2.png
+image: /img/header-photo-twitter.png
 features:
   blurbs:
     - heading: Bompenger er fantastisk fint
