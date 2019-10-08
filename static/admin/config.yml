@@ -1,0 +1,52 @@
+backend:
+    name: github
+    repo: sebrobpau/dokumentflyt-landingsside
+media_folder: static/img
+public_folder: /img
+collections:
+    - name: "pages"
+      label: "Pages"
+      files:
+          - file: "src/pages/index.md"
+            label: "Landing Page"
+            name: "index"
+            fields:
+                - {
+                      label: "Template Key",
+                      name: "templateKey",
+                      widget: "hidden",
+                      default: "index-page",
+                  }
+                - {label: Heading, name: heading, widget: string}
+                - {label: Image, name: image, widget: image}
+                - {
+                      label: Features,
+                      name: features,
+                      widget: object,
+                      fields:
+                          [
+                              {
+                                  label: Blurbs,
+                                  name: blurbs,
+                                  widget: list,
+                                  fields:
+                                      [
+                                          {
+                                              label: Image,
+                                              name: image,
+                                              widget: image,
+                                          },
+                                          {
+                                              label: Heading,
+                                              name: heading,
+                                              widget: string
+                                          },
+                                          {
+                                              label: Text,
+                                              name: text,
+                                              widget: text,
+                                          },
+                                      ],
+                              },
+                          ],
+                  }
