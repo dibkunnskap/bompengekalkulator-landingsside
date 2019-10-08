@@ -1,6 +1,6 @@
 backend:
     name: github
-    repo: sebrobpau/dokumentflyt-landingsside
+    repo: dibkunnskap/bompengekalkulator-landingsside
 media_folder: static/img
 public_folder: /img
 collections:

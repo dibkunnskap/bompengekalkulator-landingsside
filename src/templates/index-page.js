@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import {graphql} from "gatsby";
 import {createUseStyles} from "react-jss";
 import Layout from "../components/Layout";
-import BuyButton from "../components/BuyButton";
+import Button from "../components/Button";
 import FeatureGrid from "../components/FeatureGrid";
 
 export const useStyles = createUseStyles(theme => ({
@@ -78,12 +78,9 @@ export const IndexPageTemplate = props => {
                 <div className={classes.title}>
                     <h1>{heading}</h1>
                     <div className={classes.row}>
-                        <BuyButton className={classes.button1}>
+                        {/* <BuyButton className={classes.button1}>
                             Kjøp kontohjelp
-                        </BuyButton>
-                        <BuyButton className={classes.button2}>
-                            Les mer
-                        </BuyButton>
+                        </BuyButton> */}
                     </div>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 module.exports = {
     siteMetadata: {
-        title: "Kontohjelp",
-        description: "Kontohjelp landingsside"
+        title: "Bompengekalkulator",
+        description: "Bompengekalkulator landingsside"
     },
     plugins: [
         {

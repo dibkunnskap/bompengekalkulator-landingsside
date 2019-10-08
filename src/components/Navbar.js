@@ -1,7 +1,7 @@
 import React from "react";
 import {Link} from "gatsby";
 import {createUseStyles} from "react-jss";
-import BuyButton from "./BuyButton";
+import Button from "./Button";
 import logo from "../img/kontohjelp-logo.png";
 
 const useStyles = createUseStyles(theme => ({
@@ -98,8 +98,7 @@ const Navbar = () => {
                     <Link className={classes.navItem} to="/contact">
                         Kontakt
                     </Link>
-                    <BuyButton className={classes.loginButton}>Logg inn</BuyButton>
-                    <BuyButton className={classes.buyButton}>Kjøp</BuyButton>
+                    <Button className={classes.loginButton}>Beregn Bompenger</Button>
                     {/* <div className={classes.login}>
                         <a
                             className={classes.navItem}
