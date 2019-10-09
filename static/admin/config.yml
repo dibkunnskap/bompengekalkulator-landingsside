@@ -39,7 +39,7 @@ collections:
                                           {
                                               label: Heading,
                                               name: heading,
-                                              widget: string
+                                              widget: string,
                                           },
                                           {
                                               label: Text,
@@ -50,3 +50,27 @@ collections:
                               },
                           ],
                   }
+          - file: "src/pages/integrasjon/index.md"
+            label: "Integrasjon"
+            name: "integrasjon"
+            fields:
+                - {
+                      label: "Template Key",
+                      name: "templateKey",
+                      widget: "hidden",
+                      default: "integrasjon-page",
+                  }
+                - {label: "Title", name: "title", widget: "string"}
+                - {label: "Body", name: "body", widget: "markdown"}
+          - file: "src/pages/apper/index.md"
+            label: "Apps"
+            name: "apps"
+            fields:
+                - {
+                      label: "Template Key",
+                      name: "templateKey",
+                      widget: "hidden",
+                      default: "app-page",
+                  }
+                - {label: "Title", name: "title", widget: "string"}
+                - {label: "Body", name: "body", widget: "markdown"}

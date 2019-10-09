@@ -3,8 +3,6 @@ import PropTypes from "prop-types";
 import {graphql} from "gatsby";
 import {createUseStyles} from "react-jss";
 import Layout from "../components/Layout";
-/* import Button from "../components/Button"; */
-import FeatureGrid from "../components/FeatureGrid";
 
 export const useStyles = createUseStyles(theme => ({
     root: {
@@ -22,8 +20,8 @@ export const useStyles = createUseStyles(theme => ({
         alignItems: "center"
     },
     title: {
-        /* fontWeight: "100", */
-        color: theme.palette["neutral-100"],
+        fontWeight: "100",
+        color: theme.palette["neutral-700"],
         display: "flex",
         flexFlow: "column",
         /* width: theme.spacing["192"] */
@@ -31,10 +29,6 @@ export const useStyles = createUseStyles(theme => ({
         margin: "0 auto",
         maxWidth: "1080px"
         /* textAlign: "center" */
-    },
-    heading: {
-        maxWidth: "500px",
-        fontSize: "3rem",
     },
     content: {
         width: "75%",
@@ -67,83 +61,52 @@ export const useStyles = createUseStyles(theme => ({
     }
 }));
 
-export const IndexPageTemplate = props => {
-    const {heading, image, features} = props;
-    const classes = useStyles(image);
+export const AppsPageTemplate = props => {
+    const {heading, points, textBlocks} = props;
+    const classes = useStyles();
 
     return (
         <div className={classes.root}>
-            <div
-                className={classes.image}
-                style={{
-                    backgroundImage:
-                        `url(${
-                            !!image.childImageSharp
-                                ? image.childImageSharp.fluid.src
-                                : image
-                        })`
-                }}
-            >
-                <div className={classes.title}>
-                    <h1 className={classes.heading}>{heading}</h1>
-                    <div className={classes.row}>
-                        {/* <BuyButton className={classes.button1}>
-                            Kjøp kontohjelp
-                        </BuyButton> */}
-                    </div>
-                </div>
-            </div>
-            <div className={classes.content}>
-                <FeatureGrid gridItems={features.blurbs} />
-            </div>
+            {heading}
         </div>
     );
 };
 
-/* IndexPageTemplate.propTypes = {
+/* IntegrationPageTemplate.propTypes = {
     heading: PropTypes.string,
     image: PropTypes.string
 }; */
 
-const IndexPage = ({data}) => {
+const AppsPage = ({data}) => {
     const {frontmatter} = data.markdownRemark;
     return (
         <div>
             <Layout>
-                <IndexPageTemplate
+                <AppsPageTemplate
                     heading={frontmatter.heading}
-                    image={frontmatter.image}
-                    features={frontmatter.features}
+                    points={frontmatter.points}
+                    textBlocks={frontmatter.textBlocks}
                 />
             </Layout>
         </div>
     );
 };
 
-export default IndexPage;
+export default AppsPage;
 
 export const pageQuery = graphql`
-    query IndexPageTemplate {
-        markdownRemark(frontmatter: {templateKey: {eq: "index-page"}}) {
+    query AppsPageTemplate {
+        markdownRemark(frontmatter: {templateKey: {eq: "integrasjon-page"}}) {
             frontmatter {
                 heading
-                image {
-                    childImageSharp {
-                        fluid(maxWidth: 2048, quality: 100) {
-                            ...GatsbyImageSharpFluid
-                        }
+                points {
+                    point {
+                        text
                     }
                 }
-                features {
-                    blurbs {
-                        image {
-                            childImageSharp {
-                                fluid(maxWidth: 2048, quality: 100) {
-                                    ...GatsbyImageSharpFluid
-                                }
-                            }
-                        }
-                        heading
+                textBlocks {
+                    block {
+                        title
                         text
                     }
                 }

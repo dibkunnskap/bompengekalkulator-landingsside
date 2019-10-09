@@ -9,7 +9,7 @@ const useStyles = createUseStyles(theme => ({
         display: "flex",
         justifyContent: "center",
         backgroundColor: "transparent",
-        position: "absolute"
+        /* position: "absolute" */
     },
     nav: {
         width: "75%",
@@ -17,9 +17,8 @@ const useStyles = createUseStyles(theme => ({
         margin: "0 auto",
         height: theme.spacing["96"],
         display: "flex",
-        /* justifyContent: "space-between", */
+        justifyContent: "space-between",
         alignItems: "center",
-        backgroundColor: "transparent"
     },
     header: {
         fontFamily: "Caveat Brush",
@@ -28,7 +27,6 @@ const useStyles = createUseStyles(theme => ({
         textDecoration: "none"
     },
     navMenu: {
-        marginLeft: theme.spacing["128"],
         display: "flex",
         alignItems: "center"
     },
@@ -74,7 +72,10 @@ const Navbar = () => {
                     <Link className={classes.navItem} to="/blogg">
                         Blogg
                     </Link>
-                    <Link className={classes.navItem} to="/contact">
+                    <Link className={classes.navItem} to="/apper">
+                        Apper
+                    </Link>
+                    <Link className={classes.navItem} to="/integrasjon">
                         API
                     </Link>
                     <a href="http://bompengekalkulator.no">

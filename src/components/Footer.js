@@ -6,7 +6,7 @@ const useStyles = createUseStyles(theme => ({
     footer: {
         backgroundColor: theme.palette["neutral-100"],
         padding: theme.spacing["16"],
-        color: theme.palette["neutral-600"]
+        color: theme.palette["neutral-600"],
     },
     logo: {
         display: "flex",
@@ -27,7 +27,7 @@ const Footer = () => {
     return (
         <footer className={classes.footer}>
             <div className={classes.logo}>
-                <h1>Kontohjelp</h1>
+                <h1>Bompengekalkulator</h1>
             </div>
             <div>
                 <ul className={classes.list}>

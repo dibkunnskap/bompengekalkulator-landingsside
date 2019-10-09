@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
-heading: Betal bompenger med glede
+heading: Hele Norges bompengekalkulator
 image: /img/header-photo-twitter.png
 features:
   blurbs:
