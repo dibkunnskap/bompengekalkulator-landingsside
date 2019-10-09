@@ -59,22 +59,12 @@ const useStyles = createUseStyles(theme => ({
         width: theme.spacing["64"]
     },
     loginButton: {
-        width: theme.spacing["96"],
+        /* width: theme.spacing["96"], */
         border: "2px solid",
-        borderRight: "none",
-        borderRadius: "24px 0 0 24px",
-        padding: "0",
+        borderRadius: "24px",
+        /* padding: "0", */
         marginLeft: theme.spacing["16"],
         backgroundColor: "transparent"
-    },
-    buyButton: {
-        width: theme.spacing["96"],
-        color: theme.palette["neutral-050"],
-        border: `2px solid ${theme.palette["neutral-700"]}`,
-        borderLeft: "none",
-        borderRadius: "0 24px 24px 0",
-        backgroundColor: theme.palette["neutral-700"],
-        padding: "0"
     }
 }));
 
