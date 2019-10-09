@@ -71,8 +71,8 @@ const Navbar = () => {
                     >
                         Om
                     </Link>
-                    <Link className={classes.navItem} to="/blog">
-                        Blog
+                    <Link className={classes.navItem} to="/blogg">
+                        Blogg
                     </Link>
                     <Link className={classes.navItem} to="/contact">
                         API
