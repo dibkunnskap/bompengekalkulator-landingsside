@@ -12,15 +12,10 @@ export const useStyles = createUseStyles(theme => ({
     },
     image: {
         width: "100%",
-        minHeight: "800px",
+        minHeight: "600px",
         backgroundColor: theme.palette["neutral-100"],
-        backgroundImage: image =>
-            `url(${
-                !!image.childImageSharp
-                    ? image.childImageSharp.fluid.src
-                    : image
-            })`,
         backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
         backgroundPosition: "center center",
         display: "flex",
         justifyContent: "center",
@@ -34,7 +29,7 @@ export const useStyles = createUseStyles(theme => ({
         /* width: theme.spacing["192"] */
         width: "75%",
         margin: "0 auto",
-        maxWidth: "768px",
+        maxWidth: "1080px"
         /* textAlign: "center" */
     },
     content: {
@@ -63,7 +58,7 @@ export const useStyles = createUseStyles(theme => ({
     },
     row: {
         marginTop: "2rem",
-        display: "flex",
+        display: "flex"
         /* justifyContent: "center" */
     }
 }));
@@ -74,7 +69,17 @@ export const IndexPageTemplate = props => {
 
     return (
         <div className={classes.root}>
-            <div className={classes.image}>
+            <div
+                className={classes.image}
+                style={{
+                    backgroundImage:
+                        `url(${
+                            !!image.childImageSharp
+                                ? image.childImageSharp.fluid.src
+                                : image
+                        })`
+                }}
+            >
                 <div className={classes.title}>
                     <h1>{heading}</h1>
                     <div className={classes.row}>
@@ -85,7 +90,7 @@ export const IndexPageTemplate = props => {
                 </div>
             </div>
             <div className={classes.content}>
-                <FeatureGrid gridItems={features.blurbs}/>
+                <FeatureGrid gridItems={features.blurbs} />
             </div>
         </div>
     );

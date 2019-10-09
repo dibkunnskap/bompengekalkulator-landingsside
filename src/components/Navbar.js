@@ -2,13 +2,13 @@ import React from "react";
 import {Link} from "gatsby";
 import {createUseStyles} from "react-jss";
 import Button from "./Button";
-import logo from "../img/kontohjelp-logo.png";
 
 const useStyles = createUseStyles(theme => ({
     root: {
         width: "100%",
         display: "flex",
         justifyContent: "center",
+        backgroundColor: "transparent",
         position: "absolute"
     },
     nav: {
@@ -16,71 +16,44 @@ const useStyles = createUseStyles(theme => ({
         maxWidth: "1080px",
         margin: "0 auto",
         height: theme.spacing["96"],
-        /* padding: "1rem 3rem", */
         display: "flex",
-        justifyContent: "space-between",
+        /* justifyContent: "space-between", */
         alignItems: "center",
-        backgroundColor: "transparent",
-        position: "absolute"
+        backgroundColor: "transparent"
     },
-    title: {
-        padding: "1rem",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        fontSize: "1.5rem",
-        textDecoration: "none",
-        color: "#00223f"
+    header: {
+        fontFamily: "Caveat Brush",
+        fontSize: "30px",
+        color: theme.palette["primary-500"],
+        textDecoration: "none"
     },
     navMenu: {
-        /* flex: "0 0 75%", */
+        marginLeft: theme.spacing["128"],
         display: "flex",
         alignItems: "center"
-        /* position: "relative", */
-        /* left: "50%" */
     },
     navItem: {
         margin: `0 ${theme.spacing["16"]}`,
         textDecoration: "none",
-        color: theme.palette["neutral-700"],
-        fontWeight: "700",
+        color: theme.palette["primary-500"],
+        fontWeight: "700"
+    },
+    navItemActive: {
         borderBottom: "2px solid",
-        borderBottomColor: theme.palette["neutral-500"]
+        borderBottomColor: theme.palette["primary-500"]
     },
-    login: {
-        display: "flex",
-        justifyContent: "flex-end",
-        "&:hover": {
-            textDecoration: "underline"
-        }
-    },
-    logo: {
-        margin: "0",
-        width: theme.spacing["64"]
-    },
-    loginButton: {
-        width: theme.spacing["96"],
+    navButton: {
         border: "2px solid",
-        borderRight: "none",
-        borderRadius: "24px 0 0 24px",
-        padding: "0",
-        marginLeft: theme.spacing["16"],
-        backgroundColor: "transparent"
-    },
-    buyButton: {
-        width: theme.spacing["96"],
-        color: theme.palette["neutral-050"],
-        border: `2px solid ${theme.palette["neutral-700"]}`,
-        borderLeft: "none",
-        borderRadius: "0 24px 24px 0",
-        backgroundColor: theme.palette["neutral-700"],
-        padding: "0"
+        borderColor: theme.palette["primary-500"],
+        color: theme.palette["primary-500"],
+        marginLeft: theme.spacing["32"],
+        backgroundColor: "white",
+        fontWeight: "700"
     }
 }));
 
 const Navbar = () => {
     const classes = useStyles();
-
     return (
         <div className={classes.root}>
             <nav
@@ -88,25 +61,27 @@ const Navbar = () => {
                 role="navigation"
                 aria-label="main-navigation"
             >
-                <Link to="/">
-                    <img className={classes.logo} src={logo} alt="logo" />
+                <Link className={classes.header} to="/">
+                    Bompengekalkulator.no
                 </Link>
                 <div className={classes.navMenu}>
-                    <Link className={classes.navItem} to="/about">
-                        Om oss
+                    <Link
+                        className={`${classes.navItem} ${classes.navItemActive}`}
+                        to="/about"
+                    >
+                        Om
+                    </Link>
+                    <Link className={classes.navItem} to="/blog">
+                        Blog
                     </Link>
                     <Link className={classes.navItem} to="/contact">
-                        Kontakt
+                        API
                     </Link>
-                    <Button className={classes.loginButton}>Beregn Bompenger</Button>
-                    {/* <div className={classes.login}>
-                        <a
-                            className={classes.navItem}
-                            href="https://localhost:3000/logg-inn"
-                        >
-                            Logg inn
-                        </a>
-                    </div> */}
+                    <a href="http://bompengekalkulator.no">
+                        <Button className={classes.navButton}>
+                            Beregn bompenger
+                        </Button>
+                    </a>
                 </div>
             </nav>
         </div>

@@ -28,12 +28,15 @@ exports.createPages = async ({actions, graphql, reporter}) => {
     }
 
     result.data.allMarkdownRemark.edges.forEach(({node}) => {
+        const id = edge.node.id
         createPage({
             path: node.fields.slug,
             component: path.resolve(
                 `src/templates/${String(node.frontmatter.templateKey)}.js`
             ),
-            context: {} // additional data can be passed via context
+            context: {
+                id
+            } // additional data can be passed via context
         });
     });
 };
