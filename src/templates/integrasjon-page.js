@@ -7,7 +7,7 @@ import Content, { HTMLContent } from '../components/Content'
 
 export const useStyles = createUseStyles(theme => ({
     root: {
-        margin: "0 auto",
+        margin: "5rem auto",
         width: "75%",
         maxWidth: "1080px"
     },

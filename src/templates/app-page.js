@@ -3,71 +3,24 @@ import PropTypes from "prop-types";
 import {graphql} from "gatsby";
 import {createUseStyles} from "react-jss";
 import Layout from "../components/Layout";
+import Content, { HTMLContent } from '../components/Content'
 
 export const useStyles = createUseStyles(theme => ({
     root: {
-        font: "inherit"
-    },
-    image: {
-        width: "100%",
-        minHeight: "600px",
-        backgroundColor: theme.palette["neutral-100"],
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center center",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center"
-    },
-    title: {
-        fontWeight: "100",
-        color: theme.palette["neutral-700"],
-        display: "flex",
-        flexFlow: "column",
-        /* width: theme.spacing["192"] */
+        margin: "5rem auto",
         width: "75%",
-        margin: "0 auto",
         maxWidth: "1080px"
-        /* textAlign: "center" */
     },
-    content: {
-        width: "75%",
-        margin: `${theme.spacing["32"]} auto`,
-        maxWidth: "1080px"
-        /* minHeight: "800px" */
-    },
-    button1: {
-        color: theme.palette["neutral-100"],
-        backgroundColor: theme.palette["neutral-700"],
-        fontSize: "1.2rem",
-        padding: "0.25rem 1.5rem",
-        borderRadius: theme.borderRadius.radius7,
-        border: "2px solid",
-        borderColor: theme.palette["neutral-700"],
-        marginRight: "2rem"
-    },
-    button2: {
-        /* color: theme.palette["neutral-100"], */
-        backgroundColor: "transparent",
-        fontSize: "1.2rem",
-        padding: "0.25rem 1.5rem",
-        borderRadius: theme.borderRadius.radius7,
-        border: "2px solid"
-    },
-    row: {
-        marginTop: "2rem",
-        display: "flex"
-        /* justifyContent: "center" */
-    }
 }));
 
-export const AppsPageTemplate = props => {
-    const {heading, points, textBlocks} = props;
+export const AppsPageTemplate = ({contentComponent, title, content}) => {
     const classes = useStyles();
+    const PageContent = contentComponent || Content;
 
     return (
         <div className={classes.root}>
-            {heading}
+            <h1>{title}</h1>
+            <PageContent content={content} />
         </div>
     );
 };
@@ -78,14 +31,16 @@ export const AppsPageTemplate = props => {
 }; */
 
 const AppsPage = ({data}) => {
-    const {frontmatter} = data.markdownRemark;
+    const {markdownRemark} = data;
+    console.log(markdownRemark)
+
     return (
         <div>
             <Layout>
                 <AppsPageTemplate
-                    heading={frontmatter.heading}
-                    points={frontmatter.points}
-                    textBlocks={frontmatter.textBlocks}
+                    contentComponent={HTMLContent}
+                    title={markdownRemark.frontmatter.title}
+                    content={markdownRemark.html}
                 />
             </Layout>
         </div>
@@ -96,20 +51,10 @@ export default AppsPage;
 
 export const pageQuery = graphql`
     query AppsPageTemplate {
-        markdownRemark(frontmatter: {templateKey: {eq: "integrasjon-page"}}) {
+        markdownRemark(frontmatter: {templateKey: {eq: "app-page"}}) {
+            html,
             frontmatter {
-                heading
-                points {
-                    point {
-                        text
-                    }
-                }
-                textBlocks {
-                    block {
-                        title
-                        text
-                    }
-                }
+                title
             }
         }
     }

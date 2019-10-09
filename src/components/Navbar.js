@@ -65,7 +65,7 @@ const Navbar = () => {
                 <div className={classes.navMenu}>
                     <Link
                         className={`${classes.navItem} ${classes.navItemActive}`}
-                        to="/about"
+                        to="/"
                     >
                         Om
                     </Link>
