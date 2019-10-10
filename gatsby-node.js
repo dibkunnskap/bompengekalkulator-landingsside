@@ -69,6 +69,19 @@ exports.onCreateNode = ({node, actions, getNode}) => {
         });
     }
 
+    if (node.frontmatter && node.frontmatter.secondaryText) {
+        const {mainText} = node.frontmatter;
+        const value = remark()
+            .use(remarkHTML)
+            .processSync(mainText)
+            .toString();
+        createNodeField({
+            name: `secondaryText`,
+            node,
+            value
+        });
+    }
+
     if (node.frontmatter && node.frontmatter.apps) {
         const apps = node.frontmatter.apps;
 
