@@ -15,7 +15,7 @@ apps:
 
       [Les mer](https://www.simployer.no/hrm/reise-utlegg/)
   - heading: Sonya
-    image: /img/sonya-logo.svg
+    image: /img/sonya-logo.png
     text: >-
       Kjørebok/app som beregner kjøregodtgjørelse automatisk og korrekte satser
       for hver eneste bompassering.
@@ -32,7 +32,7 @@ apps:
 
       [Les mer](https://automile.no/)
   - heading: TickTack - OnTheWay
-    image: /img/ticktack_logo.png
+    image: /img/ticktacklogo-main-black.png
     text: >-
       Elektronisk kjørebok som starter automatisk når du starter å kjøre. Med
       integrert beregning av bompenger og ferjepriser på kjøreruten.
