@@ -6,7 +6,11 @@ Her finner du et utvalg apper og kjørebøker som har integrert vårt API med bo
 
 ### <br>
 
-### Simployer - Reise & utlegg
+### Simployer - Reise & utlegg 
+
+<img src="/img/simployer_logo.png" height="250px" width="250px"/>
+
+![](/img/simployer_logo.png)
 
 App fra Infotjenester som gir deg et komplett reiseregningssystem på mobil. Inkluderer ruteplanlegger og automatisk beregning av bompenger og ferjepriser med vårt API. 
 
