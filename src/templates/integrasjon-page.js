@@ -9,7 +9,7 @@ export const useStyles = createUseStyles(theme => ({
     root: {
         margin: "5rem auto",
         width: "75%",
-        maxWidth: "1080px"
+        maxWidth: "720px"
     },
 }));
 

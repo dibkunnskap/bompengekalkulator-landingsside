@@ -1,5 +1,5 @@
 ---
-templateKey: app-page
+templateKey: apper-page
 title: Apps
 ---
 Her finner du et utvalg apper og kjørebøker som har integrert vårt API med bompenger og ferjepriser.

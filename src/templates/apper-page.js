@@ -9,7 +9,7 @@ export const useStyles = createUseStyles(theme => ({
     root: {
         margin: "5rem auto",
         width: "75%",
-        maxWidth: "1080px"
+        maxWidth: "720px"
     },
 }));
 
@@ -51,7 +51,7 @@ export default AppsPage;
 
 export const pageQuery = graphql`
     query AppsPageTemplate {
-        markdownRemark(frontmatter: {templateKey: {eq: "app-page"}}) {
+        markdownRemark(frontmatter: {templateKey: {eq: "apper-page"}}) {
             html,
             frontmatter {
                 title
