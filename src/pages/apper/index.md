@@ -12,6 +12,7 @@ apps:
       mobil. Inkluderer ruteplanlegger og automatisk beregning av bompenger og
       ferjepriser med vårt API. 
 
-      Les mer
+
+      [Les mer](https://www.simployer.no/hrm/reise-utlegg/)
 ---
 
