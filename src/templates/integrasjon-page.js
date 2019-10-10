@@ -3,14 +3,14 @@ import PropTypes from "prop-types";
 import {graphql} from "gatsby";
 import {createUseStyles} from "react-jss";
 import Layout from "../components/Layout";
-import Content, { HTMLContent } from '../components/Content'
+import Content, {HTMLContent} from "../components/Content";
 
 export const useStyles = createUseStyles(theme => ({
     root: {
         margin: "5rem auto",
         width: "75%",
         maxWidth: "720px"
-    },
+    }
 }));
 
 export const IntegrationPageTemplate = ({contentComponent, title, content}) => {
@@ -52,7 +52,7 @@ export default IntegrationPage;
 export const pageQuery = graphql`
     query IntegrationPageTemplate {
         markdownRemark(frontmatter: {templateKey: {eq: "integrasjon-page"}}) {
-            html,
+            html
             frontmatter {
                 title
             }

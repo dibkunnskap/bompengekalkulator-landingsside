@@ -1,4 +1,6 @@
 const path = require("path");
+const remark = require("remark");
+const remarkHTML = require("remark-html");
 const {createFilePath} = require("gatsby-source-filesystem");
 const {fmImagesToRelative} = require("gatsby-remark-relative-images");
 
@@ -28,7 +30,7 @@ exports.createPages = async ({actions, graphql, reporter}) => {
     }
 
     result.data.allMarkdownRemark.edges.forEach(({node}) => {
-        const id = node.id
+        const id = node.id;
         createPage({
             path: node.fields.slug,
             component: path.resolve(
@@ -49,6 +51,20 @@ exports.onCreateNode = ({node, actions, getNode}) => {
         const value = createFilePath({node, getNode});
         createNodeField({
             name: `slug`,
+            node,
+            value
+        });
+    }
+
+    if (node.frontmatter && node.frontmatter.apps) {
+        const apps = node.frontmatter.apps;
+
+        const value = apps.map(app => {
+            return remark().use(remarkHTML).processSync(app.text).toString();
+        });
+
+        createNodeField({
+            name: `appTexts`,
             node,
             value
         });

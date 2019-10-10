@@ -2,6 +2,7 @@ import React from "react";
 import {createUseStyles} from "react-jss";
 import shortid from "shortid";
 import PreviewCompatibleImage from "./PreviewCompatibleImage";
+import Content, {HTMLContent} from "../components/Content";
 
 const useStyles = createUseStyles(theme => ({
     featureGrid: {
@@ -39,7 +40,7 @@ const FeatureGrid = ({gridItems}) => {
                         )}
                         <div className={classes.text}>
                             <h2>{item.heading}</h2>
-                            {item.text}
+                            <HTMLContent content={item.text} />
                         </div>
                         {index % 2 === 1 && (
                             <div className={classes.img}>

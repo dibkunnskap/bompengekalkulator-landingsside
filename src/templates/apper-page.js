@@ -10,8 +10,8 @@ export const useStyles = createUseStyles(theme => ({
     root: {
         font: "inherit",
         margin: "5rem auto",
-        width: "75%",
-        maxWidth: "720px"
+        width: "90%",
+        maxWidth: "1080px"
     }
 }));
 
@@ -35,7 +35,12 @@ export const AppsPageTemplate = ({title, description, apps}) => {
 
 const AppsPage = ({data}) => {
     const {markdownRemark} = data;
-    /* console.log() */
+
+
+    const appsWithText = markdownRemark.frontmatter.apps.map((app, index) => ({
+        ...app,
+        text: markdownRemark.fields.appTexts[index]
+    }));
 
     return (
         <div>
@@ -44,7 +49,7 @@ const AppsPage = ({data}) => {
                     contentComponent={HTMLContent}
                     title={markdownRemark.frontmatter.title}
                     description={markdownRemark.frontmatter.description}
-                    apps={markdownRemark.frontmatter.apps}
+                    apps={appsWithText}
                 />
             </Layout>
         </div>
@@ -68,8 +73,10 @@ export const pageQuery = graphql`
                         }
                     }
                     heading
-                    text
                 }
+            }
+            fields {
+                appTexts
             }
         }
     }
