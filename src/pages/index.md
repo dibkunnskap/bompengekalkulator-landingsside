@@ -9,8 +9,5 @@ features:
       text: >-
         Alle elsker å betale bompenger. Derfor er bompengekalkulator.no helt
         strålende
-    - heading: asd
-      image: /img/simployer_logo.png
-      text: 213asdasd
 ---
 
