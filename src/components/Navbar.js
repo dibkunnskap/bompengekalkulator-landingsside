@@ -41,7 +41,7 @@ const useStyles = createUseStyles(theme => ({
         borderBottomColor: theme.palette["primary-500"]
     },
     navButton: {
-        border: "2px solid",
+        border: "1px solid",
         borderColor: theme.palette["primary-500"],
         color: theme.palette["primary-500"],
         marginLeft: theme.spacing["32"],

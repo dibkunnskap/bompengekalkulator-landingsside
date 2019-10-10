@@ -70,10 +70,10 @@ exports.onCreateNode = ({node, actions, getNode}) => {
     }
 
     if (node.frontmatter && node.frontmatter.secondaryText) {
-        const {mainText} = node.frontmatter;
+        const {secondaryText} = node.frontmatter;
         const value = remark()
             .use(remarkHTML)
-            .processSync(mainText)
+            .processSync(secondaryText)
             .toString();
         createNodeField({
             name: `secondaryText`,

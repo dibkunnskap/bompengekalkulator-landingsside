@@ -5,6 +5,7 @@ import {createUseStyles} from "react-jss";
 import Layout from "../components/Layout";
 import Content, {HTMLContent} from "../components/Content";
 import Button from "../components/Button";
+import BlogRoll from "../components/BlogRoll";
 
 export const useStyles = createUseStyles(theme => ({
     root: {
@@ -53,8 +54,9 @@ export const useStyles = createUseStyles(theme => ({
         }
     },
     bloggRoll: {
+        display: "flex",
+        justifyContent: "center",
         width: "100vw",
-        height: "15rem",
         backgroundColor: theme.palette["neutral-050"]
     }
 }));
@@ -87,7 +89,9 @@ export const IndexPageTemplate = props => {
                     <Button>Apper/kjørebøker</Button>
                 </div>
             </div>
-            <div className={classes.bloggRoll}></div>
+            <div className={classes.bloggRoll}>
+                <BlogRoll number={2} maxWidth="720px"/>
+            </div>
             <div className={classes.content}>
                 <PageContent content={secondaryText} />
             </div>
@@ -102,6 +106,7 @@ export const IndexPageTemplate = props => {
 
 const IndexPage = ({data}) => {
     const {frontmatter} = data.markdownRemark;
+    console.log(data.markdownRemark.fields.secondaryText)
     return (
         <div>
             <Layout>
