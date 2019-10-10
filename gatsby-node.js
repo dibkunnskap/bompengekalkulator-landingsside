@@ -56,11 +56,27 @@ exports.onCreateNode = ({node, actions, getNode}) => {
         });
     }
 
+    if (node.frontmatter && node.frontmatter.mainText) {
+        const {mainText} = node.frontmatter;
+        const value = remark()
+            .use(remarkHTML)
+            .processSync(mainText)
+            .toString();
+        createNodeField({
+            name: `mainText`,
+            node,
+            value
+        });
+    }
+
     if (node.frontmatter && node.frontmatter.apps) {
         const apps = node.frontmatter.apps;
 
         const value = apps.map(app => {
-            return remark().use(remarkHTML).processSync(app.text).toString();
+            return remark()
+                .use(remarkHTML)
+                .processSync(app.text)
+                .toString();
         });
 
         createNodeField({

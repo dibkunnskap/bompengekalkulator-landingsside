@@ -8,7 +8,7 @@ collections:
       label: "Pages"
       files:
           - file: "src/pages/index.md"
-            label: "Landing Page"
+            label: "Front page"
             name: "index"
             fields:
                 - {
@@ -17,10 +17,9 @@ collections:
                       widget: "hidden",
                       default: "index-page",
                   }
-                - {label: Heading, name: heading, widget: string}
-                - {label: Image, name: image, widget: image}
-                - {label: Title, name: title, widget: string}
-                - {label: Description, name: description, widget: text}
+                - {label: Header, name: heading, widget: string}
+                - {label: Bilde, name: image, widget: image}
+                - {label: Hovedtekst, name: markdown1, widget: markdown}
                 - {
                       label: Features,
                       name: features,

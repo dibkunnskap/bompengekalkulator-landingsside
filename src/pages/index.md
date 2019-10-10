@@ -2,8 +2,7 @@
 templateKey: index-page
 heading: Hele Norges bompengekalkulator
 image: /img/header-photo-twitter.png
-title: Mest oppdatert
-description: test
+mainText: s
 features:
   blurbs:
     - heading: Bompenger er fantastisk fint
