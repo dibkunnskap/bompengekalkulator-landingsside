@@ -3,24 +3,28 @@ import PropTypes from "prop-types";
 import {graphql} from "gatsby";
 import {createUseStyles} from "react-jss";
 import Layout from "../components/Layout";
-import Content, { HTMLContent } from '../components/Content'
+import Content, {HTMLContent} from "../components/Content";
+import FeatureGrid from "../components/FeatureGrid";
 
 export const useStyles = createUseStyles(theme => ({
     root: {
         margin: "5rem auto",
         width: "75%",
         maxWidth: "720px"
-    },
+    }
 }));
 
-export const AppsPageTemplate = ({contentComponent, title, content}) => {
+export const AppsPageTemplate = ({title, description, apps}) => {
     const classes = useStyles();
-    const PageContent = contentComponent || Content;
+    console.log(apps)
 
     return (
         <div className={classes.root}>
-            <h1>{title}</h1>
-            <PageContent content={content} />
+            {/* <h1>{title}</h1> */}
+            <div className={classes.content}>
+                <p>{description}</p>
+                <FeatureGrid gridItems={apps} />
+            </div>
         </div>
     );
 };
@@ -32,7 +36,7 @@ export const AppsPageTemplate = ({contentComponent, title, content}) => {
 
 const AppsPage = ({data}) => {
     const {markdownRemark} = data;
-    console.log(markdownRemark)
+    /* console.log() */
 
     return (
         <div>
@@ -40,7 +44,8 @@ const AppsPage = ({data}) => {
                 <AppsPageTemplate
                     contentComponent={HTMLContent}
                     title={markdownRemark.frontmatter.title}
-                    content={markdownRemark.html}
+                    description={markdownRemark.frontmatter.description}
+                    apps={markdownRemark.frontmatter.apps}
                 />
             </Layout>
         </div>
@@ -52,9 +57,20 @@ export default AppsPage;
 export const pageQuery = graphql`
     query AppsPageTemplate {
         markdownRemark(frontmatter: {templateKey: {eq: "apper-page"}}) {
-            html,
             frontmatter {
                 title
+                description
+                apps {
+                    image {
+                        childImageSharp {
+                            fluid(maxWidth: 2048, quality: 100) {
+                                ...GatsbyImageSharpFluid
+                            }
+                        }
+                    }
+                    heading
+                    text
+                }
             }
         }
     }
