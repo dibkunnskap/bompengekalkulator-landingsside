@@ -4,7 +4,7 @@ title: Apps
 description: >-
   Her finner du et utvalg apper og kjørebøker som har integrert vårt API med
   bompenger og ferjepriser.
-blurbs:
+apps:
   - heading: Simployer - Reise & utlegg
     image: /img/simployer_logo.png
     text: >-
