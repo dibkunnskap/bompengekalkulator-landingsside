@@ -36,7 +36,6 @@ export const AppsPageTemplate = ({title, description, apps}) => {
 const AppsPage = ({data}) => {
     const {markdownRemark} = data;
 
-
     const appsWithText = markdownRemark.frontmatter.apps.map((app, index) => ({
         ...app,
         text: markdownRemark.fields.appTexts[index]

@@ -1,10 +1,9 @@
 import React from "react";
-import PropTypes from "prop-types";
+/* import PropTypes from "prop-types"; */
 import {graphql} from "gatsby";
 import {createUseStyles} from "react-jss";
 import Layout from "../components/Layout";
 /* import Button from "../components/Button"; */
-import FeatureGrid from "../components/FeatureGrid";
 
 export const useStyles = createUseStyles(theme => ({
     root: {
@@ -68,7 +67,7 @@ export const useStyles = createUseStyles(theme => ({
 }));
 
 export const IndexPageTemplate = props => {
-    const {heading, image, features} = props;
+    const {heading, image, features, title, description} = props;
     const classes = useStyles(image);
 
     return (
@@ -94,7 +93,7 @@ export const IndexPageTemplate = props => {
                 </div>
             </div>
             <div className={classes.content}>
-                <FeatureGrid gridItems={features.blurbs} />
+                <h2>{title}</h2>
             </div>
         </div>
     );
@@ -114,6 +113,8 @@ const IndexPage = ({data}) => {
                     heading={frontmatter.heading}
                     image={frontmatter.image}
                     features={frontmatter.features}
+                    title={frontmatter.title}
+                    description={frontmatter.description}
                 />
             </Layout>
         </div>
@@ -134,6 +135,8 @@ export const pageQuery = graphql`
                         }
                     }
                 }
+                title
+                description
                 features {
                     blurbs {
                         image {

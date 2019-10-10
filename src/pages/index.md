@@ -2,6 +2,8 @@
 templateKey: index-page
 heading: Hele Norges bompengekalkulator
 image: /img/header-photo-twitter.png
+title: Mest oppdatert
+description: test
 features:
   blurbs:
     - heading: Bompenger er fantastisk fint
@@ -10,4 +12,3 @@ features:
         Alle elsker å betale bompenger. Derfor er bompengekalkulator.no helt
         strålende
 ---
-
