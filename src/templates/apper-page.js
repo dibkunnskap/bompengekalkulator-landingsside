@@ -8,6 +8,7 @@ import FeatureGrid from "../components/FeatureGrid";
 
 export const useStyles = createUseStyles(theme => ({
     root: {
+        font: "inherit",
         margin: "5rem auto",
         width: "75%",
         maxWidth: "720px"
@@ -16,8 +17,6 @@ export const useStyles = createUseStyles(theme => ({
 
 export const AppsPageTemplate = ({title, description, apps}) => {
     const classes = useStyles();
-    console.log(apps)
-
     return (
         <div className={classes.root}>
             {/* <h1>{title}</h1> */}
