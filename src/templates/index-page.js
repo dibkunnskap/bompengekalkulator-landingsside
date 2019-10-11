@@ -42,13 +42,15 @@ export const useStyles = createUseStyles(theme => ({
         width: "75%",
         margin: `${theme.spacing["96"]} auto`,
         maxWidth: "720px",
-        color: theme.palette["neutral-500"]
+        color: theme.palette["neutral-500"],
+        "& > div": {
+            margin: `${theme.spacing["128"]} 0`
+        }
     },
     markdown: {
         color: theme.palette["neutral-800"],
-        /* textAlign: "center", */
         "& h1": {
-            color: "red",
+            color: "red"
         }
     },
     buttonRow: {
@@ -59,13 +61,6 @@ export const useStyles = createUseStyles(theme => ({
             color: theme.palette["neutral-050"],
             margin: `${theme.spacing["48"]} ${theme.spacing["8"]}`
         }
-    },
-    bloggRoll: {
-        padding: theme.spacing["48"],
-        display: "flex",
-        justifyContent: "center",
-        width: "100vw",
-        backgroundColor: theme.palette["neutral-050"]
     }
 }));
 
@@ -91,17 +86,29 @@ export const IndexPageTemplate = props => {
                 </div>
             </div>
             <div className={classes.content}>
-                <PageContent className={classes.markdown} content={mainText} />
-                <div className={classes.buttonRow}>
-                    <Button>Integrasjon/API</Button>
-                    <Button>Apper/kjørebøker</Button>
+                <div>
+                    <PageContent
+                        className={classes.markdown}
+                        content={mainText}
+                    />
+                    <div className={classes.buttonRow}>
+                        <Button>Integrasjon/API</Button>
+                        <Button>Apper/kjørebøker</Button>
+                    </div>
                 </div>
-            </div>
-            <div className={classes.bloggRoll}>
-                <BlogRoll title="Siste poster" limit={2} maxWidth="720px"/>
-            </div>
-            <div className={classes.content}>
-                <PageContent className={classes.markdown} content={secondaryText} />
+                <BlogRoll
+                    title="Siste nyheter"
+                    limit={2}
+                    maxWidth="720px"
+                    textAlign="center"
+                    useBorder
+                />
+                <div>
+                    <PageContent
+                        className={classes.markdown}
+                        content={secondaryText}
+                    />
+                </div>
             </div>
         </div>
     );

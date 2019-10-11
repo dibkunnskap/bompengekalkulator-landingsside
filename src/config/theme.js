@@ -1,11 +1,11 @@
 export default {
     palette: {
         "primary-050": "#E0FCFF",
-        "primary-100": "#BEF8FD",
-        "primary-200": "#87EAF2",
+        "primary-100": "hsl(185, 100%, 90%)",
+        "primary-200": "hsl(185, 76%, 75%)",
         "primary-300": "#54D1DB",
         "primary-400": "#38BEC9",
-        "primary-500": "#04a2b0",
+        "primary-500": "hsl(185, 96%, 35%)",
         "primary-600": "#14919B",
         "primary-700": "#0E7C86",
         "primary-800": "#0A6C74",

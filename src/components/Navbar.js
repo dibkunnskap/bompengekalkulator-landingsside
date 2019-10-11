@@ -19,7 +19,7 @@ const useStyles = createUseStyles(theme => ({
         flexFlow: "column",
         position: "relative",
         "@media (min-width: 900px)": {
-            width: "75%"
+            width: "90%"
         }
     },
     navTopRow: {
@@ -97,7 +97,7 @@ const useStyles = createUseStyles(theme => ({
                 backgroundColor: theme.palette["neutral-050"]
             }
         },
-        "@media (min-width: 768px)": {
+        "@media (min-width: 900px)": {
             display: "none"
         }
     }
