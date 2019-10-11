@@ -17,7 +17,7 @@ const useStyles = createUseStyles({
     }
 });
 
-const Layout = ({children}) => {
+const Layout = ({path, children}) => {
     const {title, description} = useSiteMetadata();
     const classes = useStyles();
 
@@ -30,7 +30,7 @@ const Layout = ({children}) => {
             </Helmet>
             <div className={classes.layout}>
                 <div className={classes.body}>
-                    <Navbar />
+                    <Navbar path={path}/>
                     <div>{children}</div>
                 </div>
                 <Footer />

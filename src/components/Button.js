@@ -6,9 +6,9 @@ const useStyles = createUseStyles(theme => ({
         appearance: "none",
         backgroundColor: "white",
         border: "1px solid",
-        borderColor: theme.palette["neutral-300"],
+        borderColor: theme.palette["primary-500"],
         borderRadius: theme.borderRadius.radius1,
-        color: theme.palette["neutral-500"],
+        color: theme.palette["primary-500"],
         padding: `${theme.spacing[4]} ${theme.spacing[16]}`,
         width: "fit-content",
         "&:hover": {

@@ -11,10 +11,10 @@ const useStyles = createUseStyles({
     }
 });
 
-const BlogIndexPage = () => {
+const BlogIndexPage = ({path}) => {
     const classes = useStyles();
     return (
-        <Layout>
+        <Layout path={path}>
             <div className={classes.content}>
                 <BlogRoll />
             </div>

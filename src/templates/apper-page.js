@@ -33,7 +33,7 @@ export const AppsPageTemplate = ({title, description, apps}) => {
     image: PropTypes.string
 }; */
 
-const AppsPage = ({data}) => {
+const AppsPage = ({path, data}) => {
     const {markdownRemark} = data;
 
     const appsWithText = markdownRemark.frontmatter.apps.map((app, index) => ({
@@ -42,16 +42,14 @@ const AppsPage = ({data}) => {
     }));
 
     return (
-        <div>
-            <Layout>
-                <AppsPageTemplate
-                    contentComponent={HTMLContent}
-                    title={markdownRemark.frontmatter.title}
-                    description={markdownRemark.frontmatter.description}
-                    apps={appsWithText}
-                />
-            </Layout>
-        </div>
+        <Layout path={path}>
+            <AppsPageTemplate
+                contentComponent={HTMLContent}
+                title={markdownRemark.frontmatter.title}
+                description={markdownRemark.frontmatter.description}
+                apps={appsWithText}
+            />
+        </Layout>
     );
 };
 

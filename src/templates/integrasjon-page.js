@@ -30,20 +30,16 @@ export const IntegrationPageTemplate = ({contentComponent, title, content}) => {
     image: PropTypes.string
 }; */
 
-const IntegrationPage = ({data}) => {
+const IntegrationPage = ({path, data}) => {
     const {markdownRemark} = data;
-    console.log(markdownRemark)
-
     return (
-        <div>
-            <Layout>
-                <IntegrationPageTemplate
-                    contentComponent={HTMLContent}
-                    title={markdownRemark.frontmatter.title}
-                    content={markdownRemark.html}
-                />
-            </Layout>
-        </div>
+        <Layout path={path}>
+            <IntegrationPageTemplate
+                contentComponent={HTMLContent}
+                title={markdownRemark.frontmatter.title}
+                content={markdownRemark.html}
+            />
+        </Layout>
     );
 };
 

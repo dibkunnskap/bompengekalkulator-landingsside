@@ -26,34 +26,42 @@ export const useStyles = createUseStyles(theme => ({
         color: theme.palette["neutral-050"],
         display: "flex",
         flexFlow: "column",
-        /* width: "75%", */
+        alignItems: "center",
+        width: "90%",
         margin: "0 auto",
         maxWidth: "1080px"
     },
     heading: {
         maxWidth: "500px",
-        fontSize: "3rem"
+        fontSize: theme.fontSize["32"],
+        "@media (min-width: 768px)": {
+            fontSize: theme.fontSize["48"]
+        }
     },
     content: {
         width: "75%",
-        margin: `${theme.spacing["64"]} auto`,
-        maxWidth: "720px"
-        /* minHeight: "800px" */
+        margin: `${theme.spacing["96"]} auto`,
+        maxWidth: "720px",
+        color: theme.palette["neutral-500"]
     },
-    row: {
-        marginTop: "2rem",
-        display: "flex"
-        /* justifyContent: "center" */
+    markdown: {
+        color: theme.palette["neutral-800"],
+        /* textAlign: "center", */
+        "& h1": {
+            color: "red",
+        }
     },
     buttonRow: {
-        /* marginTop: "2rem", */
         display: "flex",
-        justifyContent: "center",
+        justifyContent: "space-evenly",
         "& button": {
-            margin: "2rem"
+            backgroundColor: theme.palette["primary-500"],
+            color: theme.palette["neutral-050"],
+            margin: `${theme.spacing["48"]} ${theme.spacing["8"]}`
         }
     },
     bloggRoll: {
+        padding: theme.spacing["48"],
         display: "flex",
         justifyContent: "center",
         width: "100vw",
@@ -83,17 +91,17 @@ export const IndexPageTemplate = props => {
                 </div>
             </div>
             <div className={classes.content}>
-                <PageContent content={mainText} />
+                <PageContent className={classes.markdown} content={mainText} />
                 <div className={classes.buttonRow}>
                     <Button>Integrasjon/API</Button>
                     <Button>Apper/kjørebøker</Button>
                 </div>
             </div>
             <div className={classes.bloggRoll}>
-                <BlogRoll number={2} maxWidth="720px"/>
+                <BlogRoll title="Siste poster" limit={2} maxWidth="720px"/>
             </div>
             <div className={classes.content}>
-                <PageContent content={secondaryText} />
+                <PageContent className={classes.markdown} content={secondaryText} />
             </div>
         </div>
     );
@@ -104,12 +112,11 @@ export const IndexPageTemplate = props => {
     image: PropTypes.string
 }; */
 
-const IndexPage = ({data}) => {
+const IndexPage = ({path, data}) => {
     const {frontmatter} = data.markdownRemark;
-    console.log(data.markdownRemark.fields.secondaryText)
     return (
         <div>
-            <Layout>
+            <Layout path={path}>
                 <IndexPageTemplate
                     contentComponent={HTMLContent}
                     heading={frontmatter.heading}

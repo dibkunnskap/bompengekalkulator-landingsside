@@ -8,12 +8,12 @@ const typography = new Typography({
             styles: []
         },
         {
-            name: "Lato",
+            name: "Palanquin",
             styles: []
         }
     ],
-    headerFontFamily: ["Lato", "sans-serif"],
-    bodyFontFamily: ["Lato", "sans-serif"],
+    headerFontFamily: ["Palanquin", "sans-serif"],
+    bodyFontFamily: ["Palanquin", "sans-serif"],
 
 });
 export default typography;

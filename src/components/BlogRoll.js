@@ -5,20 +5,45 @@ import {createUseStyles} from "react-jss";
 const useStyles = createUseStyles(theme => ({
     blogRoll: {
         display: "flex",
+        flexFlow: "column",
+        justifyContent: "center",
+        alignItems: "center",
         maxWidth: maxWidth => maxWidth
     },
+    title: {
+        color: theme.palette["neutral-600"],
+        fontWeight: "500"
+    },
+    roll: {
+        display: "flex",
+        justifyContent: "center",
+        flexWrap: "wrap"
+    },
     blogBox: {
-        backgroundColor: theme.palette["neutral-050"],
-        border: "1px solid",
-        borderColor: theme.palette["neutral-300"],
-        borderRadius: theme.borderRadius.radius2,
+        textAlign: "center",
         padding: "1rem",
-        margin: "0.5rem",
-        width: "50%"
+        width: "50%",
+        minWidth: "320px",
+    },
+    link: {
+        textDecoration: "none"
+    },
+    postTitle: {
+        margin: "0",
+        color: theme.palette["neutral-900"]
+    },
+    date: {
+        color: theme.palette["neutral-400"],
+        fontSize: theme.fontSize["14"],
+    },
+    description: {
+        fontSize: theme.fontSize["16"],
+        margin: "0",
+        color: theme.palette["neutral-600"]
     }
 }));
 
-const BlogRoll = ({number, maxWidth}) => {
+const BlogRoll = ({title, limit, maxWidth}) => {
     const classes = useStyles(maxWidth);
     const data = useStaticQuery(graphql`
         query BlogRollQuery {
@@ -38,6 +63,7 @@ const BlogRoll = ({number, maxWidth}) => {
                             templateKey
                             date(formatString: "MMMM DD, YYYY")
                             featuredpost
+                            description
                         }
                     }
                 }
@@ -48,14 +74,18 @@ const BlogRoll = ({number, maxWidth}) => {
 
     return (
         <div className={classes.blogRoll}>
-            {edges.map(edge => (
-                <div className={classes.blogBox}>
-                    <Link to={edge.node.fields.slug}>
-                        <p>{edge.node.frontmatter.title}</p>
+            <h2 className={classes.title}>{title}</h2>
+            <div className={classes.roll}>
+            {edges.filter(edge => edge.node.frontmatter.featuredpost).map(edge => (
+                <div className={classes.blogBox} key={edge.node.frontmatter.description}>
+                    <Link className={classes.link} to={edge.node.fields.slug}>
+                        <p className={classes.postTitle}>{edge.node.frontmatter.title}</p>
                     </Link>
-                    <p>{edge.node.frontmatter.date}</p>
+                    <p className={classes.date}>{edge.node.frontmatter.date}</p>
+                    <p className={classes.description}>{edge.node.frontmatter.description}</p>
                 </div>
-            )).slice(0,number)}
+            )).slice(0,limit)}
+            </div>
         </div>
     );
 };
