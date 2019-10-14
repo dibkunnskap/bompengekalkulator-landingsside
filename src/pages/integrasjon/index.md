@@ -8,9 +8,7 @@ title: Integrasjon
 * Som utvikler kan du sende inn kjøreruten både med og uten waypoints.
 * Historiske takster
 
-### 
-
-[object Object]
+### <br>
 
 ### Dine brukere forventer korrekte data
 
@@ -20,7 +18,7 @@ Brukere av reiseregningsapper og kjørebøker forventer å få bompenger og ferj
 
 \[Hvem benytter APIet?]
 
-### 
+### <br>
 
 ### Hvorfor velge vårt API?
 
@@ -29,6 +27,8 @@ Som leverandør av kjørebok, reiseregningssystem eller bildelingstjeneste er du
 ### 
 
 \[Test ut APIet her]
+
+### <br>
 
 ### Spørsmål og priser
 
