@@ -10,9 +10,7 @@ title: Integrasjon
 
 ### 
 
-buttonundefined
-
-
+[object Object]
 
 ### Dine brukere forventer korrekte data
 
