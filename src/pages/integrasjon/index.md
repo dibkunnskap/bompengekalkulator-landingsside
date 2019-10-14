@@ -16,6 +16,8 @@ Brukere av reiseregningsapper og kjørebøker forventer å få bompenger og ferj
 
 ### 
 
+<button class="button-0-2-1 undefined" type="button">test</button>
+
 \[Hvem benytter APIet?]
 
 <button class="myclas">asd</button>
