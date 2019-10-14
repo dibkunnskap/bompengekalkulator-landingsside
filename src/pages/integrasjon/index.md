@@ -16,7 +16,7 @@ Brukere av reiseregningsapper og kjørebøker forventer å få bompenger og ferj
 
 ### 
 
-{"widget":"button","label":"test"}
+{"widget":"button"}
 
 \[Hvem benytter APIet?]
 
