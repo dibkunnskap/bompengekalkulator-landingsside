@@ -62,6 +62,15 @@ const BlogRoll = props => {
     const classes = useStyles(props);
     const {edges} = data.allMarkdownRemark;
 
+    const formatDate = date => {
+        const d = new Date(date);
+        return d.toLocaleDateString("nb-NO", {
+            year: "numeric",
+            month: "long",
+            day: "numeric"
+        });
+    };
+
     return (
         <div className={classes.blogRoll}>
             <h2 className={classes.title}>{title}</h2>
@@ -83,7 +92,7 @@ const BlogRoll = props => {
                                     </p>
                                 </Link>
                                 <p className={classes.date}>
-                                    {edge.node.frontmatter.date}
+                                    {formatDate(edge.node.frontmatter.date)}
                                 </p>
                                 <p className={classes.description}>
                                     {edge.node.frontmatter.description}
@@ -124,7 +133,7 @@ export default ({limit, title}) => (
                             frontmatter {
                                 title
                                 templateKey
-                                date(formatString: "MMMM DD, YYYY")
+                                date
                                 featuredpost
                                 description
                             }
@@ -133,6 +142,6 @@ export default ({limit, title}) => (
                 }
             }
         `}
-        render={(data) => <BlogRoll data={data} title={title} limit={limit} />}
+        render={data => <BlogRoll data={data} title={title} limit={limit} />}
     />
 );

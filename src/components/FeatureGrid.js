@@ -2,7 +2,7 @@ import React from "react";
 import {createUseStyles} from "react-jss";
 import shortid from "shortid";
 import PreviewCompatibleImage from "./PreviewCompatibleImage";
-import Content, {HTMLContent} from "../components/Content";
+import {HTMLContent} from "../components/Content";
 
 const useStyles = createUseStyles(theme => ({
     featureGrid: {
@@ -16,15 +16,6 @@ const useStyles = createUseStyles(theme => ({
     text: {
         width: "50%",
         padding: `0 ${theme.spacing["16"]}`,
-        /* "& a": {
-            border: "1px solid",
-            borderColor: theme.palette["primary-500"],
-            borderRadius: theme.borderRadius.radius1,
-            color: theme.palette["primary-500"],
-            padding: `0 ${theme.spacing[16]}`,
-            width: "fit-content",
-            textDecoration: "none"
-        } */
     },
     img: {
         width: "50%",

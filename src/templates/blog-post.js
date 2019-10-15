@@ -4,7 +4,7 @@ import {createUseStyles} from "react-jss";
 import Layout from "../components/Layout";
 import Content, {HTMLContent} from "../components/Content";
 
-const useStyles = createUseStyles(theme => ({
+export const useStyles = createUseStyles(theme => ({
     wrapper: {
         display: "flex",
         justifyContent: "center",
@@ -16,18 +16,26 @@ const useStyles = createUseStyles(theme => ({
         "& h1, h2, h3": {
             color: theme.palette["primary-500"]
         }
+    },
+    date: {
+        color: theme.palette["neutral-400"]
     }
 }));
 
 export const BlogPostTemplate = ({title, date, content, contentComponent}) => {
     const classes = useStyles();
     const PostContent = contentComponent || Content;
+    const formattedDate = date.toLocaleDateString("nb-NO", {
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+    });
 
     return (
         <div className={classes.wrapper}>
             <div className={classes.blogPost}>
                 <h1>{title}</h1>
-                <p>{date}</p>
+                <p className={classes.date}>{formattedDate}</p>
                 <PostContent content={content} />
             </div>
         </div>
@@ -36,6 +44,7 @@ export const BlogPostTemplate = ({title, date, content, contentComponent}) => {
 
 const BlogPost = ({path, data}) => {
     const {markdownRemark: post} = data;
+    const date = new Date(post.frontmatter.date);
 
     return (
         <Layout path={path}>
@@ -43,7 +52,7 @@ const BlogPost = ({path, data}) => {
                 content={post.html}
                 contentComponent={HTMLContent}
                 title={post.frontmatter.title}
-                date={post.frontmatter.date}
+                date={date}
             />
         </Layout>
     );
@@ -58,7 +67,7 @@ export const pageQuery = graphql`
             html
             frontmatter {
                 title
-                date(formatString: "MMMM DD, YYYY")
+                date
             }
         }
     }

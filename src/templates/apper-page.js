@@ -3,7 +3,7 @@ import React from "react";
 import {graphql} from "gatsby";
 import {createUseStyles} from "react-jss";
 import Layout from "../components/Layout";
-import Content, {HTMLContent} from "../components/Content";
+import {HTMLContent} from "../components/Content";
 import FeatureGrid from "../components/FeatureGrid";
 
 export const useStyles = createUseStyles(theme => ({
@@ -19,7 +19,8 @@ export const useStyles = createUseStyles(theme => ({
         margin: `${theme.spacing["64"]} 0`
     },
     content: {
-        "& a": {
+        "& a[type=\"button\"]": {
+            appearance: "none",
             border: "1px solid",
             borderColor: theme.palette["primary-500"],
             borderRadius: theme.borderRadius.radius1,

@@ -52,7 +52,7 @@ const Footer = () => {
                     </Link>
                 </li>
             </ul>
-            <p className={classes.contact}>DIBkunnskap AS | Strandveien 50, Lysaker | 95 40 70 70 | post@dib.no</p>
+            <p className={classes.contact}>DIBkunnskap AS</p>
         </footer>
     );
 };

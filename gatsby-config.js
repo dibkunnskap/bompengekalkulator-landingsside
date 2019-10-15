@@ -4,7 +4,6 @@ module.exports = {
         description: "Bompengekalkulator landingsside"
     },
     plugins: [
-        "gatsby-plugin-mdx",
         {
             resolve: "gatsby-plugin-typography",
             options: {
