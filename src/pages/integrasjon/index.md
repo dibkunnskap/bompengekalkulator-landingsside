@@ -12,9 +12,9 @@ title: Integrasjon
 
 Brukere av reiseregningsapper og kjørebøker forventer å få bompenger og ferjepriser med i beregningen av kjøreturen. Disse utgiftene utgjør en stadig større andel av totale reisekostnader
 
-[Hvem begynnter APIet?](../apper)
+[Hvem benytter APIet?](../apper)
 
-
+<a href="../apper" type="button">Hvem benytter APIet?</a>
 
 ### <br>
 
