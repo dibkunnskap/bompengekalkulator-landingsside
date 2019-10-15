@@ -4,6 +4,7 @@ import {createUseStyles} from "react-jss";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import useSiteMetadata from "./SiteMetadata";
+/* import theme from "./src/config/theme"; */
 
 const useStyles = createUseStyles({
     layout: {
