@@ -20,11 +20,11 @@ const useStyles = createUseStyles(theme => ({
     }
 }));
 
-const BuyButton = ({className, children}) => {
+const Button = ({className, children}) => {
     const classes = useStyles();
     return (
         <button className={`${classes.button} ${className}`} type="button">{children}</button>
     )
 }
 
-export default BuyButton;
+export default Button;

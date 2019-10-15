@@ -15,8 +15,8 @@ const IndexPagePreview = ({entry}) => {
             <JssWrapper styles={useStyles}>
                 <IndexPageTemplate
                     contentComponent={HTMLContent}
-                    image={data.image}
                     heading={data.heading}
+                    image={data.image}
                     mainText={mainText}
                     secondaryText={secondaryText}
                 />

@@ -1,24 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
 import JssWrapper from "../JssWrapper";
-import {IndexPageTemplate, useStyles} from "../../templates/index-page";
+import {IntegrationPageTemplate, useStyles} from "../../templates/integrasjon-page";
 import {HTMLContent} from "../../components/Content";
 import {markupToHtml} from "../../utils/utils";
 
-const IndexPagePreview = ({entry}) => {
+const IntegrationPagePreview = ({entry}) => {
     const data = entry.getIn(["data"]).toJS();
-    const mainText = markupToHtml(data.mainText);
-    const secondaryText = markupToHtml(data.secondaryText);
+    const html = markupToHtml(data.body);
 
     if (data) {
         return (
             <JssWrapper styles={useStyles}>
-                <IndexPageTemplate
+                <IntegrationPageTemplate
                     contentComponent={HTMLContent}
-                    image={data.image}
-                    heading={data.heading}
-                    mainText={mainText}
-                    secondaryText={secondaryText}
+                    title={data.title}
+                    content={html}
                 />
             </JssWrapper>
         );
@@ -27,10 +24,10 @@ const IndexPagePreview = ({entry}) => {
     }
 };
 
-IndexPagePreview.propTypes = {
+IntegrationPagePreview.propTypes = {
     entry: PropTypes.shape({
         getIn: PropTypes.func
     })
 };
 
-export default IndexPagePreview;
+export default IntegrationPagePreview;

@@ -11,11 +11,20 @@ const useStyles = createUseStyles(theme => ({
     feature: {
         display: "flex",
         alignItems: "center",
-        margin: "10rem 0"
+        margin: "6rem 0"
     },
     text: {
         width: "50%",
-        padding: `0 ${theme.spacing["16"]}`
+        padding: `0 ${theme.spacing["16"]}`,
+        "& a": {
+            border: "1px solid",
+            borderColor: theme.palette["primary-500"],
+            borderRadius: theme.borderRadius.radius1,
+            color: theme.palette["primary-500"],
+            padding: `0 ${theme.spacing[16]}`,
+            width: "fit-content",
+            textDecoration: "none"
+        }
     },
     img: {
         width: "50%",

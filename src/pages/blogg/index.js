@@ -4,38 +4,34 @@ import Layout from "../../components/Layout";
 import BlogRoll from "../../components/BlogRoll";
 
 const useStyles = createUseStyles(theme => ({
-    wrapper: {
-
+    root: {
+        width: "90%",
+        maxWidth: "720px",
+        margin: "0 auto"
     },
     headerContainer: {
         display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        padding: theme.spacing["32"],
+        /* justifyContent: "center", */
+        /* alignItems: "center", */
+        padding: `${theme.spacing["32"]} 0`,
+        marginTop: theme.spacing["32"],
         /* backgroundColor: theme.palette["neutral-050"] */
     },
     header: {
-        color: theme.palette["neutral-700"],
+        color: theme.palette["primary-500"],
         margin: "0"
-    },
-    content: {
-        width: "90%",
-        maxWidth: "1080px",
-        margin: "0 auto"
-    },
+    }
 }));
 
 const BlogIndexPage = ({path}) => {
     const classes = useStyles();
     return (
         <Layout path={path}>
-            <div className={classes.wrapper}>
+            <div className={classes.root}>
                 <div className={classes.headerContainer}>
-                    <h2 className={classes.header}>Siste bloggposter</h2>
+                    <h1 className={classes.header}>Siste nyheter</h1>
                 </div>
-                <div className={classes.content}>
-                    <BlogRoll useBorder useButtons/>
-                </div>
+                <BlogRoll title=""/>
             </div>
         </Layout>
     );

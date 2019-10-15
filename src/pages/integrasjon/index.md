@@ -8,21 +8,13 @@ title: Integrasjon
 * Som utvikler kan du sende inn kjøreruten både med og uten waypoints.
 * Historiske takster
 
-### <br>
-
 ### Dine brukere forventer korrekte data
 
 Brukere av reiseregningsapper og kjørebøker forventer å få bompenger og ferjepriser med i beregningen av kjøreturen. Disse utgiftene utgjør en stadig større andel av totale reisekostnader
 
 ### 
 
-<button class="button-0-2-1 undefined" type="button">test</button>
-
 \[Hvem benytter APIet?]
-
-<button class="myclas">asd</button>
-
-### <br>
 
 ### Hvorfor velge vårt API?
 
@@ -32,7 +24,6 @@ Som leverandør av kjørebok, reiseregningssystem eller bildelingstjeneste er du
 
 \[Test ut APIet her]
 
-### <br>
 
 ### Spørsmål og priser
 

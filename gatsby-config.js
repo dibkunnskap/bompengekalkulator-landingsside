@@ -4,6 +4,7 @@ module.exports = {
         description: "Bompengekalkulator landingsside"
     },
     plugins: [
+        "gatsby-plugin-mdx",
         {
             resolve: "gatsby-plugin-typography",
             options: {
@@ -75,4 +76,11 @@ module.exports = {
         "gatsby-plugin-jss",
         "gatsby-plugin-netlify"
     ]
+};
+
+exports.onCreateWebpackConfig = ({actions, getConfig}) => {
+    const config = getConfig();
+    config.node = {
+        fs: 'empty'
+    };
 };

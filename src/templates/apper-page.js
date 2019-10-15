@@ -9,9 +9,20 @@ import FeatureGrid from "../components/FeatureGrid";
 export const useStyles = createUseStyles(theme => ({
     root: {
         font: "inherit",
-        margin: "5rem auto",
+        margin: "0 auto",
         width: "90%",
-        maxWidth: "1080px"
+        maxWidth: "720px",
+    },
+    title: {
+        /* textAlign: "center", */
+        color: theme.palette["primary-500"],
+        margin: `${theme.spacing["64"]} 0`
+    },
+    description: {
+        margin: "0 auto",
+        /* textAlign: "center", */
+        /* fontWeight: "700", */
+        /* color: theme.palette["neutral-700"] */
     }
 }));
 
@@ -19,9 +30,9 @@ export const AppsPageTemplate = ({title, description, apps}) => {
     const classes = useStyles();
     return (
         <div className={classes.root}>
-            {/* <h1>{title}</h1> */}
+            <h1 className={classes.title}>{title}</h1>
             <div className={classes.content}>
-                <p>{description}</p>
+                <p className={classes.description}>{description}</p>
                 <FeatureGrid gridItems={apps} />
             </div>
         </div>

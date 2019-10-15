@@ -7,9 +7,19 @@ import Content, {HTMLContent} from "../components/Content";
 
 export const useStyles = createUseStyles(theme => ({
     root: {
-        margin: "5rem auto",
+        margin: "0 auto",
         width: "75%",
-        maxWidth: "720px"
+        maxWidth: "720px",
+        "& h1, h2, h3": {
+            color: theme.palette["primary-500"]
+        },
+        /* "& button": {
+            backgroundColor: "red"
+        } */
+    },
+    title: {
+        margin: `${theme.spacing["64"]} 0`,
+        /* textAlign: "center" */
     }
 }));
 
@@ -19,7 +29,7 @@ export const IntegrationPageTemplate = ({contentComponent, title, content}) => {
 
     return (
         <div className={classes.root}>
-            <h1>{title}</h1>
+            <h1 className={classes.title}>{title}</h1>
             <PageContent content={content} />
         </div>
     );

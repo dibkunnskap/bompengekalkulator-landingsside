@@ -4,6 +4,7 @@ const remarkHTML = require("remark-html");
 const {createFilePath} = require("gatsby-source-filesystem");
 const {fmImagesToRelative} = require("gatsby-remark-relative-images");
 
+
 exports.createPages = async ({actions, graphql, reporter}) => {
     const {createPage} = actions;
     const result = await graphql(`
@@ -23,6 +24,7 @@ exports.createPages = async ({actions, graphql, reporter}) => {
             }
         }
     `);
+
     // Handle errors
     if (result.errors) {
         reporter.panicOnBuild("Error while running GraphQL query.");

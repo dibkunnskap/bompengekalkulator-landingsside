@@ -9,7 +9,10 @@ import BlogRoll from "../components/BlogRoll";
 
 export const useStyles = createUseStyles(theme => ({
     root: {
-        font: "inherit"
+        font: "inherit",
+        /* "& h2": {
+            color: theme.palette["primary-500"]
+        } */
     },
     image: {
         width: "100%",
@@ -23,7 +26,7 @@ export const useStyles = createUseStyles(theme => ({
         alignItems: "center"
     },
     title: {
-        color: theme.palette["neutral-050"],
+        color: "white",
         display: "flex",
         flexFlow: "column",
         alignItems: "center",
@@ -42,7 +45,9 @@ export const useStyles = createUseStyles(theme => ({
         width: "75%",
         margin: `${theme.spacing["96"]} auto`,
         maxWidth: "720px",
-        color: theme.palette["neutral-500"],
+        "& h2": {
+            color: theme.palette["primary-500"]
+        },
         "& > div": {
             margin: `${theme.spacing["128"]} 0`
         }
@@ -57,9 +62,10 @@ export const useStyles = createUseStyles(theme => ({
         display: "flex",
         justifyContent: "space-evenly",
         "& button": {
-            backgroundColor: theme.palette["primary-500"],
-            color: theme.palette["neutral-050"],
-            margin: `${theme.spacing["48"]} ${theme.spacing["8"]}`
+            /* backgroundColor: theme.palette["primary-500"], */
+            /* color: theme.palette["neutral-050"], */
+            marginTop: theme.spacing["48"]
+            /* margin: `${theme.spacing["48"]} ${theme.spacing["8"]}` */
         }
     }
 }));
@@ -128,7 +134,6 @@ const IndexPage = ({path, data}) => {
                     contentComponent={HTMLContent}
                     heading={frontmatter.heading}
                     image={frontmatter.image}
-                    features={frontmatter.features}
                     mainText={data.markdownRemark.fields.mainText}
                     secondaryText={data.markdownRemark.fields.secondaryText}
                 />
@@ -149,19 +154,6 @@ export const pageQuery = graphql`
                         fluid(maxWidth: 2048, quality: 100) {
                             ...GatsbyImageSharpFluid
                         }
-                    }
-                }
-                features {
-                    blurbs {
-                        image {
-                            childImageSharp {
-                                fluid(maxWidth: 2048, quality: 100) {
-                                    ...GatsbyImageSharpFluid
-                                }
-                            }
-                        }
-                        heading
-                        text
                     }
                 }
             }

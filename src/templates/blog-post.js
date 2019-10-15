@@ -4,7 +4,7 @@ import {createUseStyles} from "react-jss";
 import Layout from "../components/Layout";
 import Content, {HTMLContent} from "../components/Content";
 
-const useStyles = createUseStyles({
+const useStyles = createUseStyles(theme => ({
     wrapper: {
         display: "flex",
         justifyContent: "center",
@@ -12,9 +12,12 @@ const useStyles = createUseStyles({
     },
     blogPost: {
         width: "75%",
-        maxWidth: "1080px"
+        maxWidth: "720px",
+        "& h1, h2, h3": {
+            color: theme.palette["primary-500"]
+        }
     }
-});
+}));
 
 export const BlogPostTemplate = ({title, date, content, contentComponent}) => {
     const classes = useStyles();

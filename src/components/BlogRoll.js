@@ -1,5 +1,5 @@
 import React from "react";
-import {Link, graphql, useStaticQuery} from "gatsby";
+import {Link, graphql, StaticQuery} from "gatsby";
 import {createUseStyles} from "react-jss";
 import Button from "../components/Button";
 
@@ -8,7 +8,6 @@ const useStyles = createUseStyles(theme => ({
         display: "flex",
         flexFlow: "column",
         justifyContent: "center",
-        alignItems: "center",
         maxWidth: props => props.maxWidth
     },
     title: {
@@ -16,8 +15,9 @@ const useStyles = createUseStyles(theme => ({
     },
     roll: {
         display: "flex",
-        justifyContent: "center",
-        flexWrap: "wrap"
+        flexWrap: "wrap",
+        justifyContent: "flex-start",
+        margin: `0 -${theme.spacing["8"]}`
     },
     blogBox: {
         padding: theme.spacing["32"],
@@ -31,16 +31,14 @@ const useStyles = createUseStyles(theme => ({
         display: "flex",
         flexFlow: "column",
         justifyContent: "space-between",
-        "&:not(:last-child)": {
-            marginRight: theme.spacing["16"]
-        }
+        margin: theme.spacing["8"]
     },
     link: {
         textDecoration: "none"
     },
     postTitle: {
         margin: "0",
-        color: theme.palette["neutral-800"],
+        color: theme.palette["neutral-700"],
         fontWeight: "700"
     },
     date: {
@@ -60,38 +58,13 @@ const useStyles = createUseStyles(theme => ({
 }));
 
 const BlogRoll = props => {
-    const {title, limit} = props;
+    const {data, limit, title} = props;
     const classes = useStyles(props);
-    const data = useStaticQuery(graphql`
-        query BlogRollQuery {
-            allMarkdownRemark(
-                sort: {order: DESC, fields: [frontmatter___date]}
-                filter: {frontmatter: {templateKey: {eq: "blog-post"}}}
-            ) {
-                edges {
-                    node {
-                        excerpt(pruneLength: 400)
-                        id
-                        fields {
-                            slug
-                        }
-                        frontmatter {
-                            title
-                            templateKey
-                            date(formatString: "MMMM DD, YYYY")
-                            featuredpost
-                            description
-                        }
-                    }
-                }
-            }
-        }
-    `);
     const {edges} = data.allMarkdownRemark;
 
     return (
         <div className={classes.blogRoll}>
-            <h1 className={classes.title}>{title}</h1>
+            <h2 className={classes.title}>{title}</h2>
             <div className={classes.roll}>
                 {edges
                     .filter(edge => edge.node.frontmatter.featuredpost)
@@ -133,4 +106,33 @@ BlogRoll.defaultProps = {
     textAlign: "left"
 };
 
-export default BlogRoll;
+export default ({limit, title}) => (
+    <StaticQuery
+        query={graphql`
+            query BlogRollQuery {
+                allMarkdownRemark(
+                    sort: {order: DESC, fields: [frontmatter___date]}
+                    filter: {frontmatter: {templateKey: {eq: "blog-post"}}}
+                ) {
+                    edges {
+                        node {
+                            excerpt(pruneLength: 400)
+                            id
+                            fields {
+                                slug
+                            }
+                            frontmatter {
+                                title
+                                templateKey
+                                date(formatString: "MMMM DD, YYYY")
+                                featuredpost
+                                description
+                            }
+                        }
+                    }
+                }
+            }
+        `}
+        render={(data) => <BlogRoll data={data} title={title} limit={limit} />}
+    />
+);
