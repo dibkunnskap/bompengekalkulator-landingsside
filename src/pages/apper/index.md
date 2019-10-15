@@ -13,7 +13,8 @@ apps:
       ferjepriser med vårt API. 
 
 
-      [Les mer](https://www.simployer.no/hrm/reise-utlegg/)
+      <a href="https://www.simployer.no/hrm/reise-utlegg/" type="button">Les
+      mer</a>
   - heading: Sonya
     image: /img/sonya-logo.png
     text: >-
@@ -21,7 +22,7 @@ apps:
       for hver eneste bompassering.
 
 
-      [Les mer](https://sonya.com/)
+      <a href="https://sonya.com/" type="button">Les mer</a>
   - heading: Automile
     image: /img/automile_logo.png
     text: >-
@@ -30,7 +31,7 @@ apps:
       bompenger og ferjepriser.
 
 
-      [Les mer](https://automile.no/)
+      <a href="https://https://automile.no/" type="button">Les mer</a>
   - heading: TickTack - OnTheWay
     image: /img/ticktacklogo-main-black.png
     text: >-
@@ -38,6 +39,6 @@ apps:
       integrert beregning av bompenger og ferjepriser på kjøreruten.
 
 
-      [Les mer](https://www.ticktack.no/ontheway/)
+      <a href="https://www.ticktack.no/ontheway/" type="button">Les mer</a>
 ---
 
