@@ -25,11 +25,14 @@ export const useStyles = createUseStyles(theme => ({
 export const BlogPostTemplate = ({title, date, content, contentComponent}) => {
     const classes = useStyles();
     const PostContent = contentComponent || Content;
-    const formattedDate = date.toLocaleDateString("nb-NO", {
-        year: "numeric",
-        month: "long",
-        day: "numeric"
-    });
+    let formattedDate = null;
+    if (date) {
+        formattedDate = date.toLocaleDateString("nb-NO", {
+            year: "numeric",
+            month: "long",
+            day: "numeric"
+        });
+    }
 
     return (
         <div className={classes.wrapper}>
