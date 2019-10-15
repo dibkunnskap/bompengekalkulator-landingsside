@@ -12,17 +12,19 @@ title: Integrasjon
 
 Brukere av reiseregningsapper og kjørebøker forventer å få bompenger og ferjepriser med i beregningen av kjøreturen. Disse utgiftene utgjør en stadig større andel av totale reisekostnader
 
-### 
+[Hvem begynnter APIet?](../apper)
 
-\[Hvem benytter APIet?]
+
+
+### <br>
 
 ### Hvorfor velge vårt API?
 
 Som leverandør av kjørebok, reiseregningssystem eller bildelingstjeneste er du avhengig av datakvalitet som det offentlige ikke kan tilby. APIet holder vi oppdatert gjennom automatisk overvåkning og brukergenerert feedback fra alle bilistene som bruker bompengekalkulator.no
 
-### 
+[Test ut APIet her](https://dibkunnskapapi.developer.azure-api.net/)
 
-\[Test ut APIet her]
+
 
 
 ### Spørsmål og priser

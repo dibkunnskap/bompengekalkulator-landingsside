@@ -18,6 +18,17 @@ export const useStyles = createUseStyles(theme => ({
         color: theme.palette["primary-500"],
         margin: `${theme.spacing["64"]} 0`
     },
+    content: {
+        "& a": {
+            border: "1px solid",
+            borderColor: theme.palette["primary-500"],
+            borderRadius: theme.borderRadius.radius1,
+            color: theme.palette["primary-500"],
+            padding: `0 ${theme.spacing[16]}`,
+            width: "fit-content",
+            textDecoration: "none"
+        }
+    },
     description: {
         margin: "0 auto",
         /* textAlign: "center", */

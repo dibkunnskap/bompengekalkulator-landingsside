@@ -16,7 +16,7 @@ const useStyles = createUseStyles(theme => ({
     text: {
         width: "50%",
         padding: `0 ${theme.spacing["16"]}`,
-        "& a": {
+        /* "& a": {
             border: "1px solid",
             borderColor: theme.palette["primary-500"],
             borderRadius: theme.borderRadius.radius1,
@@ -24,7 +24,7 @@ const useStyles = createUseStyles(theme => ({
             padding: `0 ${theme.spacing[16]}`,
             width: "fit-content",
             textDecoration: "none"
-        }
+        } */
     },
     img: {
         width: "50%",

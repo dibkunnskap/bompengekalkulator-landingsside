@@ -13,9 +13,15 @@ export const useStyles = createUseStyles(theme => ({
         "& h1, h2, h3": {
             color: theme.palette["primary-500"]
         },
-        /* "& button": {
-            backgroundColor: "red"
-        } */
+        "& a": {
+            border: "1px solid",
+            borderColor: theme.palette["primary-500"],
+            borderRadius: theme.borderRadius.radius1,
+            color: theme.palette["primary-500"],
+            padding: `0 ${theme.spacing[16]}`,
+            width: "fit-content",
+            textDecoration: "none"
+        }
     },
     title: {
         margin: `${theme.spacing["64"]} 0`,
