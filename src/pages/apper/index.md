@@ -31,7 +31,7 @@ apps:
       bompenger og ferjepriser.
 
 
-      <a href="https://https://automile.no/" type="button">Les mer</a>
+      <a href="https://automile.no/" type="button">Les mer</a>
   - heading: TickTack - OnTheWay
     image: /img/ticktacklogo-main-black.png
     text: >-
