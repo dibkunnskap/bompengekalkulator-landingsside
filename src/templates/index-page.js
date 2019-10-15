@@ -96,7 +96,7 @@ export const IndexPageTemplate = props => {
                     />
                     <div className={classes.buttonRow}>
                         <Link to="/integrasjon"><Button>Integrasjon/API</Button></Link>
-                        <Link to="/integrasjon"><Button>Apper/kjørebøker</Button></Link>
+                        <Link to="/apper"><Button>Apper/kjørebøker</Button></Link>
                     </div>
                 </div>
                 <BlogRoll
