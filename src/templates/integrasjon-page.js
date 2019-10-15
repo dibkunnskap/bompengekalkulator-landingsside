@@ -13,7 +13,7 @@ export const useStyles = createUseStyles(theme => ({
         "& h1, h2, h3": {
             color: theme.palette["primary-500"]
         },
-        "& a[type=\"button\"]": {
+        '& a[type="button"]': {
             appearance: "none",
             border: "1px solid",
             borderColor: theme.palette["primary-500"],
@@ -25,8 +25,11 @@ export const useStyles = createUseStyles(theme => ({
         }
     },
     title: {
-        margin: `${theme.spacing["64"]} 0`,
+        margin: `${theme.spacing["64"]} 0`
         /* textAlign: "center" */
+    },
+    content: {
+        marginBottom: theme.spacing["96"]
     }
 }));
 
@@ -37,7 +40,9 @@ export const IntegrationPageTemplate = ({contentComponent, title, content}) => {
     return (
         <div className={classes.root}>
             <h1 className={classes.title}>{title}</h1>
-            <PageContent content={content} />
+            <div className={classes.content}>
+                <PageContent content={content} />
+            </div>
         </div>
     );
 };

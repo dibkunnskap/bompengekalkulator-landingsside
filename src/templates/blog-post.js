@@ -7,12 +7,12 @@ import Content, {HTMLContent} from "../components/Content";
 export const useStyles = createUseStyles(theme => ({
     wrapper: {
         display: "flex",
-        justifyContent: "center",
-        margin: "5rem auto"
+        justifyContent: "center"
     },
     blogPost: {
         width: "75%",
         maxWidth: "720px",
+        margin: `${theme.spacing["64"]} 0`,
         "& h1, h2, h3": {
             color: theme.palette["primary-500"]
         }

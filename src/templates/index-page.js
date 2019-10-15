@@ -1,6 +1,6 @@
 import React from "react";
 /* import PropTypes from "prop-types"; */
-import {graphql} from "gatsby";
+import {Link, graphql} from "gatsby";
 import {createUseStyles} from "react-jss";
 import Layout from "../components/Layout";
 import Content, {HTMLContent} from "../components/Content";
@@ -62,10 +62,7 @@ export const useStyles = createUseStyles(theme => ({
         display: "flex",
         justifyContent: "space-evenly",
         "& button": {
-            /* backgroundColor: theme.palette["primary-500"], */
-            /* color: theme.palette["neutral-050"], */
-            marginTop: theme.spacing["48"]
-            /* margin: `${theme.spacing["48"]} ${theme.spacing["8"]}` */
+            marginTop: theme.spacing["48"],
         }
     }
 }));
@@ -98,8 +95,8 @@ export const IndexPageTemplate = props => {
                         content={mainText}
                     />
                     <div className={classes.buttonRow}>
-                        <Button>Integrasjon/API</Button>
-                        <Button>Apper/kjørebøker</Button>
+                        <Link to="/integrasjon"><Button>Integrasjon/API</Button></Link>
+                        <Link to="/integrasjon"><Button>Apper/kjørebøker</Button></Link>
                     </div>
                 </div>
                 <BlogRoll
@@ -108,6 +105,7 @@ export const IndexPageTemplate = props => {
                     maxWidth="720px"
                     textAlign="center"
                     useBorder
+                    featured
                 />
                 <div>
                     <PageContent

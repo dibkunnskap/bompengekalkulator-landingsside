@@ -8,9 +8,12 @@ const useStyles = createUseStyles(theme => ({
         display: "flex",
         flexFlow: "column",
         justifyContent: "center",
+        alignItems: "center",
         maxWidth: props => props.maxWidth
     },
     title: {
+        width: "100%",
+        textAlign: "left",
         color: theme.palette["neutral-600"]
     },
     roll: {
@@ -58,7 +61,7 @@ const useStyles = createUseStyles(theme => ({
 }));
 
 const BlogRoll = props => {
-    const {data, limit, title} = props;
+    const {data, limit, title, featured} = props;
     const classes = useStyles(props);
     const {edges} = data.allMarkdownRemark;
 
@@ -76,7 +79,7 @@ const BlogRoll = props => {
             <h2 className={classes.title}>{title}</h2>
             <div className={classes.roll}>
                 {edges
-                    .filter(edge => edge.node.frontmatter.featuredpost)
+                    .filter(edge => featured ? edge.node.frontmatter.featuredpost : true)
                     .map(edge => (
                         <div
                             className={classes.blogBox}
@@ -115,7 +118,7 @@ BlogRoll.defaultProps = {
     textAlign: "left"
 };
 
-export default ({limit, title}) => (
+export default ({limit, title, featured}) => (
     <StaticQuery
         query={graphql`
             query BlogRollQuery {
@@ -142,6 +145,6 @@ export default ({limit, title}) => (
                 }
             }
         `}
-        render={data => <BlogRoll data={data} title={title} limit={limit} />}
+        render={data => <BlogRoll data={data} title={title} limit={limit} featured={featured} />}
     />
 );

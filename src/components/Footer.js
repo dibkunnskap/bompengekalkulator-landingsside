@@ -8,26 +8,38 @@ const useStyles = createUseStyles(theme => ({
         flexFlow: "column",
         alignItems: "center",
         backgroundColor: theme.palette["neutral-050"],
-        padding: theme.spacing["16"],
-        color: theme.palette["neutral-600"],
+        padding: theme.spacing["12"],
+        color: theme.palette["neutral-600"]
     },
-    logo: {
+    content: {
         display: "flex",
-        justifyContent: "center"
-    },
-    list: {
-        listStyleType: "none",
-        margin: `${theme.spacing["16"]} 0`,
+        justifyContent: "space-between",
+        alignItems: "center",
         width: "720px"
     },
+    links: {
+        display: "flex",
+        alignItems: "center",
+        color: theme.palette["neutral-500"],
+        "& a": {
+            color: theme.palette["neutral-500"],
+            fontSize: theme.fontSize["16"],
+            margin: theme.spacing["16"]
+        }
+    },
     link: {
-        color: theme.palette["neutral-600"],
         font: "inherit",
         textDecoration: "none"
     },
+    logo: {
+        fontFamily: "Caveat Brush !important",
+        fontSize: "24px",
+        color: theme.palette["neutral-400"]
+    },
     contact: {
-        color: theme.palette["neutral-400"],
-        fontSize: theme.fontSize["16"]
+        color: theme.palette["neutral-500"],
+        fontSize: theme.fontSize["16"],
+        margin: "0"
     }
 }));
 
@@ -35,24 +47,28 @@ const Footer = () => {
     const classes = useStyles();
     return (
         <footer className={classes.footer}>
-            <ul className={classes.list}>
-                <li>
-                    <Link className={classes.link} to="/">
-                        Hjem
+            <div className={classes.content}>
+                <a
+                    className={`${classes.link} ${classes.logo}`}
+                    href="https://bompengekalkulator.no"
+                >
+                    bompengekalkulator.no
+                </a>
+                <div className={classes.links}>
+                    <Link className={classes.link} to="/blogg">
+                        Blogg
                     </Link>
-                </li>
-                <li>
-                    <Link className={classes.link} to="/">
-                        About
+                        |
+                    <Link className={classes.link} to="/apper">
+                        Apper
                     </Link>
-                </li>
-                <li>
-                    <Link className={classes.link} to="/">
-                        Kontakt
+                        |
+                    <Link className={classes.link} to="/integrasjon">
+                        Integrasjon
                     </Link>
-                </li>
-            </ul>
-            <p className={classes.contact}>DIBkunnskap AS</p>
+                </div>
+                <p className={classes.contact}>DIBkunnskap AS</p>
+            </div>
         </footer>
     );
 };
