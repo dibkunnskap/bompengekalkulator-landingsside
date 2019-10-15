@@ -2,8 +2,8 @@
 templateKey: apper-page
 title: Apper og kjørebøker
 description: >-
-  Her finner du et utvalg apper og kjørebøker som har integrert vårt API med
-  bompenger og ferjepriser.
+  Hvis du bruker en av appene under, er du heldig. Da får du nemlig også
+  bompenger og ferjepriser med på reiseregningen.
 apps:
   - heading: Simployer - Reise & utlegg
     image: /img/simployer_logo.png
