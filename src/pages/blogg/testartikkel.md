@@ -10,7 +10,7 @@ featuredpost: false
 ---
 ## Først det viktigste..
 
-bompengekalulator.no hadde ikke eksistert uten deg som bruker. Dere som er ute og kjøre på norske veier hjelper oss daglig til å holde kalkulatoren oppdatert med nye bomtakster, plasseringer og andre ting i bompengejungelen.  Det gjør at våre data er de mest oppdaterte.
+bompengekalulator.no hadde ikke eksistert uten deg som bruker. Dere som er ute og kjører på norske veier gir oss verdifulle tilbakemeldinger slik at vi kan holde kalkulatoren oppdatert med nye bomtakster, plasseringer og andre ting i bompengejungelen.  Det gjør at våre data er de mest oppdaterte.
 
 ## Så hvordan vi tjener penger..
 
