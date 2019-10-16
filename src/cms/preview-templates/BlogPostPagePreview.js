@@ -8,7 +8,6 @@ import {markupToHtml} from "../../utils/utils";
 const BlogPagePreview = ({entry}) => {
     const data = entry.getIn(["data"]).toJS();
     const html = markupToHtml(data.body);
-    console.log(data)
 
     if (data) {
         return (
