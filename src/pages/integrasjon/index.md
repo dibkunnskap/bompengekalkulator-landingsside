@@ -8,7 +8,7 @@ title: Integrasjon
 * Som utvikler kan du sende inn kjøreruten både med og uten waypoints.
 * Historiske takster
 
-### <br>
+<br>
 
 ### Dine brukere forventer korrekte data
 
@@ -16,7 +16,7 @@ Brukere av reiseregningsapper og kjørebøker forventer å få bompenger og ferj
 
 <a href="../apper" type="button">Hvem benytter APIet?</a>
 
-### <br>
+<br>
 
 ### Hvorfor velge vårt API?
 
@@ -24,7 +24,7 @@ Som leverandør av kjørebok, reiseregningssystem eller bildelingstjeneste er du
 
 <a href="https://dibkunnskapapi.developer.azure-api.net/" type="button">Test ut APIet her</a>
 
-### <br>
+<br>
 
 ### Spørsmål og priser
 
