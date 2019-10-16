@@ -2,8 +2,8 @@
 templateKey: apper-page
 title: Apper og kjørebøker
 description: >-
-  Her finner du et utvalg apper og kjørebøker som har integrert vårt API med
-  bompenger og ferjepriser.
+  Hvis du bruker en av appene under, er du heldig. Da får du nemlig også
+  bompenger og ferjepriser med på reiseregningen.
 apps:
   - heading: Simployer - Reise & utlegg
     image: /img/simployer_logo.png
@@ -13,8 +13,8 @@ apps:
       ferjepriser med vårt API. 
 
 
-      <a href="https://www.simployer.no/hrm/reise-utlegg/" type="button">Les
-      mer</a>
+      <a href="https://www.simployer.no/hrm/reise-utlegg/" type="button">Gå til
+      nettside</a>
   - heading: Sonya
     image: /img/sonya-logo.png
     text: >-
@@ -22,7 +22,7 @@ apps:
       for hver eneste bompassering.
 
 
-      <a href="https://sonya.com/" type="button">Les mer</a>
+      <a href="https://sonya.com/" type="button">Gå til nettside</a>
   - heading: Automile
     image: /img/automile_logo.png
     text: >-
@@ -31,7 +31,7 @@ apps:
       bompenger og ferjepriser.
 
 
-      <a href="https://https://automile.no/" type="button">Les mer</a>
+      <a href="https://automile.no/" type="button">Gå til nettside</a>
   - heading: TickTack - OnTheWay
     image: /img/ticktacklogo-main-black.png
     text: >-
@@ -39,6 +39,7 @@ apps:
       integrert beregning av bompenger og ferjepriser på kjøreruten.
 
 
-      <a href="https://www.ticktack.no/ontheway/" type="button">Les mer</a>
+      <a href="https://www.ticktack.no/ontheway/" type="button">Gå til
+      nettside</a>
 ---
 

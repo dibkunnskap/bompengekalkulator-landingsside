@@ -3,24 +3,28 @@ templateKey: index-page
 heading: Hele Norges bompengekalkulator
 image: /img/header-photo-twitter.png
 mainText: >-
-    ## Mest oppdatert
+  ## Mest oppdatert
 
 
-    bompengekalkulator.no er Norges mest oppdaterte kalkulator for beregning av
-    bompenger og ferjepriser. Hvis du har en app eller kjørebok som får levert
-    data fra bompengekalkulator.no vil føring av reiseregninger og utlegg gå som
-    en lek.
-
+  bompengekalkulator.no er Norges mest oppdaterte kalkulator for beregning av
+  bompenger og ferjepriser. Kalkulatoren forsyner også andre apper og kjørebøker
+  med oppdaterte data.
 secondaryText: >-
-    ## Hvorfor er det gratis å bruke bompengekalkulator.no?
+  ## Historien bak
 
 
-    Der andre løsninger bruker utdaterte offentlige data, holder vi bompriser og bomstasjoner oppdatert gjennom tilbakemeldinger fra våre 4000+ daglige brukere. Dere som er ute hver dag og kjører. Det gjør at vi kan tilby dataene våre til leverandører av reiseregningsapper og kjørebøker. Og slik finansieres hele Norges bompengekalkulator.
+  I 2014 lagde [DIBkunnskap](https://dib.no) Norges første bompengekalkulator
+  fordi det ble stadig vanskeligere å vite akkurat hvor mye bilturen kostet. De
+  senere årene har bompengesystemet blitt enda mer komplisert. Derfor lanserte
+  vi en ny versjon av kalkulatoren i juni 2019 som hensyntar, timesregler,
+  brikkerabatter, drivstofftyper, rushtid og i tillegg tar med ferjeprisen i
+  regnestykket.
+
+
+  Vi er eneste aktør som har god oversikt over "bom-Norge", derfor deler vi
+  dataene med andre apper og kjørebøker slik at det blir enda enklere å føre
+  reiseregning. Det er tross alt ikke særlig gøy.
 features:
-    blurbs:
-        - heading: Bompenger er fantastisk fint
-          image: /img/daglig-oppdatert.png
-          text: >-
-              Alle elsker å betale bompenger. Derfor er bompengekalkulator.no helt
-              strålende
+  blurbs: []
 ---
+
