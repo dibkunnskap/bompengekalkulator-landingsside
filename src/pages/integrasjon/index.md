@@ -12,7 +12,7 @@ title: Integrasjon
 
 ### Dine brukere forventer korrekte data
 
-Brukere av reiseregningsapper og kjørebøker forventer å få bompenger og ferjepriser med i beregningen av kjøreturen. Disse utgiftene utgjør en stadig større andel av totale reisekostnader
+Brukere av reiseregningsapper og kjørebøker forventer å få bompenger og ferjepriser med i beregningen av kjøreturen. Disse utgiftene utgjør en stadig større andel av totale reisekostnader.
 
 <a href="../apper" type="button">Hvem benytter APIet?</a>
 
