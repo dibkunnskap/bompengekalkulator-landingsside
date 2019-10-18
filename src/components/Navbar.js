@@ -119,7 +119,7 @@ const Navbar = ({path}) => {
                     </a>
                     <div className={classes.navMenu}>
                         <Link
-                            className={`${classes.navItem} ${path === "/" &&
+                            className={`${classes.navItem} ${(path === "/" || path === "") &&
                                 classes.navItemActive}`}
                             to="/"
                         >
