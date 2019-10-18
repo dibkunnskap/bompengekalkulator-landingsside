@@ -22,7 +22,9 @@ apps:
       kjøregodtgjørelse og korrekte satser for hver eneste bompassering.
 
 
-      <a href="https://sonya.com/" type="button">Gå til nettside</a>
+      <a
+      href="https://sonya.com/?utm_source=bompengekalkulator.no&utm_medium=about"
+      type="button">Gå til nettside</a>
   - heading: Automile
     image: /img/automile_logo.png
     text: >-
