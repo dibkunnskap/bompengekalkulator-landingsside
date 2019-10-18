@@ -13,13 +13,14 @@ const useStyles = createUseStyles(theme => ({
     nav: {
         width: "100%",
         paddingLeft: "5%",
-        maxWidth: "720px",
         margin: "0 auto",
         display: "flex",
         flexFlow: "column",
         position: "relative",
-        "@media (min-width: 900px)": {
+        "@media (min-width: 720px)": {
+            width: "90%",
             paddingLeft: "0%",
+            maxWidth: "720px"
         }
     },
     navTopRow: {
@@ -38,7 +39,7 @@ const useStyles = createUseStyles(theme => ({
     navMenu: {
         display: "flex",
         alignItems: "center",
-        "@media (max-width: 900px)": {
+        "@media (max-width: 720px)": {
             display: "none"
         }
     },
@@ -79,7 +80,7 @@ const useStyles = createUseStyles(theme => ({
         "&:focus": {
             outline: "none"
         },
-        "@media (min-width: 900px)": {
+        "@media (min-width: 720px)": {
             display: "none"
         }
     },
@@ -95,7 +96,7 @@ const useStyles = createUseStyles(theme => ({
                 backgroundColor: theme.palette["neutral-050"]
             }
         },
-        "@media (min-width: 900px)": {
+        "@media (min-width: 720px)": {
             display: "none"
         }
     }
