@@ -17,10 +17,15 @@ const useStyles = createUseStyles(theme => ({
         flexWrap: "wrap",
         alignItems: "center",
         width: "100%",
-        maxWidth: "720px"
+        maxWidth: "720px",
+        "& > *": {
+            flex: "1",
+            textAlign: "center"
+        }
     },
     links: {
         display: "flex",
+        justifyContent: "center",
         alignItems: "center",
         color: theme.palette["neutral-500"],
         "& a": {
@@ -41,7 +46,8 @@ const useStyles = createUseStyles(theme => ({
     contact: {
         color: theme.palette["neutral-500"],
         fontSize: theme.fontSize["16"],
-        margin: "0"
+        margin: "0",
+        whiteSpace: "nowrap"
     }
 }));
 
