@@ -106,6 +106,7 @@ const useStyles = createUseStyles(theme => ({
 const Navbar = ({path}) => {
     const [hamburgerOpen, setHambugerOpen] = useState(false);
     const classes = useStyles();
+    console.log(path)
     return (
         <div className={classes.root}>
             <nav
