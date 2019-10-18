@@ -14,7 +14,7 @@ export const useStyles = createUseStyles(theme => ({
         maxWidth: "720px",
         margin: `${theme.spacing["64"]} 0`,
         "& h1, h2, h3": {
-            color: theme.palette["primary-500"]
+            color: theme.palette["neutral-800"]
         }
     },
     date: {

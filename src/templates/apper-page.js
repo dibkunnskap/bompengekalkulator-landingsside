@@ -15,7 +15,7 @@ export const useStyles = createUseStyles(theme => ({
     },
     title: {
         /* textAlign: "center", */
-        color: theme.palette["primary-500"],
+        color: theme.palette["neutral-800"],
         margin: `${theme.spacing["64"]} 0`
     },
     content: {

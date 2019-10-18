@@ -18,7 +18,7 @@ const useStyles = createUseStyles(theme => ({
         alignItems: "center",
         width: "100%",
         maxWidth: "720px",
-        "& > *": {
+        "& > div": {
             flex: "1",
             textAlign: "center"
         }
@@ -56,12 +56,14 @@ const Footer = () => {
     return (
         <footer className={classes.footer}>
             <div className={classes.content}>
-                <a
-                    className={`${classes.link} ${classes.logo}`}
-                    href="https://bompengekalkulator.no"
-                >
-                    bompengekalkulator.no
-                </a>
+                <div>
+                    <a
+                        className={`${classes.link} ${classes.logo}`}
+                        href="https://bompengekalkulator.no"
+                    >
+                        bompengekalkulator.no
+                    </a>
+                </div>
                 <div className={classes.links}>
                     <Link className={classes.link} to="/">
                         Om
@@ -79,7 +81,9 @@ const Footer = () => {
                         Integrasjon
                     </Link>
                 </div>
-                <p className={classes.contact}>DIBkunnskap AS</p>
+                <div>
+                    <p className={classes.contact}>DIBkunnskap AS</p>
+                </div>
             </div>
         </footer>
     );

@@ -11,7 +11,7 @@ export const useStyles = createUseStyles(theme => ({
         width: "75%",
         maxWidth: "720px",
         "& h1, h2, h3": {
-            color: theme.palette["primary-500"]
+            color: theme.palette["neutral-800"]
         },
         '& a[type="button"]': {
             appearance: "none",

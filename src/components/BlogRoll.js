@@ -43,7 +43,7 @@ const useStyles = createUseStyles(theme => ({
     },
     postTitle: {
         margin: "0",
-        color: theme.palette["neutral-700"],
+        color: theme.palette["primary-500"],
         fontWeight: "700"
     },
     date: {

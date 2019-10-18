@@ -14,7 +14,7 @@ const useStyles = createUseStyles(theme => ({
         marginTop: theme.spacing["32"],
     },
     header: {
-        color: theme.palette["primary-500"],
+        color: theme.palette["neutral-800"],
         marginBottom: theme.spacing["32"],
     }
 }));

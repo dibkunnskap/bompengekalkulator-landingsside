@@ -43,10 +43,10 @@ export const useStyles = createUseStyles(theme => ({
         margin: `${theme.spacing["96"]} auto`,
         maxWidth: "720px",
         "& h2": {
-            color: theme.palette["primary-500"]
+            color: theme.palette["neutral-800"]
         },
         "& > div": {
-            margin: `${theme.spacing["128"]} 0`
+            margin: `${theme.spacing["96"]} 0`
         }
     },
     markdown: {
