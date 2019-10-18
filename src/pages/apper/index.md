@@ -33,7 +33,9 @@ apps:
       bompenger og fergepriser.
 
 
-      <a href="https://automile.no/" type="button">Gå til nettside</a>
+      <a
+      href="https://automile.no/?utm_source=bompengekalkulator.no&utm_medium=apper"
+      type="button">Gå til nettside</a>
   - heading: TickTack - OnTheWay
     image: /img/ticktacklogo-main-black.png
     text: >-
