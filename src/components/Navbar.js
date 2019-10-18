@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import {Link} from "gatsby";
 import {createUseStyles} from "react-jss";
-import Button from "./Button";
 import menuIcon from "../img/menu.svg";
 
 const useStyles = createUseStyles(theme => ({
@@ -13,13 +12,14 @@ const useStyles = createUseStyles(theme => ({
     },
     nav: {
         width: "100%",
+        paddingLeft: "5%",
         maxWidth: "720px",
         margin: "0 auto",
         display: "flex",
         flexFlow: "column",
         position: "relative",
         "@media (min-width: 900px)": {
-            width: "90%"
+            paddingLeft: "0%",
         }
     },
     navTopRow: {
@@ -33,9 +33,7 @@ const useStyles = createUseStyles(theme => ({
         fontSize: theme.fontSize["32"],
         color: theme.palette["primary-500"],
         textDecoration: "none",
-        "@media (max-width: 900px)": {
-            paddingLeft: theme.spacing["48"]
-        }
+        whiteSpace: "no-wrap",
     },
     navMenu: {
         display: "flex",
@@ -106,7 +104,6 @@ const useStyles = createUseStyles(theme => ({
 const Navbar = ({path}) => {
     const [hamburgerOpen, setHambugerOpen] = useState(false);
     const classes = useStyles();
-    console.log(path)
     return (
         <div className={classes.root}>
             <nav
@@ -120,7 +117,7 @@ const Navbar = ({path}) => {
                     </a>
                     <div className={classes.navMenu}>
                         <Link
-                            className={`${classes.navItem} ${(path === "/" || path === "") &&
+                            className={`${classes.navItem} ${path === "/" &&
                                 classes.navItemActive}`}
                             to="/"
                         >
