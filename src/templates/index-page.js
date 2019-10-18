@@ -10,9 +10,6 @@ import BlogRoll from "../components/BlogRoll";
 export const useStyles = createUseStyles(theme => ({
     root: {
         font: "inherit",
-        /* "& h2": {
-            color: theme.palette["primary-500"]
-        } */
     },
     image: {
         width: "100%",
@@ -42,7 +39,7 @@ export const useStyles = createUseStyles(theme => ({
         }
     },
     content: {
-        width: "75%",
+        width: "90%",
         margin: `${theme.spacing["96"]} auto`,
         maxWidth: "720px",
         "& h2": {
@@ -54,6 +51,9 @@ export const useStyles = createUseStyles(theme => ({
     },
     markdown: {
         color: theme.palette["neutral-800"],
+        "& a": {
+            color: theme.palette["primary-500"]
+        },
         "& h1": {
             color: "red"
         }
