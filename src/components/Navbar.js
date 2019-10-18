@@ -13,7 +13,7 @@ const useStyles = createUseStyles(theme => ({
     },
     nav: {
         width: "100%",
-        maxWidth: "1080px",
+        maxWidth: "720px",
         margin: "0 auto",
         display: "flex",
         flexFlow: "column",
@@ -114,9 +114,9 @@ const Navbar = ({path}) => {
                 aria-label="main-navigation"
             >
                 <div className={classes.navTopRow}>
-                    <Link className={classes.header} to="/">
+                    <a className={classes.header} href="https://bompengekalkulator.no">
                         Bompengekalkulator.no
-                    </Link>
+                    </a>
                     <div className={classes.navMenu}>
                         <Link
                             className={`${classes.navItem} ${path === "/" &&
@@ -147,11 +147,6 @@ const Navbar = ({path}) => {
                         >
                             Integrasjon
                         </Link>
-                        <a href="http://bompengekalkulator.no">
-                            <Button className={classes.navButton}>
-                                Beregn bompenger
-                            </Button>
-                        </a>
                     </div>
                     <button
                         className={classes.hamburgerButton}

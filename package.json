@@ -1,14 +1,14 @@
 {
   "name": "bompengekalkulator-landingsside",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "Bompengekalkulator landingsside",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "gatsby build",
+    "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
   },
