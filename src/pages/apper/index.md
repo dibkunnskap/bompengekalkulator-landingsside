@@ -18,17 +18,19 @@ apps:
   - heading: Sonya
     image: /img/sonya-logo.png
     text: >-
-      Kjørebok/app som beregner kjøregodtgjørelse automatisk og korrekte satser
-      for hver eneste bompassering.
+      App for utlegg og reiseregninger med automatisk utregning av diett og
+      kjøregodtgjørelse og korrekte satser for hver eneste bompassering.
 
 
-      <a href="https://sonya.com/" type="button">Gå til nettside</a>
+      <a
+      href="https://sonya.com/?utm_source=bompengekalkulator.no&utm_medium=about"
+      type="button">Gå til nettside</a>
   - heading: Automile
     image: /img/automile_logo.png
     text: >-
-      Avansert elektronisk kjørebok med blant annet integrert
-      reiseregningsfunksjonalitet og selvfølgelig automatisk beregning av
-      bompenger og ferjepriser.
+      Leverandør av avansert elektronisk kjørebok og sporsender, med blant annet
+      integrert funksjonalitet for reiseregning og automatisk beregning av
+      bompenger og fergepriser.
 
 
       <a href="https://automile.no/" type="button">Gå til nettside</a>
