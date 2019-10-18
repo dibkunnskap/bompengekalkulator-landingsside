@@ -24,8 +24,7 @@ const useStyles = createUseStyles(theme => ({
     },
     blogBox: {
         padding: theme.spacing["32"],
-        width: "calc(50% - 16px)",
-        minWidth: "320px",
+        maxWidth: "calc(50% - 16px)",
         backgroundColor: "white",
         border: `1px solid ${theme.palette["neutral-050"]}`,
         boxShadow:
@@ -34,7 +33,10 @@ const useStyles = createUseStyles(theme => ({
         display: "flex",
         flexFlow: "column",
         justifyContent: "space-between",
-        margin: theme.spacing["8"]
+        margin: theme.spacing["8"],
+        "@media (max-width: 720px)": {
+            maxWidth: "calc(100% - 16px)",
+        }
     },
     link: {
         textDecoration: "none"
