@@ -11,6 +11,8 @@ Det er egentlig bare to bompengekalkulatorer i Norge: Fjellinjen sin og bompenge
 
 Siden dette ikke er en uavhengig test har vi kun sett på objektive kriterier, nemlig om kalkulatoren gir korrekt beregning eller ikke på en kjørerute. I tabellene under er kun avvikene gjengitt.
 
+<br>
+
 **Fra Arendal til Moss med bensindrevet bil:**
 
 | Avvikene            | bompengekalkulator.no | Fjellinjen      |
@@ -19,6 +21,8 @@ Siden dette ikke er en uavhengig test har vi kun sett på objektive kriterier, n
 | E18 Mørland         | kr 24,00              | Mangler         |
 | E18 Stølen          | kr 11,20              | Mangler         |
 | Ferje Horten - Moss | kr 184,50             | Mangler         |
+
+<br>
 
 **Fra Kristiansund til Bergen med dieseldrevet bil:**
 
@@ -34,11 +38,16 @@ Siden dette ikke er en uavhengig test har vi kun sett på objektive kriterier, n
 
 Her var det ingen avvik mellom kalkulatorene. Begge oppgir riktig pris på 16 kr.
 
+<br>
+
 ## Konklusjon
 
 Kjører du kun i Oslo og Bærum kan du trygt benytte Fjellinjens kalkulator, men på andre kjøreruter i Norge er ikke takstene nødvendigvis oppdatert, den viser at du passerer bommer du ikke passerer, tar ikke hensyn til timesregler, og tar ikke hensyn til andre brikkerabatter enn 20%.
 
+<br>
+
 ## Funksjonalitet
+
 Under ser du en sammenligning i funksjonalitet mellom kalkulatorene.
 
 | Funksjonalitet            | Fjellinjen             | bompengekalkulator.no |
