@@ -29,7 +29,7 @@ apps:
     image: /img/automile_logo.png
     text: >-
       Leverandør av avansert elektronisk kjørebok og sporsender, med blant annet
-      integrert funksjonalitet for reiseregning, automatisk beregning av
+      integrert funksjonalitet for reiseregning og automatisk beregning av
       bompenger og fergepriser.
 
 
