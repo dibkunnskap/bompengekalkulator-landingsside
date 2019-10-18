@@ -28,9 +28,9 @@ apps:
   - heading: Automile
     image: /img/automile_logo.png
     text: >-
-      Avansert elektronisk kjørebok med blant annet integrert
-      reiseregningsfunksjonalitet og selvfølgelig automatisk beregning av
-      bompenger og ferjepriser.
+      Leverandør av avansert elektronisk kjørebok og sporsender, med blant annet
+      integrert funksjonalitet for reiseregning, automatisk beregning av
+      bompenger og fergepriser.
 
 
       <a href="https://automile.no/" type="button">Gå til nettside</a>
