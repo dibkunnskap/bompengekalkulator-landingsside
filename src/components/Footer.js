@@ -14,8 +14,10 @@ const useStyles = createUseStyles(theme => ({
     content: {
         display: "flex",
         justifyContent: "space-between",
+        flexWrap: "wrap",
         alignItems: "center",
-        width: "720px"
+        width: "100%",
+        maxWidth: "720px"
     },
     links: {
         display: "flex",
@@ -55,14 +57,18 @@ const Footer = () => {
                     bompengekalkulator.no
                 </a>
                 <div className={classes.links}>
+                    <Link className={classes.link} to="/">
+                        Om
+                    </Link>
+                    |
                     <Link className={classes.link} to="/blogg">
                         Blogg
                     </Link>
-                        |
+                    |
                     <Link className={classes.link} to="/apper">
                         Apper
                     </Link>
-                        |
+                    |
                     <Link className={classes.link} to="/integrasjon">
                         Integrasjon
                     </Link>
