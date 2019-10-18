@@ -18,8 +18,8 @@ apps:
   - heading: Sonya
     image: /img/sonya-logo.png
     text: >-
-      Kjørebok/app som beregner kjøregodtgjørelse automatisk og korrekte satser
-      for hver eneste bompassering.
+      App for utlegg og reiseregninger med automatisk utregning av diett og
+      kjøregodtgjørelse og korrekte satser for hver eneste bompassering.
 
 
       <a href="https://sonya.com/" type="button">Gå til nettside</a>
