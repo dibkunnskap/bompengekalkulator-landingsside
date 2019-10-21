@@ -10,7 +10,7 @@ export const useStyles = createUseStyles(theme => ({
         justifyContent: "center"
     },
     blogPost: {
-        width: "75%",
+        width: "90%",
         maxWidth: "720px",
         margin: `${theme.spacing["64"]} 0`,
         "& h1, h2, h3": {
