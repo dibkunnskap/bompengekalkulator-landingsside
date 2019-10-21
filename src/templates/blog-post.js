@@ -15,6 +15,11 @@ export const useStyles = createUseStyles(theme => ({
         margin: `${theme.spacing["64"]} 0`,
         "& h1, h2, h3": {
             color: theme.palette["neutral-800"]
+        },
+        "& table": {
+            "@media (max-width: 500px)": {
+                fontSize: "3.5vw"
+            }
         }
     },
     date: {
