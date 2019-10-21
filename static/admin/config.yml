@@ -22,6 +22,7 @@ collections:
       folder: "src/pages"
       create: true
       slug: "{{slug}}"
+      identifier_field: slug
       fields:
         - {label: "Template Key", name: "templateKey", widget: "hidden", default: "extra-page"}
         - {label: "Slug", name: "slug", widget: "string"}
