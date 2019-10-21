@@ -19,8 +19,10 @@ const useStyles = createUseStyles(theme => ({
         width: "100%",
         maxWidth: "720px",
         "& > div": {
-            flex: "1",
-            textAlign: "center"
+            "@media (max-width: 720px)": {
+                flex: "1",
+                textAlign: "center"
+            }
         }
     },
     links: {
@@ -65,7 +67,6 @@ const useStyles = createUseStyles(theme => ({
 
 const Footer = () => {
     const classes = useStyles();
-    const openIntercom = () => window.Intercom("showNewMessage");
 
     return (
         <footer className={classes.footer}>
@@ -79,14 +80,10 @@ const Footer = () => {
                     </a>
                 </div>
                 <div className={classes.links}>
-                    <Link to="/">Om</Link>|
-                    <Link to="/blogg">Blogg</Link>|
+                    <Link to="/">Om</Link>|<Link to="/blogg">Blogg</Link>|
                     <Link to="/apper">Apper</Link>|
                     <Link to="/integrasjon">Integrasjon</Link>
                 </div>
-                <button className={classes.button} type="button" onClick={openIntercom}>
-                    Tilbakemelding
-                </button>
                 <div>
                     <p className={classes.contact}>DIBkunnskap AS</p>
                 </div>
