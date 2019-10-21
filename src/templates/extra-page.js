@@ -32,55 +32,43 @@ export const useStyles = createUseStyles(theme => ({
     }
 }));
 
-export const BlogPostTemplate = ({title, date, content, contentComponent}) => {
+export const ExtraPageTemplate = ({title, content, contentComponent}) => {
     const classes = useStyles();
     const PostContent = contentComponent || Content;
-    let formattedDate = null;
-    if (date) {
-        formattedDate = date.toLocaleDateString("nb-NO", {
-            year: "numeric",
-            month: "long",
-            day: "numeric"
-        });
-    }
 
     return (
         <div className={classes.wrapper}>
             <div className={classes.blogPost}>
                 <h1>{title}</h1>
-                <p className={classes.date}>{formattedDate}</p>
                 <PostContent content={content} />
             </div>
         </div>
     );
 };
 
-const BlogPost = ({path, data}) => {
+const ExtraPage = ({path, data}) => {
     const {markdownRemark: post} = data;
-    const date = new Date(post.frontmatter.date);
 
     return (
         <Layout path={path}>
-            <BlogPostTemplate
+            <ExtraPageTemplate
                 content={post.html}
                 contentComponent={HTMLContent}
                 title={post.frontmatter.title}
-                date={date}
             />
         </Layout>
     );
 };
 
-export default BlogPost;
+export default ExtraPage;
 
 export const pageQuery = graphql`
-    query BlogPostByID($id: String!) {
+    query ExtraPageByID($id: String!) {
         markdownRemark(id: {eq: $id}) {
             id
             html
             frontmatter {
                 title
-                date
             }
         }
     }
