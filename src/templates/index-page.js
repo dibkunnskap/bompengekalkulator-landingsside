@@ -1,16 +1,15 @@
 import React from "react";
-import PropTypes from "prop-types";
+/* import PropTypes from "prop-types"; */
 import {Link, graphql} from "gatsby";
 import {createUseStyles} from "react-jss";
 import Layout from "../components/Layout";
 import Content, {HTMLContent} from "../components/Content";
-import BackgroundImage from "gatsby-background-image";
 import Button from "../components/Button";
 import BlogRoll from "../components/BlogRoll";
 
 export const useStyles = createUseStyles(theme => ({
     root: {
-        font: "inherit"
+        font: "inherit",
     },
     image: {
         width: "100%",
@@ -63,7 +62,7 @@ export const useStyles = createUseStyles(theme => ({
         display: "flex",
         justifyContent: "space-evenly",
         "& button": {
-            marginTop: theme.spacing["48"]
+            marginTop: theme.spacing["48"],
         }
     }
 }));
@@ -75,14 +74,20 @@ export const IndexPageTemplate = props => {
 
     return (
         <div className={classes.root}>
-            <BackgroundImage
+            <div
                 className={classes.image}
-                fluid={image.childImageSharp.fluid}
+                style={{
+                    backgroundImage: `url(${
+                        !!image.childImageSharp
+                            ? image.childImageSharp.fluid.src
+                            : image
+                    })`
+                }}
             >
                 <div className={classes.title}>
                     <h1 className={classes.heading}>{heading}</h1>
                 </div>
-            </BackgroundImage>
+            </div>
             <div className={classes.content}>
                 <div>
                     <PageContent
@@ -90,12 +95,8 @@ export const IndexPageTemplate = props => {
                         content={mainText}
                     />
                     <div className={classes.buttonRow}>
-                        <Link to="/integrasjon">
-                            <Button>Integrasjon/API</Button>
-                        </Link>
-                        <Link to="/apper">
-                            <Button>Apper/kjørebøker</Button>
-                        </Link>
+                        <Link to="/integrasjon"><Button>Integrasjon/API</Button></Link>
+                        <Link to="/apper"><Button>Apper/kjørebøker</Button></Link>
                     </div>
                 </div>
                 <BlogRoll
@@ -117,14 +118,10 @@ export const IndexPageTemplate = props => {
     );
 };
 
-IndexPageTemplate.propTypes = {
+/* IndexPageTemplate.propTypes = {
     heading: PropTypes.string,
-    image: PropTypes.object,
-    contentComponent: PropTypes.func,
-    BackgroundImage: PropTypes.string,
-    mainText: PropTypes.string,
-    secondaryText: PropTypes.string
-};
+    image: PropTypes.string
+}; */
 
 const IndexPage = ({path, data}) => {
     const {frontmatter} = data.markdownRemark;
@@ -152,8 +149,8 @@ export const pageQuery = graphql`
                 heading
                 image {
                     childImageSharp {
-                        fluid(maxWidth: 2048, quality: 90) {
-                            ...GatsbyImageSharpFluid_noBase64
+                        fluid(maxWidth: 2048, quality: 100) {
+                            ...GatsbyImageSharpFluid
                         }
                     }
                 }
