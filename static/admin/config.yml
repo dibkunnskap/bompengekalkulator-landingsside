@@ -17,7 +17,7 @@ collections:
         - {label: "Featured Post", name: "featuredpost", widget: "boolean", default: false}
         - {label: "Body", name: "body", widget: "markdown"}
         
-    - name: "extraPage"
+    - name: "side"
       label: "Side"
       folder: "src/pages"
       create: true
@@ -25,9 +25,6 @@ collections:
       fields:
         - {label: "Template Key", name: "templateKey", widget: "hidden", default: "extra-page"}
         - {label: "Title", name: "title", widget: "string"}
-        - {label: "Publish Date", name: "date", widget: "datetime"}
-        - {label: "Description", name: "description", widget: "text"}
-        - {label: "Featured Post", name: "featuredpost", widget: "boolean", default: false}
         - {label: "Body", name: "body", widget: "markdown"}
 
     - name: "pages"
