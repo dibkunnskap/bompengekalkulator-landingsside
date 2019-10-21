@@ -65,7 +65,6 @@ const useStyles = createUseStyles(theme => ({
 
 const Footer = () => {
     const classes = useStyles();
-
     const openIntercom = () => window.Intercom("showNewMessage");
 
     return (
