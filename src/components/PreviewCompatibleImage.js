@@ -9,14 +9,14 @@ const useStyles = createUseStyles({
     }
 });
 
-const PreviewCompatibleImage = ({imageInfo}) => {
+const PreviewCompatibleImage = ({className, imageInfo}) => {
     const classes = useStyles();
     const {alt = "", childImageSharp, image} = imageInfo;
 
     if (!!image && !!image.childImageSharp) {
         return (
             <Img
-                className={classes.img}
+                className={`${classes.img} ${className}`}
                 fluid={image.childImageSharp.fluid}
                 alt={alt}
             />
@@ -26,7 +26,7 @@ const PreviewCompatibleImage = ({imageInfo}) => {
     if (!!childImageSharp) {
         return (
             <Img
-                className={classes.img}
+                className={`${classes.img} ${className}`}
                 fluid={childImageSharp.fluid}
                 alt={alt}
             />
@@ -34,11 +34,12 @@ const PreviewCompatibleImage = ({imageInfo}) => {
     }
 
     if (!!image && typeof image === "string")
-        return <img className={classes.img} src={image} alt={alt} />;
+        return <img className={`${classes.img} ${className}`} src={image} alt={alt} />;
     return null;
 };
 
 PreviewCompatibleImage.propTypes = {
+    className: PropTypes.string,
     imageInfo: PropTypes.shape({
         alt: PropTypes.string,
         childImageSharp: PropTypes.object,
