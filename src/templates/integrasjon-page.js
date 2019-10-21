@@ -8,7 +8,7 @@ import Content, {HTMLContent} from "../components/Content";
 export const useStyles = createUseStyles(theme => ({
     root: {
         margin: "0 auto",
-        width: "75%",
+        width: "90%",
         maxWidth: "720px",
         "& h1, h2, h3": {
             color: theme.palette["neutral-800"]
