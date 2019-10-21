@@ -1,5 +1,6 @@
 ---
 templateKey: index-page
+title: Index.md -- IKKE SLETT
 heading: Hele Norges bompengekalkulator
 image: /img/header-photo-twitter.png
 mainText: >-

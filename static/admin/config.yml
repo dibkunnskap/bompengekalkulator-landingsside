@@ -42,6 +42,7 @@ collections:
                       widget: "hidden",
                       default: "index-page",
                   }
+                - {label: Title, name: title, widget: string}
                 - {label: Header, name: heading, widget: string}
                 - {label: Bilde, name: image, widget: image}
                 - {label: Hovedtekst, name: mainText, widget: markdown}
