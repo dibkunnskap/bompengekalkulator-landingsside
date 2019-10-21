@@ -17,8 +17,13 @@ export const useStyles = createUseStyles(theme => ({
             color: theme.palette["neutral-800"]
         },
         "& table": {
-            "@media (max-width: 500px)": {
-                fontSize: "3.5vw"
+            maxWidth: "100vw",
+            "@media (max-width: 600px)": {
+                fontSize: "3vw",
+                "& td": {
+                    paddingLeft: "2vw",
+                    paddingRight: "2vw"
+                }
             }
         }
     },
