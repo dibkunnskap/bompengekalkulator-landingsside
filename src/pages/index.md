@@ -3,6 +3,7 @@ templateKey: index-page
 slug: index.md -- IKKE SLETT!
 heading: Hele Norges bompengekalkulator
 image: /img/header-photo-twitter.png
+delete: false
 mainText: >-
   ## Mest oppdatert
 
