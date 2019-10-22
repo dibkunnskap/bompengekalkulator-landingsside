@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
-title: Hele Norges bompengekalkulator
+slug: index.md -- IKKE SLETT!
 heading: Hele Norges bompengekalkulator
 image: /img/header-photo-twitter.png
 mainText: >-
@@ -25,7 +25,5 @@ secondaryText: >-
   Vi er eneste aktør som har god oversikt over "bom-Norge", derfor deler vi
   dataene med andre apper og kjørebøker slik at det blir enda enklere å føre
   reiseregning. Det er tross alt ikke særlig gøy.
-features:
-  blurbs: []
 ---
 
