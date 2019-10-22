@@ -1,19 +1,21 @@
 import Typography from "typography";
+import theme from "../config/theme";
+
 const typography = new Typography({
-    baseFontSize: "18px",
-    baseLineHeight: 1.666,
+    baseFontSize: theme.font.fontSize,
+    baseLineHeight: theme.font.lineHeight,
     googleFonts: [
         {
             name: "Caveat Brush",
             styles: []
         },
         {
-            name: "Palanquin",
+            name: theme.font.fontName,
             styles: []
         }
     ],
-    headerFontFamily: ["Palanquin", "sans-serif"],
-    bodyFontFamily: ["Palanquin", "sans-serif"],
-
+    headerFontFamily: theme.font.fontFamily,
+    bodyFontFamily: theme.font.fontFamily
 });
+
 export default typography;
