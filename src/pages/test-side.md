@@ -1,6 +1,6 @@
 ---
 templateKey: extra-page
-slug: docs
+slug: /docs
 title: API documentation
 ---
 
