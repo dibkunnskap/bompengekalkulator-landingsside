@@ -4,13 +4,15 @@ import {Link, graphql} from "gatsby";
 import {createUseStyles} from "react-jss";
 import Layout from "../components/Layout";
 import Content, {HTMLContent} from "../components/Content";
-import BackgroundImage from "gatsby-background-image";
+import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 import Button from "../components/Button";
 import BlogRoll from "../components/BlogRoll";
 
 export const useStyles = createUseStyles(theme => ({
     root: {
-        font: "inherit"
+        fontFamily: theme.font.fontFamily,
+        fontSize: theme.font.fontSize,
+        lineHeight: theme.font.lineHeight
     },
     image: {
         width: "100%",
@@ -75,14 +77,15 @@ export const IndexPageTemplate = props => {
 
     return (
         <div className={classes.root}>
-            <BackgroundImage
+            <PreviewCompatibleImage
                 className={classes.image}
-                fluid={image.childImageSharp.fluid}
+                imageInfo={image}
+                type="background"
             >
                 <div className={classes.title}>
                     <h1 className={classes.heading}>{heading}</h1>
                 </div>
-            </BackgroundImage>
+            </PreviewCompatibleImage>
             <div className={classes.content}>
                 <div>
                     <PageContent
