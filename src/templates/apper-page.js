@@ -8,9 +8,10 @@ import FeatureGrid from "../components/FeatureGrid";
 
 export const useStyles = createUseStyles(theme => ({
     root: {
-        /* fontFamily: theme.font.fontFamily,
+        font: "inherit",
+        fontFamily: theme.font.fontFamily,
         fontSize: theme.font.fontSize,
-        lineHeight: theme.font.lineHeight, */
+        lineHeight: theme.font.lineHeight,
         margin: "0 auto",
         width: "90%",
         maxWidth: "720px"

@@ -5,9 +5,12 @@ import Layout from "../components/Layout";
 import Content, {HTMLContent} from "../components/Content";
 
 export const useStyles = createUseStyles(theme => ({
-    wrapper: {
+    root: {
         display: "flex",
-        justifyContent: "center"
+        justifyContent: "center",
+        fontFamily: theme.font.fontFamily,
+        fontSize: theme.font.fontSize,
+        lineHeight: theme.font.lineHeight
     },
     blogPost: {
         width: "90%",
@@ -29,6 +32,24 @@ export const useStyles = createUseStyles(theme => ({
     },
     date: {
         color: theme.palette["neutral-400"]
+    },
+    content: {
+        "& a": {
+            color: theme.palette["primary-500"],
+        },
+        "& li": {
+            marginBottom: "0",
+            "& p": {
+                marginBottom: "0",
+            }
+        },
+        "& ul": {
+            marginTop: "0"
+        },
+        "& pre": {
+            padding: `${theme.spacing["4"]} ${theme.spacing["12"]}`,
+            backgroundColor: theme.palette["neutral-050"]
+        }
     }
 }));
 
@@ -37,10 +58,10 @@ export const ExtraPageTemplate = ({title, content, contentComponent}) => {
     const PostContent = contentComponent || Content;
 
     return (
-        <div className={classes.wrapper}>
+        <div className={classes.root}>
             <div className={classes.blogPost}>
                 <h1>{title}</h1>
-                <PostContent content={content} />
+                <PostContent className={classes.content} content={content} />
             </div>
         </div>
     );

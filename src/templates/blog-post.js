@@ -5,9 +5,12 @@ import Layout from "../components/Layout";
 import Content, {HTMLContent} from "../components/Content";
 
 export const useStyles = createUseStyles(theme => ({
-    wrapper: {
+    root: {
         display: "flex",
-        justifyContent: "center"
+        justifyContent: "center",
+        fontFamily: theme.font.fontFamily,
+        fontSize: theme.font.fontSize,
+        lineHeight: theme.font.lineHeight
     },
     blogPost: {
         width: "90%",
@@ -45,7 +48,7 @@ export const BlogPostTemplate = ({title, date, content, contentComponent}) => {
     }
 
     return (
-        <div className={classes.wrapper}>
+        <div className={classes.root}>
             <div className={classes.blogPost}>
                 <h1>{title}</h1>
                 <p className={classes.date}>{formattedDate}</p>
