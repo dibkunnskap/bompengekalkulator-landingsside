@@ -4,6 +4,8 @@ import {create} from "jss";
 import {JssProvider, ThemeProvider} from "react-jss";
 import preset from "jss-preset-default";
 import theme from "../config/theme";
+import typography from "../utils/typography";
+import {TypographyStyle} from "react-typography";
 
 const JssWrapper = ({children}) => {
     const [jss, setJss] = useState(null);
@@ -20,6 +22,7 @@ const JssWrapper = ({children}) => {
 
     return (
         <root.div>
+            <TypographyStyle typography={typography} />
             <style ref={setRefAndCreateJss} />
             {jss && (
                 <JssProvider jss={jss}>
