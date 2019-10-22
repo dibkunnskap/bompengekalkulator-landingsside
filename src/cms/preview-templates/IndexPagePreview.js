@@ -16,7 +16,7 @@ const IndexPagePreview = ({entry}) => {
                 <IndexPageTemplate
                     contentComponent={HTMLContent}
                     heading={data.heading}
-                    image={data.image}
+                    image={{image: data.image}}
                     mainText={mainText}
                     secondaryText={secondaryText}
                 />
