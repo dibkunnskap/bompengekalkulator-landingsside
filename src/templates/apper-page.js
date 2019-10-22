@@ -8,18 +8,19 @@ import FeatureGrid from "../components/FeatureGrid";
 
 export const useStyles = createUseStyles(theme => ({
     root: {
-        font: "inherit",
+        /* fontFamily: theme.font.fontFamily,
+        fontSize: theme.font.fontSize,
+        lineHeight: theme.font.lineHeight, */
         margin: "0 auto",
         width: "90%",
-        maxWidth: "720px",
+        maxWidth: "720px"
     },
     title: {
-        /* textAlign: "center", */
         color: theme.palette["neutral-800"],
         margin: `${theme.spacing["64"]} 0`
     },
     content: {
-        "& a[type=\"button\"]": {
+        '& a[type="button"]': {
             appearance: "none",
             border: "1px solid",
             borderColor: theme.palette["primary-500"],
@@ -27,11 +28,12 @@ export const useStyles = createUseStyles(theme => ({
             color: theme.palette["primary-500"],
             padding: `0 ${theme.spacing[16]}`,
             width: "fit-content",
-            textDecoration: "none"
+            textDecoration: "none",
+            whiteSpace: "nowrap"
         }
     },
     description: {
-        margin: "0 auto",
+        margin: "0 auto"
         /* textAlign: "center", */
         /* fontWeight: "700", */
         /* color: theme.palette["neutral-700"] */

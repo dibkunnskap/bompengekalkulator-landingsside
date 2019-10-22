@@ -10,6 +10,9 @@ export const useStyles = createUseStyles(theme => ({
         margin: "0 auto",
         width: "90%",
         maxWidth: "720px",
+        fontFamily: theme.font.fontFamily,
+        fontSize: theme.font.fontSize,
+        lineHeight: theme.font.lineHeight,
         "& h1, h2, h3": {
             color: theme.palette["neutral-800"]
         },
@@ -21,7 +24,8 @@ export const useStyles = createUseStyles(theme => ({
             color: theme.palette["primary-500"],
             padding: `0 ${theme.spacing[16]}`,
             width: "fit-content",
-            textDecoration: "none"
+            textDecoration: "none",
+            whiteSpace: "nowrap",
         }
     },
     title: {
