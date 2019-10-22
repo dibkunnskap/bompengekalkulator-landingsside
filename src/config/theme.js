@@ -1,4 +1,10 @@
 export default {
+    font: {
+        fontName: "Palanquin",
+        fontFamily: ["Palanquin", "sans-serif"],
+        fontSize: "18px",
+        lineHeight: "1.666"
+    },
     palette: {
         "primary-050": "#E0FCFF",
         "primary-100": "hsl(185, 100%, 90%)",
