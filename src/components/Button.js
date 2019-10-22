@@ -11,6 +11,8 @@ const useStyles = createUseStyles(theme => ({
         color: theme.palette["primary-500"],
         padding: `${theme.spacing[4]} ${theme.spacing[16]}`,
         width: "fit-content",
+        font: "inherit",
+        lineHeight: theme.font.lineHeight,
         "&:hover": {
             cursor: "pointer"
         },
