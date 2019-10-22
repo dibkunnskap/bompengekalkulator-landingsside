@@ -3,15 +3,12 @@ templateKey: extra-page
 slug: docs
 title: API documentation
 ---
-
-# TABLE OF CONTENTS
-
-+ METHODS
++ [Methods](#Methods)
   - [GetFeesByWaypointList](#GetFeesByWaypointList)
   - [GetFeesByWaypoints](#GetFeesByWaypoints)
-  - [FindRouteDescriptions] (#FindRouteDescriptions)
+  - [FindRouteDescriptions](#FindRouteDescriptions)
 
-+ REQUEST
++ [Request](#Request)
    - [Waypointlist](#Waypointlist)
    - [Fra](#Fra)
    - [Til](#Til)
@@ -25,11 +22,11 @@ title: API documentation
    - [Retur](#Retur)
    - [Tidsreferanser](#Tidsreferanser)
 
-+ RESPONSE
++ [Response](#Response)
 
 
 
-# METHODS
+# Methods <a name="Methods"></a>
 
 ## GetFeesByWaypointList <a name="GetFeesByWaypointList"></a>
 
@@ -123,7 +120,7 @@ You can use this method if you do not have any geocoordinates, and only Places/I
 
 
 
-# POST PARAMETERS
+# Request <a name="Request"></a>
 
 ## Waypointlist <a name="Waypointlist"></a>
 
@@ -244,4 +241,4 @@ This parameter, typically set to 1 has the following values:
 "Tidsreferanser":"1"
 ```
 
-# 
+# Response <a name="Response"></a>
