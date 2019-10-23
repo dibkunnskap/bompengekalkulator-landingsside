@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import {Link} from "gatsby";
 import {createUseStyles} from "react-jss";
 import menuIcon from "../img/menu.svg";
@@ -34,7 +34,7 @@ const useStyles = createUseStyles(theme => ({
         fontSize: theme.fontSize["32"],
         color: theme.palette["primary-500"],
         textDecoration: "none",
-        whiteSpace: "no-wrap",
+        whiteSpace: "no-wrap"
     },
     navMenu: {
         display: "flex",
@@ -103,8 +103,14 @@ const useStyles = createUseStyles(theme => ({
 }));
 
 const Navbar = ({path}) => {
+    const [currentPath, setCurrentPath] = useState("/");
     const [hamburgerOpen, setHambugerOpen] = useState(false);
     const classes = useStyles();
+
+    useEffect(() => {
+        setCurrentPath(path);
+    }, [path, setCurrentPath]);
+
     return (
         <div className={classes.root}>
             <nav
@@ -113,34 +119,38 @@ const Navbar = ({path}) => {
                 aria-label="main-navigation"
             >
                 <div className={classes.navTopRow}>
-                    <a className={classes.header} href="https://bompengekalkulator.no">
+                    <a
+                        className={classes.header}
+                        href="https://bompengekalkulator.no"
+                    >
                         Bompengekalkulator.no
                     </a>
                     <div className={classes.navMenu}>
                         <Link
-                            className={`${classes.navItem} ${path === "/" &&
-                                classes.navItemActive}`}
+                            className={`${classes.navItem} ${currentPath ===
+                                "/" && classes.navItemActive}`}
                             to="/"
                         >
                             Om
                         </Link>
                         <Link
-                            className={`${classes.navItem} ${path.includes(
-                                "/blogg"
-                            ) && classes.navItemActive}`}
+                            className={`${
+                                classes.navItem
+                            } ${currentPath.includes("/blogg") &&
+                                classes.navItemActive}`}
                             to="/blogg"
                         >
                             Blogg
                         </Link>
                         <Link
-                            className={`${classes.navItem} ${path ===
+                            className={`${classes.navItem} ${currentPath ===
                                 "/apper/" && classes.navItemActive}`}
                             to="/apper"
                         >
                             Apper
                         </Link>
                         <Link
-                            className={`${classes.navItem} ${path ===
+                            className={`${classes.navItem} ${currentPath ===
                                 "/integrasjon/" && classes.navItemActive}`}
                             to="/integrasjon"
                         >
