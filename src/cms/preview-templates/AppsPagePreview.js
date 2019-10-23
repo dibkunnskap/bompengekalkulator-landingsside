@@ -16,15 +16,14 @@ const AppsPagePreview = ({entry}) => {
                 />
             </JssWrapper>
         );
-    } else {
-        return <div>Loading...</div>;
     }
+    return <div>Loading...</div>;
 };
 
 AppsPagePreview.propTypes = {
     entry: PropTypes.shape({
         getIn: PropTypes.func
-    })
+    }).isRequired
 };
 
 export default AppsPagePreview;

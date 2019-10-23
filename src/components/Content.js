@@ -11,7 +11,7 @@ export const useStyles = createUseStyles(theme => ({
         "& a": {
             color: theme.palette["primary-500"]
         },
-        '& a[type="button"]': {
+        "& a[type='button']": {
             appearance: "none",
             border: "1px solid",
             borderColor: theme.palette["primary-500"],
@@ -53,7 +53,7 @@ export const HTMLContent = ({content, className}) => {
     return (
         <div
             className={`${classes.content} ${className}`}
-            dangerouslySetInnerHTML={{__html: content}}
+            dangerouslySetInnerHTML={{__html: content}} /* eslint-disable-line */
         />
     );
 };
@@ -65,7 +65,7 @@ const Content = ({content, className}) => {
 
 Content.defaultProps = {
     className: ""
-}
+};
 
 Content.propTypes = {
     content: PropTypes.node.isRequired,

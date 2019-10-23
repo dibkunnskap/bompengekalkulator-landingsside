@@ -20,15 +20,14 @@ const BlogPagePreview = ({entry}) => {
                 />
             </JssWrapper>
         );
-    } else {
-        return <div>Loading...</div>;
-    }
+    } 
+    return <div>Loading...</div>;
 };
 
 BlogPagePreview.propTypes = {
     entry: PropTypes.shape({
         getIn: PropTypes.func
-    })
+    }).isRequired
 };
 
 export default BlogPagePreview;

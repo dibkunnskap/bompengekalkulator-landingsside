@@ -22,15 +22,14 @@ const IndexPagePreview = ({entry}) => {
                 />
             </JssWrapper>
         );
-    } else {
-        return <div>Loading...</div>;
     }
+    return <div>Loading...</div>;
 };
 
 IndexPagePreview.propTypes = {
     entry: PropTypes.shape({
         getIn: PropTypes.func
-    })
+    }).isRequired
 };
 
 export default IndexPagePreview;

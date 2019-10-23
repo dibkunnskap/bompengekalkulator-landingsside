@@ -80,8 +80,12 @@ const Footer = () => {
                     </a>
                 </div>
                 <div className={classes.links}>
-                    <Link to="/">Om</Link>|<Link to="/blogg">Blogg</Link>|
-                    <Link to="/apper">Apper</Link>|
+                    <Link to="/">Om</Link>
+                    |
+                    <Link to="/blogg">Blogg</Link>
+                    |
+                    <Link to="/apper">Apper</Link>
+                    |
                     <Link to="/integrasjon">Integrasjon</Link>
                 </div>
                 <div>

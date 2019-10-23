@@ -19,15 +19,14 @@ const ExtraPagePreview = ({entry}) => {
                 />
             </JssWrapper>
         );
-    } else {
-        return <div>Loading...</div>;
     }
+    return <div>Loading...</div>;
 };
 
 ExtraPagePreview.propTypes = {
     entry: PropTypes.shape({
         getIn: PropTypes.func
-    })
+    }).isRequired
 };
 
 export default ExtraPagePreview;

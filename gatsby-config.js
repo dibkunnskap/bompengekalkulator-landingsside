@@ -97,7 +97,7 @@ module.exports = {
     ]
 };
 
-exports.onCreateWebpackConfig = ({actions, getConfig}) => {
+exports.onCreateWebpackConfig = ({getConfig}) => {
     const config = getConfig();
     config.node = {
         fs: "empty"
