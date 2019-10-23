@@ -7,15 +7,7 @@ const useStyles = createUseStyles(theme => ({
     root: {
         width: "90%",
         maxWidth: "720px",
-        margin: `${theme.spacing["64"]} auto`
-    },
-    headerContainer: {
-        display: "flex",
-        marginTop: theme.spacing["32"],
-    },
-    header: {
-        color: theme.palette["neutral-800"],
-        marginBottom: theme.spacing["32"],
+        margin: `${theme.spacing["64"]} auto`,
     }
 }));
 
@@ -24,9 +16,7 @@ const BlogIndexPage = ({path}) => {
     return (
         <Layout path={path}>
             <div className={classes.root}>
-                <div className={classes.headerContainer}>
-                    <h1 className={classes.header}>Siste nyheter</h1>
-                </div>
+                <h1 className={classes.header}>Siste nyheter</h1>
                 <BlogRoll title="" />
             </div>
         </Layout>

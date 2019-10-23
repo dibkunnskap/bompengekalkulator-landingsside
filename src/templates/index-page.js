@@ -12,7 +12,7 @@ export const useStyles = createUseStyles(theme => ({
     root: {
         fontFamily: theme.font.fontFamily,
         fontSize: theme.font.fontSize,
-        lineHeight: theme.font.lineHeight
+        lineHeight: theme.font.lineHeight,
     },
     image: {
         width: "100%",
@@ -30,9 +30,7 @@ export const useStyles = createUseStyles(theme => ({
         display: "flex",
         flexFlow: "column",
         alignItems: "center",
-        width: "90%",
         margin: "0 auto",
-        maxWidth: "1080px"
     },
     heading: {
         maxWidth: "500px",
@@ -43,29 +41,17 @@ export const useStyles = createUseStyles(theme => ({
     },
     content: {
         width: "90%",
-        margin: `${theme.spacing["96"]} auto`,
         maxWidth: "720px",
-        "& h2": {
-            color: theme.palette["neutral-800"]
-        },
+        margin: `${theme.spacing["96"]} auto`,
         "& > div": {
             margin: `${theme.spacing["96"]} 0`
-        }
-    },
-    markdown: {
-        color: theme.palette["neutral-800"],
-        "& a": {
-            color: theme.palette["primary-500"]
-        },
-        "& h1": {
-            color: "red"
         }
     },
     buttonRow: {
         display: "flex",
         justifyContent: "space-evenly",
-        "& button": {
-            marginTop: theme.spacing["48"]
+        "& a": {
+            marginTop: `-${theme.spacing["32"]}`
         }
     }
 }));
@@ -87,19 +73,14 @@ export const IndexPageTemplate = props => {
                 </div>
             </PreviewCompatibleImage>
             <div className={classes.content}>
-                <div>
-                    <PageContent
-                        className={classes.markdown}
-                        content={mainText}
-                    />
-                    <div className={classes.buttonRow}>
-                        <Link to="/integrasjon">
-                            <Button>Integrasjon/API</Button>
-                        </Link>
-                        <Link to="/apper">
-                            <Button>Apper/kjørebøker</Button>
-                        </Link>
-                    </div>
+                <PageContent content={mainText} />
+                <div className={classes.buttonRow}>
+                    <Link to="/integrasjon">
+                        <Button>Integrasjon/API</Button>
+                    </Link>
+                    <Link to="/apper">
+                        <Button>Apper/kjørebøker</Button>
+                    </Link>
                 </div>
                 <BlogRoll
                     title="Siste nyheter"
@@ -109,12 +90,7 @@ export const IndexPageTemplate = props => {
                     useBorder
                     featured
                 />
-                <div>
-                    <PageContent
-                        className={classes.markdown}
-                        content={secondaryText}
-                    />
-                </div>
+                <PageContent content={secondaryText} />
             </div>
         </div>
     );

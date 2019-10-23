@@ -1,5 +1,5 @@
 import React from "react";
-/* import PropTypes from "prop-types"; */
+import PropTypes from "prop-types";
 import {graphql} from "gatsby";
 import {createUseStyles} from "react-jss";
 import Layout from "../components/Layout";
@@ -7,33 +7,15 @@ import Content, {HTMLContent} from "../components/Content";
 
 export const useStyles = createUseStyles(theme => ({
     root: {
-        margin: "0 auto",
         width: "90%",
         maxWidth: "720px",
+        margin: `${theme.spacing["64"]} auto`,
         fontFamily: theme.font.fontFamily,
         fontSize: theme.font.fontSize,
-        lineHeight: theme.font.lineHeight,
-        "& h1, h2, h3": {
-            color: theme.palette["neutral-800"]
-        },
-        '& a[type="button"]': {
-            appearance: "none",
-            border: "1px solid",
-            borderColor: theme.palette["primary-500"],
-            borderRadius: theme.borderRadius.radius1,
-            color: theme.palette["primary-500"],
-            padding: `0 ${theme.spacing[16]}`,
-            width: "fit-content",
-            textDecoration: "none",
-            whiteSpace: "nowrap",
-        }
+        lineHeight: theme.font.lineHeight
     },
     title: {
-        margin: `${theme.spacing["64"]} 0`
-        /* textAlign: "center" */
-    },
-    content: {
-        marginBottom: theme.spacing["96"]
+        marginBottom: theme.spacing["48"]
     }
 }));
 
@@ -44,17 +26,16 @@ export const IntegrationPageTemplate = ({contentComponent, title, content}) => {
     return (
         <div className={classes.root}>
             <h1 className={classes.title}>{title}</h1>
-            <div className={classes.content}>
-                <PageContent content={content} />
-            </div>
+            <PageContent content={content} />
         </div>
     );
 };
 
-/* IntegrationPageTemplate.propTypes = {
-    heading: PropTypes.string,
-    image: PropTypes.string
-}; */
+IntegrationPageTemplate.propTypes = {
+    contentComponent: PropTypes.func,
+    title: PropTypes.string,
+    content: PropTypes.string
+};
 
 const IntegrationPage = ({path, data}) => {
     const {markdownRemark} = data;

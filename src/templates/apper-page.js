@@ -1,63 +1,56 @@
 import React from "react";
-/* import PropTypes from "prop-types"; */
+import PropTypes from "prop-types";
 import {graphql} from "gatsby";
 import {createUseStyles} from "react-jss";
 import Layout from "../components/Layout";
-import {HTMLContent} from "../components/Content";
+import Content, {HTMLContent} from "../components/Content";
 import FeatureGrid from "../components/FeatureGrid";
 
 export const useStyles = createUseStyles(theme => ({
     root: {
-        font: "inherit",
+        width: "90%",
+        maxWidth: "720px",
+        margin: `${theme.spacing["64"]} auto`,
         fontFamily: theme.font.fontFamily,
         fontSize: theme.font.fontSize,
-        lineHeight: theme.font.lineHeight,
-        margin: "0 auto",
-        width: "90%",
-        maxWidth: "720px"
+        lineHeight: theme.font.lineHeight
     },
     title: {
         color: theme.palette["neutral-800"],
-        margin: `${theme.spacing["64"]} 0`
-    },
-    content: {
-        '& a[type="button"]': {
-            appearance: "none",
-            border: "1px solid",
-            borderColor: theme.palette["primary-500"],
-            borderRadius: theme.borderRadius.radius1,
-            color: theme.palette["primary-500"],
-            padding: `0 ${theme.spacing[16]}`,
-            width: "fit-content",
-            textDecoration: "none",
-            whiteSpace: "nowrap"
-        }
+        marginBottom: theme.spacing["48"]
     },
     description: {
-        margin: "0 auto"
-        /* textAlign: "center", */
-        /* fontWeight: "700", */
-        /* color: theme.palette["neutral-700"] */
+        marginBottom: theme.spacing["48"]
     }
 }));
 
-export const AppsPageTemplate = ({title, description, apps}) => {
+export const AppsPageTemplate = ({
+    contentComponent,
+    title,
+    description,
+    apps
+}) => {
     const classes = useStyles();
+    const PostContent = contentComponent || Content;
     return (
         <div className={classes.root}>
             <h1 className={classes.title}>{title}</h1>
-            <div className={classes.content}>
-                <p className={classes.description}>{description}</p>
-                <FeatureGrid gridItems={apps} />
-            </div>
+            <PostContent
+                className={classes.description}
+                content={description}
+            />
+            <FeatureGrid gridItems={apps} />
         </div>
     );
 };
 
-/* IntegrationPageTemplate.propTypes = {
-    heading: PropTypes.string,
-    image: PropTypes.string
-}; */
+AppsPageTemplate.propTypes = {
+    title: PropTypes.string,
+    description: PropTypes.string,
+    apps: PropTypes.arrayOf(
+        PropTypes.oneOfType([PropTypes.string, PropTypes.object])
+    )
+};
 
 const AppsPage = ({path, data}) => {
     const {markdownRemark} = data;

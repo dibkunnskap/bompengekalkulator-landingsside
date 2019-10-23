@@ -6,16 +6,17 @@ import {HTMLContent} from "../components/Content";
 
 const useStyles = createUseStyles(theme => ({
     featureGrid: {
-        /* height: "500px", */
+        width: "100%"
     },
     feature: {
         display: "flex",
         alignItems: "center",
-        margin: "6rem 0"
+        "&:not(:last-child)": {
+            marginBottom: theme.spacing["64"]
+        }
     },
     text: {
-        width: "50%",
-        padding: `0 ${theme.spacing["16"]}`,
+        width: "50%"
     },
     img: {
         width: "50%",

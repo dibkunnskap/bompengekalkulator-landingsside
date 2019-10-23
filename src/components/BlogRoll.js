@@ -14,7 +14,7 @@ const useStyles = createUseStyles(theme => ({
     title: {
         width: "100%",
         textAlign: "left",
-        color: theme.palette["neutral-600"]
+        color: theme.palette["neutral-800"]
     },
     roll: {
         display: "flex",

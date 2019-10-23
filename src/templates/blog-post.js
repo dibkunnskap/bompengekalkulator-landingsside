@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import {graphql} from "gatsby";
 import {createUseStyles} from "react-jss";
 import Layout from "../components/Layout";
@@ -6,29 +7,12 @@ import Content, {HTMLContent} from "../components/Content";
 
 export const useStyles = createUseStyles(theme => ({
     root: {
-        display: "flex",
-        justifyContent: "center",
-        fontFamily: theme.font.fontFamily,
-        fontSize: theme.font.fontSize,
-        lineHeight: theme.font.lineHeight
-    },
-    blogPost: {
         width: "90%",
         maxWidth: "720px",
-        margin: `${theme.spacing["64"]} 0`,
-        "& h1, h2, h3": {
-            color: theme.palette["neutral-800"]
-        },
-        "& table": {
-            maxWidth: "100vw",
-            "@media (max-width: 600px)": {
-                fontSize: "3vw",
-                "& td": {
-                    paddingLeft: "2vw",
-                    paddingRight: "2vw"
-                }
-            }
-        }
+        margin: `${theme.spacing["64"]} auto`,
+        fontFamily: theme.font.fontFamily,
+        fontSize: theme.font.fontSize,
+        lineHeight: theme.font.lineHeight,
     },
     date: {
         color: theme.palette["neutral-400"]
@@ -49,13 +33,18 @@ export const BlogPostTemplate = ({title, date, content, contentComponent}) => {
 
     return (
         <div className={classes.root}>
-            <div className={classes.blogPost}>
-                <h1>{title}</h1>
-                <p className={classes.date}>{formattedDate}</p>
-                <PostContent content={content} />
-            </div>
+            <h1>{title}</h1>
+            <p className={classes.date}>{formattedDate}</p>
+            <PostContent content={content} />
         </div>
     );
+};
+
+BlogPostTemplate.propTypes = {
+    content: PropTypes.string,
+    contentComponent: PropTypes.func,
+    date: PropTypes.string,
+    title: PropTypes.string
 };
 
 const BlogPost = ({path, data}) => {

@@ -4,7 +4,6 @@ import {createUseStyles} from "react-jss";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import useSiteMetadata from "./SiteMetadata";
-/* import theme from "./src/config/theme"; */
 
 const useStyles = createUseStyles({
     layout: {
@@ -14,7 +13,8 @@ const useStyles = createUseStyles({
         justifyContent: "space-between"
     },
     body: {
-        width: "100%"
+        width: "100%",
+        flex: "1"
     }
 });
 
@@ -30,10 +30,8 @@ const Layout = ({path, children}) => {
                 <meta name="description" content={description} />
             </Helmet>
             <div className={classes.layout}>
-                <div className={classes.body}>
-                    <Navbar path={path}/>
-                    <div>{children}</div>
-                </div>
+                <Navbar path={path} />
+                <div className={classes.body}>{children}</div>
                 <Footer />
             </div>
         </div>
