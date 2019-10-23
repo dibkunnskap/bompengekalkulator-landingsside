@@ -23,6 +23,7 @@ const useStyles = createUseStyles(theme => ({
         margin: `0 -${theme.spacing["8"]}`
     },
     blogBox: {
+        flex: "0 0 auto",
         padding: theme.spacing["32"],
         maxWidth: "calc(50% - 16px)",
         backgroundColor: "white",
