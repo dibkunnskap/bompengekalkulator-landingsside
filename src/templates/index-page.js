@@ -29,8 +29,7 @@ export const useStyles = createUseStyles(theme => ({
         color: "white",
         display: "flex",
         flexFlow: "column",
-        alignItems: "center",
-        margin: "0 auto",
+        alignItems: "center"
     },
     heading: {
         maxWidth: "500px",
