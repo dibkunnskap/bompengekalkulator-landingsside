@@ -3,6 +3,8 @@ templateKey: extra-page
 slug: docs
 title: API documentation
 ---
+Any questions? <a class="intercom" href>Use the chat</a>
+
 + [Methods](#Methods)
   - [GetFeesByWaypointList](#GetFeesByWaypointList)
   - [GetFeesByWaypoints](#GetFeesByWaypoints)
@@ -298,7 +300,7 @@ This parameter, typically set to 1 has the following values:
 ...................
 ```
 
-See explanations below
+See explanations below. Any questions? <a class="intercom" href>Use the chat</a>
 
 ```
 "Tur":
