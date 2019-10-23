@@ -12,7 +12,7 @@ export const useStyles = createUseStyles(theme => ({
         margin: `${theme.spacing["64"]} auto`,
         fontFamily: theme.font.fontFamily,
         fontSize: theme.font.fontSize,
-        lineHeight: theme.font.lineHeight,
+        lineHeight: theme.font.lineHeight
     },
     date: {
         color: theme.palette["neutral-400"]
@@ -32,9 +32,9 @@ export const ExtraPageTemplate = ({title, content, contentComponent}) => {
 };
 
 ExtraPageTemplate.propTypes = {
-    content: PropTypes.string,
-    contentComponent: PropTypes.func,
-    title: PropTypes.string
+    content: PropTypes.string.isRequired,
+    contentComponent: PropTypes.func.isRequired,
+    title: PropTypes.string.isRequired
 };
 
 const ExtraPage = ({path, data}) => {
@@ -50,6 +50,11 @@ const ExtraPage = ({path, data}) => {
         </Layout>
     );
 };
+
+ExtraPage.propTypes = {
+    path: PropTypes.string.isRequired,
+    data: PropTypes.objectOf(PropTypes.object).isRequired
+}
 
 export default ExtraPage;
 

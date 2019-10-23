@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import {createUseStyles} from "react-jss";
 
 const useStyles = createUseStyles(theme => ({
@@ -25,8 +26,24 @@ const useStyles = createUseStyles(theme => ({
 const Button = ({className, children}) => {
     const classes = useStyles();
     return (
-        <button className={`${classes.button} ${className}`} type="button">{children}</button>
-    )
+        <button className={`${classes.button} ${className}`} type="button">
+            {children}
+        </button>
+    );
+};
+
+Button.defaultProps = {
+    className: null,
+    children: null
 }
+
+Button.propTypes = {
+    className: PropTypes.string,
+    children: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.element,
+        PropTypes.arrayOf(PropTypes.element)
+    ])
+};
 
 export default Button;

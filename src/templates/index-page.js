@@ -12,7 +12,7 @@ export const useStyles = createUseStyles(theme => ({
     root: {
         fontFamily: theme.font.fontFamily,
         fontSize: theme.font.fontSize,
-        lineHeight: theme.font.lineHeight,
+        lineHeight: theme.font.lineHeight
     },
     image: {
         width: "100%",
@@ -28,7 +28,7 @@ export const useStyles = createUseStyles(theme => ({
     title: {
         color: "white",
         width: "90%",
-        maxWidth: "500px",
+        maxWidth: "500px"
     },
     heading: {
         fontSize: theme.fontSize["32"],
@@ -79,14 +79,7 @@ export const IndexPageTemplate = props => {
                         <Button>Apper/kjørebøker</Button>
                     </Link>
                 </div>
-                <BlogRoll
-                    title="Siste nyheter"
-                    limit={2}
-                    maxWidth="720px"
-                    textAlign="center"
-                    useBorder
-                    featured
-                />
+                <BlogRoll title="Siste nyheter" limit={2} featured />
                 <PageContent content={secondaryText} />
             </div>
         </div>
@@ -94,12 +87,11 @@ export const IndexPageTemplate = props => {
 };
 
 IndexPageTemplate.propTypes = {
-    heading: PropTypes.string,
-    image: PropTypes.object,
-    contentComponent: PropTypes.func,
-    BackgroundImage: PropTypes.string,
-    mainText: PropTypes.string,
-    secondaryText: PropTypes.string
+    heading: PropTypes.string.isRequired,
+    image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
+    contentComponent: PropTypes.func.isRequired,
+    mainText: PropTypes.string.isRequired,
+    secondaryText: PropTypes.string.isRequired
 };
 
 const IndexPage = ({path, data}) => {
@@ -118,6 +110,11 @@ const IndexPage = ({path, data}) => {
         </div>
     );
 };
+
+IndexPage.propTypes = {
+    path: PropTypes.string.isRequired,
+    data: PropTypes.objectOf(PropTypes.object).isRequired
+}
 
 export default IndexPage;
 

@@ -1,0 +1,55 @@
+{
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "allowImportExportEverywhere": true,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "experimentalObjectRestSpread": true,
+        "spread": true
+      }
+    },
+    "env": {
+      "browser": true,
+      "es6": true,
+      "node": true,
+      "jest": true
+    },
+    "extends": [
+      "airbnb",
+      "prettier"
+    ],
+    "plugins": [
+      "react-hooks"
+    ],
+    "rules": {
+      "linebreak-style": 0,
+      "comma-dangle": [2, "never"],
+      "no-debugger": 1,
+      "no-nested-ternary": 0,
+      "no-underscore-dangle": 0,
+      "import/no-named-as-default": 0,
+      "import/no-named-as-default-member": 1,
+      "import/prefer-default-export": 0,
+      "indent": ["error", 4, {"SwitchCase": 1}],
+      "jsx-a11y/anchor-is-valid": 1,
+      "jsx-a11y/label-has-associated-control": 1,
+      "jsx-a11y/label-has-for": 0,
+      "jsx-a11y/no-noninteractive-element-interactions": 1,
+      "max-len": 0,
+      "object-curly-spacing": [2, "never"],
+      "quotes": [2, "double"],
+      "react/default-props-match-prop-types": 1,
+      "react/jsx-filename-extension": [1, {"extensions": [".js"]}],
+      "react/jsx-indent-props": ["error", 4],
+      "react/jsx-indent": ["error", 4],
+      "react/no-array-index-key": 1,
+      "object-curly-newline": 0,
+      "arrow-parens": 0,
+      "implicit-arrow-linebreak": 0,
+      "react/jsx-curly-newline": 0,
+      "operator-linebreak": 0,
+      "arrow-body-style": 0,
+      "react/jsx-props-no-spreading": 0,
+      "react/jsx-wrap-multilines": 0
+    }
+  }

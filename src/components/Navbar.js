@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import PropTypes from "prop-types";
 import {Link} from "gatsby";
 import {createUseStyles} from "react-jss";
 import menuIcon from "../img/menu.svg";
@@ -102,7 +103,7 @@ const useStyles = createUseStyles(theme => ({
 }));
 
 const Navbar = ({path}) => {
-    const [currentPath, setCurrentPath] = useState("/");
+    const [currentPath, setCurrentPath] = useState(path);
     const [hamburgerOpen, setHambugerOpen] = useState(false);
     const classes = useStyles();
 
@@ -184,5 +185,13 @@ const Navbar = ({path}) => {
         </div>
     );
 };
+
+Navbar.defaultProps = {
+    path: "/"
+}
+
+Navbar.propTypes = {
+    path: PropTypes.string
+}
 
 export default Navbar;

@@ -32,7 +32,7 @@ exports.createPages = async ({actions, graphql, reporter}) => {
     }
 
     result.data.allMarkdownRemark.edges.forEach(({node}) => {
-        const id = node.id;
+        const {id} = node;
         createPage({
             path: node.fields.slug,
             component: path.resolve(
@@ -49,10 +49,10 @@ exports.onCreateNode = ({node, actions, getNode}) => {
     const {createNodeField} = actions;
     fmImagesToRelative(node); // convert image paths for gatsby images
 
-    if (node.internal.type === `MarkdownRemark`) {
+    if (node.internal.type === "MarkdownRemark") {
         const value = createFilePath({node, getNode});
         createNodeField({
-            name: `slug`,
+            name: "slug",
             node,
             value
         });
@@ -65,7 +65,7 @@ exports.onCreateNode = ({node, actions, getNode}) => {
             .processSync(mainText)
             .toString();
         createNodeField({
-            name: `mainText`,
+            name: "mainText",
             node,
             value
         });
@@ -78,14 +78,14 @@ exports.onCreateNode = ({node, actions, getNode}) => {
             .processSync(secondaryText)
             .toString();
         createNodeField({
-            name: `secondaryText`,
+            name: "secondaryText",
             node,
             value
         });
     }
 
     if (node.frontmatter && node.frontmatter.apps) {
-        const apps = node.frontmatter.apps;
+        const {apps} = node.frontmatter;
 
         const value = apps.map(app => {
             return remark()
@@ -95,7 +95,7 @@ exports.onCreateNode = ({node, actions, getNode}) => {
         });
 
         createNodeField({
-            name: `appTexts`,
+            name: "appTexts",
             node,
             value
         });

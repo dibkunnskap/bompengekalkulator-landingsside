@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import {createUseStyles} from "react-jss";
 import Navbar from "./Navbar";
@@ -37,5 +38,18 @@ const Layout = ({path, children}) => {
         </div>
     );
 };
+
+Layout.defaultProps = {
+    path: ""
+}
+
+Layout.propTypes = {
+    path: PropTypes.string,
+    children: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.element,
+        PropTypes.arrayOf(PropTypes.element)
+    ]).isRequired
+}
 
 export default Layout;

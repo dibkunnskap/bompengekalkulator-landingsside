@@ -1,8 +1,9 @@
 import React from "react";
+import PropTypes from "prop-types";
 import {createUseStyles} from "react-jss";
 import shortid from "shortid";
 import PreviewCompatibleImage from "./PreviewCompatibleImage";
-import {HTMLContent} from "../components/Content";
+import {HTMLContent} from "./Content";
 
 const useStyles = createUseStyles(theme => ({
     featureGrid: {
@@ -54,26 +55,10 @@ const FeatureGrid = ({gridItems}) => {
     );
 };
 
-/* index % 2 === 0 ? (
-    <div
-        className={classes.feature}
-        key={shortid.generate()}
-    >
-        <div className={classes.img}>
-            <PreviewCompatibleImage imageInfo={item} />
-        </div>
-        <div className={classes.text}>{item.text}</div>
-    </div>
-) : (
-    <div
-        className={classes.feature}
-        key={shortid.generate()}
-    >
-        <div className={classes.text}>{item.text}</div>
-        <div className={classes.img}>
-            <PreviewCompatibleImage imageInfo={item} />
-        </div>
-    </div>
-) */
+FeatureGrid.propTypes = {
+    gridItems: PropTypes.arrayOf(
+        PropTypes.oneOfType([PropTypes.string, PropTypes.object])
+    ).isRequired
+};
 
 export default FeatureGrid;

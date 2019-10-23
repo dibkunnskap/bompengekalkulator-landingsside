@@ -1,7 +1,8 @@
 import React from "react";
+import PropTypes from "prop-types";
 import {Link, graphql, StaticQuery} from "gatsby";
 import {createUseStyles} from "react-jss";
-import Button from "../components/Button";
+import Button from "./Button";
 
 const useStyles = createUseStyles(theme => ({
     blogRoll: {
@@ -37,7 +38,7 @@ const useStyles = createUseStyles(theme => ({
         justifyContent: "space-between",
         margin: theme.spacing["8"],
         "@media (max-width: 720px)": {
-            maxWidth: "calc(100% - 16px)",
+            maxWidth: "calc(100% - 16px)"
         }
     },
     link: {
@@ -64,7 +65,7 @@ const useStyles = createUseStyles(theme => ({
     }
 }));
 
-const BlogRoll = props => {
+const BlogRollComponent = props => {
     const {data, limit, title, featured} = props;
     const classes = useStyles(props);
     const {edges} = data.allMarkdownRemark;
@@ -78,12 +79,15 @@ const BlogRoll = props => {
         });
     };
 
+
     return (
         <div className={classes.blogRoll}>
             <h2 className={classes.title}>{title}</h2>
             <div className={classes.roll}>
                 {edges
-                    .filter(edge => featured ? edge.node.frontmatter.featuredpost : true)
+                    .filter(edge =>
+                        featured ? edge.node.frontmatter.featuredpost : true
+                    )
                     .map(edge => (
                         <div
                             className={classes.blogBox}
@@ -118,11 +122,15 @@ const BlogRoll = props => {
     );
 };
 
-BlogRoll.defaultProps = {
-    textAlign: "left"
+
+BlogRollComponent.propTypes = {
+    data: PropTypes.objectOf(PropTypes.objectOf(PropTypes.array)).isRequired,
+    limit: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    featured: PropTypes.bool.isRequired
 };
 
-export default ({limit, title, featured}) => (
+const BlogRoll = ({limit, title, featured}) => (
     <StaticQuery
         query={graphql`
             query BlogRollQuery {
@@ -149,6 +157,26 @@ export default ({limit, title, featured}) => (
                 }
             }
         `}
-        render={data => <BlogRoll data={data} title={title} limit={limit} featured={featured} />}
+        render={data => (
+            <BlogRollComponent
+                data={data}
+                title={title}
+                limit={limit}
+                featured={featured}
+            />
+        )}
     />
 );
+
+BlogRoll.defaultProps = {
+    limit: 99,
+    featured: false
+};
+
+BlogRoll.propTypes = {
+    limit: PropTypes.number,
+    title: PropTypes.string.isRequired,
+    featured: PropTypes.bool
+};
+
+export default BlogRoll;

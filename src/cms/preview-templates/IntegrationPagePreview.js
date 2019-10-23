@@ -19,15 +19,14 @@ const IntegrationPagePreview = ({entry}) => {
                 />
             </JssWrapper>
         );
-    } else {
-        return <div>Loading...</div>;
-    }
+    } 
+    return <div>Loading...</div>;
 };
 
 IntegrationPagePreview.propTypes = {
     entry: PropTypes.shape({
         getIn: PropTypes.func
-    })
+    }).isRequired
 };
 
 export default IntegrationPagePreview;

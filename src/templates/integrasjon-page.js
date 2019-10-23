@@ -32,9 +32,9 @@ export const IntegrationPageTemplate = ({contentComponent, title, content}) => {
 };
 
 IntegrationPageTemplate.propTypes = {
-    contentComponent: PropTypes.func,
-    title: PropTypes.string,
-    content: PropTypes.string
+    contentComponent: PropTypes.func.isRequired,
+    title: PropTypes.string.isRequired,
+    content: PropTypes.string.isRequired
 };
 
 const IntegrationPage = ({path, data}) => {
@@ -49,6 +49,11 @@ const IntegrationPage = ({path, data}) => {
         </Layout>
     );
 };
+
+IntegrationPage.propTypes = {
+    path: PropTypes.string.isRequired,
+    data: PropTypes.objectOf(PropTypes.object).isRequired
+}
 
 export default IntegrationPage;
 

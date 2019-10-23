@@ -11,7 +11,6 @@ import ExtraPagePreview from "./preview-templates/ExtraPagePreview";
 CMS.registerMediaLibrary(uploadcare);
 CMS.registerMediaLibrary(cloudinary);
 
-
 CMS.registerPreviewTemplate("index", IndexPagePreview);
 CMS.registerPreviewTemplate("integrasjon", IntegrationPagePreview);
 CMS.registerPreviewTemplate("apper", AppsPagePreview);

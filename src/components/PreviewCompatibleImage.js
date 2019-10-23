@@ -25,18 +25,17 @@ const PreviewCompatibleImage = ({className, children, imageInfo, type}) => {
                     {children}
                 </BackgroundImage>
             );
-        } else {
-            return (
-                <Img
-                    className={`${classes.img} ${className}`}
-                    fluid={image.childImageSharp.fluid}
-                    alt={alt}
-                />
-            );
-        }
+        } 
+        return (
+            <Img
+                className={`${classes.img} ${className}`}
+                fluid={image.childImageSharp.fluid}
+                alt={alt}
+            />
+        );
     }
 
-    if (!!childImageSharp) {
+    if (childImageSharp) {
         if (type === "background") {
             return (
                 <BackgroundImage
@@ -47,15 +46,14 @@ const PreviewCompatibleImage = ({className, children, imageInfo, type}) => {
                     {children}
                 </BackgroundImage>
             );
-        } else {
-            return (
-                <Img
-                    className={`${classes.img} ${className}`}
-                    fluid={childImageSharp.fluid}
-                    alt={alt}
-                />
-            );
         }
+        return (
+            <Img
+                className={`${classes.img} ${className}`}
+                fluid={childImageSharp.fluid}
+                alt={alt}
+            />
+        );
     }
 
     if (!!image && typeof image === "string") {
@@ -71,18 +69,23 @@ const PreviewCompatibleImage = ({className, children, imageInfo, type}) => {
                     {children}
                 </div>
             );
-        } else {
-            return (
-                <img
-                    className={`${classes.img} ${className}`}
-                    src={image}
-                    alt={alt}
-                />
-            );
         }
+        return (
+            <img
+                className={`${classes.img} ${className}`}
+                src={image}
+                alt={alt}
+            />
+        );
     }
     return null;
 };
+
+PreviewCompatibleImage.defaultProps = {
+    className: "",
+    type: "image",
+    children: null
+}
 
 PreviewCompatibleImage.propTypes = {
     className: PropTypes.string,

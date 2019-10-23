@@ -12,7 +12,7 @@ export const useStyles = createUseStyles(theme => ({
         margin: `${theme.spacing["64"]} auto`,
         fontFamily: theme.font.fontFamily,
         fontSize: theme.font.fontSize,
-        lineHeight: theme.font.lineHeight,
+        lineHeight: theme.font.lineHeight
     },
     date: {
         color: theme.palette["neutral-400"]
@@ -41,10 +41,10 @@ export const BlogPostTemplate = ({title, date, content, contentComponent}) => {
 };
 
 BlogPostTemplate.propTypes = {
-    content: PropTypes.string,
-    contentComponent: PropTypes.func,
-    date: PropTypes.string,
-    title: PropTypes.string
+    content: PropTypes.string.isRequired,
+    contentComponent: PropTypes.func.isRequired,
+    date: PropTypes.instanceOf(Date).isRequired,
+    title: PropTypes.string.isRequired
 };
 
 const BlogPost = ({path, data}) => {
@@ -62,6 +62,11 @@ const BlogPost = ({path, data}) => {
         </Layout>
     );
 };
+
+BlogPost.propTypes = {
+    path: PropTypes.string.isRequired,
+    data: PropTypes.objectOf(PropTypes.object).isRequired
+}
 
 export default BlogPost;
 

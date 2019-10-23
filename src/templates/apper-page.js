@@ -44,12 +44,17 @@ export const AppsPageTemplate = ({
     );
 };
 
+AppsPageTemplate.defaultProps = {
+    contentComponent: null
+}
+
 AppsPageTemplate.propTypes = {
-    title: PropTypes.string,
-    description: PropTypes.string,
+    contentComponent: PropTypes.func,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
     apps: PropTypes.arrayOf(
         PropTypes.oneOfType([PropTypes.string, PropTypes.object])
-    )
+    ).isRequired
 };
 
 const AppsPage = ({path, data}) => {
@@ -71,6 +76,11 @@ const AppsPage = ({path, data}) => {
         </Layout>
     );
 };
+
+AppsPage.propTypes = {
+    path: PropTypes.string.isRequired,
+    data: PropTypes.objectOf(PropTypes.object).isRequired
+}
 
 export default AppsPage;
 
