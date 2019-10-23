@@ -28,7 +28,7 @@ Som leverandør av kjørebok, reiseregningssystem eller bildelingstjeneste er du
 
 ### Spørsmål og priser
 
-Betal kun for det du bruker. Integrasjonen prises per API-kall, og enhetsprisen synker jo flere kall tjenesten din gjør. Kontakt oss via chatten hvis du har spørsmål til priser eller SLA.
+Betal kun for det du bruker. Integrasjonen prises per API-kall, og enhetsprisen synker jo flere kall tjenesten din gjør. <a class="intercom" href>Kontakt oss via chatten</a> hvis du har spørsmål til priser eller SLA.
 
 <a href="../docs" type="button">API dokumentasjon</a>
 

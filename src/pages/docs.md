@@ -3,6 +3,8 @@ templateKey: extra-page
 slug: docs
 title: API documentation
 ---
+Any questions? <a class="intercom" href>Use the chat</a>
+
 + [Methods](#Methods)
   - [GetFeesByWaypointList](#GetFeesByWaypointList)
   - [GetFeesByWaypoints](#GetFeesByWaypoints)
@@ -10,21 +12,11 @@ title: API documentation
 
 + [Request](#Request)
    - [Waypointlist](#Waypointlist)
-   - [Fra](#Fra)
-   - [Til](#Til)
-   - [Vialiste](#Vialiste)
-   - [Dato](#Dato)
-   - [Tidspunkt](#Tidspunkt)
-   - [Bilsize](#Bilsize)
-   - [Litenbiltype](#Litenbiltype)
-   - [Storbiltype](#Storbiltype)
-   - [Billengdeunder](#Billengdeunder)
-   - [Retur](#Retur)
-   - [Tidsreferanser](#Tidsreferanser)
+   - [Fra](#Fra) | [Til](#Til) | [Vialiste](#Vialiste)
+   - [Dato](#Dato) | [Tidspunkt](#Tidspunkt) | [Bilsize](#Bilsize) | [Litenbiltype](#Litenbiltype) | [Storbiltype](#Storbiltype) | [Billengdeunder](#Billengdeunder) | [Retur](#Retur) | [Tidsreferanser](#Tidsreferanser)
 
 + [Response](#Response)
 
-(Coming)
 
 # Methods <a name="Methods"></a>
 
@@ -63,7 +55,7 @@ POST /api/bomstasjoner/GetFeesByWaypoints
 
 This method is used when you only have To/From (and optional via waypoints). We use the Google Maps API to calculate the route. Instead of [WaypointList](#WaypointList) you use [Fra](#Fra) and [Til](#Til) and the optional [Vialiste](#Vialiste). This method is used by some apps for travel expenses.
 
-* If you only use "Fra" and "Til" you will get 3 alternative routes back from the API.
+* If you only use "Fra" and "Til" you will get up until 3 alternative routes back from the API.
 * If you include "Vialiste" with at least one string, you only get one route back from the API
 
 ```
@@ -126,7 +118,7 @@ You can use this method if you do not have any geocoordinates, and only Places/I
 
 Used in the method [GetFeesByWaypointList](#GetFeesByWaypointList)
 
-List of waypoints in geo-coordinates. Every waypoint also have a time parameter in seconds from the start time (Tidspunkt_hhmm/time_hhmm). If some of the time values are empty we will try to fill the gaps based on the values in front and back.
+List of waypoints in geo-coordinates. Every waypoint also have a time parameter in seconds from the start time. If some of the time values are empty we will try to fill the gaps based on the values in front and back.
 ```
 {
    	"Waypointlist":[
@@ -242,3 +234,225 @@ This parameter, typically set to 1 has the following values:
 ```
 
 # Response <a name="Response"></a>
+
+```
+{
+  "Tur": [																			
+    {
+      "Name": "E39",															
+      "DistanseNice": "83 km",
+      "TidNice": "1 time 58 min",
+      "KostnadNice": "501,00 kr.",
+      "RabattertNice": "336,80 kr.",
+      "Meters": 83299,
+      "Seconds": 7109,
+      "Kostnad": 501.0,
+      "Rabattert": 336.8,
+      "listPolylinePointsEncoded": [
+        "{dsiJ}xc_@BCt@cA\\c@^e@V]Xa@`@q@`@s@Zg@LSNU",
+        "eo|fJk`_b@GPERCH?BAFGVIZGXIZEX"
+      ],
+      "AvgiftsPunkter": [
+        {
+          "Navn": "Karmsundsgata",
+          "Vegnr": "Fv47",
+          "Latitude": "59.39918",
+          "Longitude": "5.29372",
+          "Retning": "SØ",
+          "Punktradius": "10",
+          "Timesregel": true,
+          "Lokalrabatt": "0",
+          "Autopassrabatt": "20",
+          "LNullutslipprabatt": "60",
+          "SNullutslipprabatt": "",
+          "Mndtak": "75",
+          "Informasjon": "",
+          "Bomselskapurl": "http://www.haugalandspakken.no/takster/",
+          "Autopass": true,
+          "Kommune": "Haugesund",
+          "Passeringstid_Est": "",
+          "TimesregelNavn": "",
+          "Avgifter": [
+            {
+              "Feetype": "bompenger",
+              "Vehicletype": "kjøretøy under 3500 kg",
+              "Sizetype": "",
+              "Sizetypename": "",
+              "Rushstart": "",
+              "Rushstop": "",
+              "RushtidsInfo": "",
+              "Pris": 11.0,
+              "PrisRabbattert": 8.8,
+              "PrisNice": "11,00 kr.",
+              "PrisRabbatertNice": "8,80 kr.",
+              "Informasjon": "",
+              "Vehicle_type_id": "l",
+              "Size_type_id": "",
+              "Feetype_id": "bp",
+              "Rushperiod_id": ""
+            }
+          ]
+        },
+      ]
+    }
+  ]
+  "Retur": [
+...................
+```
+
+See explanations below. Any questions? <a class="intercom" href>Use the chat</a>
+
+```
+"Tur":
+//Trip
+
+"Name": "string",
+//Name of trip
+
+"DistanseNice": "string",
+//Distance in ui format
+
+"TidNice": "string",
+//Timeusage in ui format
+
+"KostnadNice": "string",
+//Full price(no autopass) in ui format
+
+"RabattertNice": "string",
+//Discounted price(autopass) in ui format
+
+"Meters": number,
+//Distance in metric meters
+
+"Seconds": number,
+//Timeusage in seconds since
+
+"Kostnad": number,
+//Full price (no Autopass)
+
+"Rabattert": number, 
+//Discounted price (Autopass)
+
+"listPolylinePointsEncoded":
+//The google route in encoded plyline format (if used)
+ 
+"AvgiftsPunkter":
+//Toll station
+
+"Navn": "string",
+//Name of toll station
+
+"Vegnr": "string",
+//Name of road
+
+"Latitude": "string",
+//Latitude coordinate
+
+"Longitude": "string",
+//Longitude coordinate
+
+"Retning": "string",
+//Direction of toll collection
+
+"Punktradius": "string",
+//Detection radius in metric meters
+
+"Timesregel": boolean,
+//One hour rule in play
+
+"Lokalrabatt": "string",
+//Local discount --not in use for autopass
+
+"Autopassrabatt": "string",
+//Autopass discount percentage
+
+"LNullutslipprabatt": "string",
+//Autopass discount percentage
+(small < 3500 kg - zero emissions)
+
+"SNullutslipprabatt": "string",
+//Autopass discount percentage
+(large >3500kg - zero emissions)
+
+"Mndtak": "string",
+//Max amount of toll collection pr. month
+
+"Informasjon": "string",
+//DIBkunnskap information about the tollstation
+
+"Bomselskapurl": "string",
+//The url of the Toll company
+
+"Autopass": boolean,
+//Toll station supports autopass
+
+"Kommune": "string",
+//The municipality the toll station recides in
+
+"Passeringstid_Est": "string",
+//If used in input parameter we estimate the time
+passing the toll station (hhmm)
+
+"TimesregelNavn": "string",
+//Name of the toll ring the toll station belongs to
+
+"Avgifter":
+//Fees
+
+"Feetype": "string",
+//Explained text for Feetype_id
+
+"Vehicletype": "string",
+//Explained text for Vehicle_type_id
+
+"Sizetype": "string",
+//Explained text for Size_type_id
+
+"Sizetypename": "string",
+//Sizetypename --> "lengde" == length
+
+"Rushstart": "string",
+//Start of rush hour yyyy-mm-ddThh:mm:ss, if it applies
+
+"Rushstop": "string",
+//End of rush hour yyyy-mm-ddThh:mm:ss, if it applies
+
+"RushtidsInfo": "string",
+//DIBkunnskap information of rushour
+
+"Pris": number,
+//The fee price
+
+"PrisRabbattert": number,
+//The fee price discounted
+
+"PrisNice": "string",
+//The fee price for ui
+
+"PrisRabbatertNice": "string",
+//The fee price discounted for ui
+
+"Informasjon": "string",
+//DIBkunnskap information for fee
+
+"Vehicle_type_id": "string",
+//Vehicletype (na="not applicable eg.  ferry ticket", 
+s="small<3500kg", l="large>3500kg",b="gasoline",d="diesel",
+lnu="small electric/zero emissions",
+snu="large electric/zero emissions",h="hydrogen",
+eV="euroV and older",eVI="euroVI and newer",
+lhyd="small<3500kg hybrid", slhyb="large>3500kg hybrid",
+lhyb="small>3500kg rechargeable hybrid",
+llhyb="large>3500kg rechargeable hybrid", mc="motor cycle")
+
+"Size_type_id": "string",
+//Sizetype, na or length classification for vehicle, typically on ferry
+
+"Feetype_id": "string",
+//Feetypeid (fb=ferry, bp=toll fee)
+
+"Rushperiod_id": "string"
+//Id for rushperiod
+
+"Retur":
+//Return trip, if retur is set to 1 in input parameters
