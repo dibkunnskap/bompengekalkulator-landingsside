@@ -27,12 +27,10 @@ export const useStyles = createUseStyles(theme => ({
     },
     title: {
         color: "white",
-        display: "flex",
-        flexFlow: "column",
-        alignItems: "center"
+        width: "90%",
+        maxWidth: "500px",
     },
     heading: {
-        maxWidth: "500px",
         fontSize: theme.fontSize["32"],
         "@media (min-width: 768px)": {
             fontSize: theme.fontSize["48"]
