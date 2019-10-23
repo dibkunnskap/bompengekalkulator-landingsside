@@ -118,7 +118,7 @@ You can use this method if you do not have any geocoordinates, and only Places/I
 
 Used in the method [GetFeesByWaypointList](#GetFeesByWaypointList)
 
-List of waypoints in geo-coordinates. Every waypoint also have a time parameter in seconds from the start time (Tidspunkt_hhmm/time_hhmm). If some of the time values are empty we will try to fill the gaps based on the values in front and back.
+List of waypoints in geo-coordinates. Every waypoint also have a time parameter in seconds from the start time. If some of the time values are empty we will try to fill the gaps based on the values in front and back.
 ```
 {
    	"Waypointlist":[
