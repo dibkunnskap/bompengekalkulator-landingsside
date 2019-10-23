@@ -102,7 +102,7 @@ const useStyles = createUseStyles(theme => ({
 }));
 
 const Navbar = ({path}) => {
-    const [currentPath, setCurrentPath] = useState("/");
+    const [currentPath, setCurrentPath] = useState(path);
     const [hamburgerOpen, setHambugerOpen] = useState(false);
     const classes = useStyles();
 
