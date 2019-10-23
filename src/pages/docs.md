@@ -55,7 +55,7 @@ POST /api/bomstasjoner/GetFeesByWaypoints
 
 This method is used when you only have To/From (and optional via waypoints). We use the Google Maps API to calculate the route. Instead of [WaypointList](#WaypointList) you use [Fra](#Fra) and [Til](#Til) and the optional [Vialiste](#Vialiste). This method is used by some apps for travel expenses.
 
-* If you only use "Fra" and "Til" you will get 3 alternative routes back from the API.
+* If you only use "Fra" and "Til" you will get up until 3 alternative routes back from the API.
 * If you include "Vialiste" with at least one string, you only get one route back from the API
 
 ```
