@@ -10,21 +10,11 @@ title: API documentation
 
 + [Request](#Request)
    - [Waypointlist](#Waypointlist)
-   - [Fra](#Fra)
-   - [Til](#Til)
-   - [Vialiste](#Vialiste)
-   - [Dato](#Dato)
-   - [Tidspunkt](#Tidspunkt)
-   - [Bilsize](#Bilsize)
-   - [Litenbiltype](#Litenbiltype)
-   - [Storbiltype](#Storbiltype)
-   - [Billengdeunder](#Billengdeunder)
-   - [Retur](#Retur)
-   - [Tidsreferanser](#Tidsreferanser)
+   - [Fra](#Fra) | [Til](#Til) | [Vialiste](#Vialiste)
+   - [Dato](#Dato) | [Tidspunkt](#Tidspunkt) | [Bilsize](#Bilsize) | [Litenbiltype](#Litenbiltype) | [Storbiltype](#Storbiltype) | [Billengdeunder](#Billengdeunder) | [Retur](#Retur) | [Tidsreferanser](#Tidsreferanser)
 
 + [Response](#Response)
 
-(Coming)
 
 # Methods <a name="Methods"></a>
 
