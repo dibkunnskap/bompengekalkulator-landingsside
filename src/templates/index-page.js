@@ -46,7 +46,7 @@ export const useStyles = createUseStyles(theme => ({
     },
     buttonRow: {
         display: "flex",
-        justifyContent: "space-evenly",
+        justifyContent: "space-around",
         "& a": {
             marginTop: `-${theme.spacing["32"]}`
         }
