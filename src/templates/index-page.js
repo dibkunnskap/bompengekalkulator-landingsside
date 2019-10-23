@@ -16,7 +16,7 @@ export const useStyles = createUseStyles(theme => ({
     },
     image: {
         width: "100%",
-        minHeight: "600px",
+        height: "600px",
         backgroundColor: theme.palette["neutral-100"],
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
@@ -27,13 +27,10 @@ export const useStyles = createUseStyles(theme => ({
     },
     title: {
         color: "white",
-        display: "flex",
-        flexFlow: "column",
-        alignItems: "center",
-        margin: "0 auto",
+        width: "90%",
+        maxWidth: "500px",
     },
     heading: {
-        maxWidth: "500px",
         fontSize: theme.fontSize["32"],
         "@media (min-width: 768px)": {
             fontSize: theme.fontSize["48"]
@@ -49,7 +46,7 @@ export const useStyles = createUseStyles(theme => ({
     },
     buttonRow: {
         display: "flex",
-        justifyContent: "space-evenly",
+        justifyContent: "space-around",
         "& a": {
             marginTop: `-${theme.spacing["32"]}`
         }

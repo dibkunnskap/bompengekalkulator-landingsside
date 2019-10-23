@@ -17,12 +17,14 @@ const useStyles = createUseStyles(theme => ({
         color: theme.palette["neutral-800"]
     },
     roll: {
+        width: `calc(100% + ${theme.spacing["16"]})`,
         display: "flex",
         flexWrap: "wrap",
         justifyContent: "flex-start",
         margin: `0 -${theme.spacing["8"]}`
     },
     blogBox: {
+        flex: "0 0 auto",
         padding: theme.spacing["32"],
         maxWidth: "calc(50% - 16px)",
         backgroundColor: "white",
