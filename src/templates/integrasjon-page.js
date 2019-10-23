@@ -9,7 +9,7 @@ export const useStyles = createUseStyles(theme => ({
     root: {
         width: "90%",
         maxWidth: "720px",
-        margin: `${theme.spacing["64"]} auto`,
+        margin: `${theme.spacing["64"]} auto ${theme.spacing["96"]} auto`,
         fontFamily: theme.font.fontFamily,
         fontSize: theme.font.fontSize,
         lineHeight: theme.font.lineHeight
