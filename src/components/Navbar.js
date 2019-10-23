@@ -13,7 +13,6 @@ const useStyles = createUseStyles(theme => ({
     nav: {
         width: "100%",
         paddingLeft: "5%",
-        margin: "0 auto",
         display: "flex",
         flexFlow: "column",
         position: "relative",
