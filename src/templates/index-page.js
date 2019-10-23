@@ -16,7 +16,7 @@ export const useStyles = createUseStyles(theme => ({
     },
     image: {
         width: "100%",
-        minHeight: "600px",
+        height: "600px",
         backgroundColor: theme.palette["neutral-100"],
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
