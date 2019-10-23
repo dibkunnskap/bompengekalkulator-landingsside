@@ -308,8 +308,7 @@ This parameter, typically set to 1 has the following values:
 ...................
 ```
 
-//Vehicletype (na="not applicable eg.  ferry ticket",s="small<3500kg",l="large>3500kg",b="gasoline",d="diesel",lnu="small electric/zero emissions",snu="large electric/zero emissions",h="hydrogen",eV="euroV and older",eVI="euroVI and newer",lhyd="small<3500kg hybrid",slhyb="large>3500kg hybrid",lhyb="small>3500kg rechargeable hybrid",llhyb="large>3500kg rechargeable hybrid",mc="motor cycle")
-
+See explanations below
 
 ```
 "Tur":
@@ -373,13 +372,15 @@ This parameter, typically set to 1 has the following values:
 //Local discount --not in use for autopass
 
 "Autopassrabatt": "string",
-//Discount percentage with use of autopass
+//Autopass discount percentage
 
 "LNullutslipprabatt": "string",
-//Discount percentage with use of autopass (small < 3500 kg - zero emissions)
+//Autopass discount percentage
+(small < 3500 kg - zero emissions)
 
 "SNullutslipprabatt": "string",
-//Discount percentage with use of autopass (large >3500kg - zero emissions)
+//Autopass discount percentage
+(large >3500kg - zero emissions)
 
 "Mndtak": "string",
 //Max amount of toll collection pr. month
@@ -397,7 +398,8 @@ This parameter, typically set to 1 has the following values:
 //The municipality the toll station recides in
 
 "Passeringstid_Est": "string",
-//If is used in input parameter we estimate the time we pass the toll station (hhmm)
+//If used in input parameter we estimate the time
+passing the toll station (hhmm)
 
 "TimesregelNavn": "string",
 //Name of the toll ring the toll station belongs to
@@ -442,7 +444,14 @@ This parameter, typically set to 1 has the following values:
 //DIBkunnskap information for fee
 
 "Vehicle_type_id": "string",
-//Vehicletype
+//Vehicletype (na="not applicable eg.  ferry ticket", 
+s="small<3500kg", l="large>3500kg",b="gasoline",d="diesel",
+lnu="small electric/zero emissions",
+snu="large electric/zero emissions",h="hydrogen",
+eV="euroV and older",eVI="euroVI and newer",
+lhyd="small<3500kg hybrid", slhyb="large>3500kg hybrid",
+lhyb="small>3500kg rechargeable hybrid",
+llhyb="large>3500kg rechargeable hybrid", mc="motor cycle")
 
 "Size_type_id": "string",
 //Sizetype, na or length classification for vehicle, typically on ferry
