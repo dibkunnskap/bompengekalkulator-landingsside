@@ -130,7 +130,7 @@ List of waypoints in geo-coordinates. Every waypoint also have a time parameter 
 ```
 
 ## Fra <a name="Fra"></a>
-Used in the method [GetFeesByWaypoints](#GetFeesByWaypoints):
+Used in the method [GetFeesByWaypoints](#GetFeesByWaypoints). Max limit is 25:
 
 ```
 "Fra":{ 
