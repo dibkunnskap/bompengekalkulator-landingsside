@@ -5,7 +5,7 @@ title: Integrasjon
 * Det eneste APIet med oppdaterte bompenger og ferjepriser
 * Garantert 99,95% tilgjengelighet
 * APIet inneholder alle parametere, inkludert timesregler og rushtidsavgifter.
-* Inkluderer også bompenger i Sverige (trängselskatt)
+* Inkluderer også bompenger i Sverige og Danmark
 * Som utvikler kan du sende inn kjøreruten både med og uten waypoints.
 * Historiske takster
 
