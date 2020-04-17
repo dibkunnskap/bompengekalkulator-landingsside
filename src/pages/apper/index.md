@@ -15,16 +15,6 @@ apps:
 
       <a href="https://www.simployer.no/hrm/reise-utlegg/" type="button">Gå til
       nettside</a>
-  - heading: Sonya
-    image: /img/sonya-logo.png
-    text: >-
-      App for utlegg og reiseregninger med automatisk utregning av diett og
-      kjøregodtgjørelse og korrekte satser for hver eneste bompassering.
-
-
-      <a
-      href="https://sonya.com/?utm_source=bompengekalkulator.no&utm_medium=about"
-      type="button">Gå til nettside</a>
   - heading: Automile
     image: /img/automile_logo.png
     text: >-
@@ -35,6 +25,16 @@ apps:
 
       <a
       href="https://automile.no/?utm_source=bompengekalkulator.no&utm_medium=apper"
+      type="button">Gå til nettside</a>
+  - heading: Sonya
+    image: /img/sonya-logo.png
+    text: >-
+      App for utlegg og reiseregninger med automatisk utregning av diett og
+      kjøregodtgjørelse og korrekte satser for hver eneste bompassering.
+
+
+      <a
+      href="https://sonya.com/?utm_source=bompengekalkulator.no&utm_medium=about"
       type="button">Gå til nettside</a>
   - heading: TickTack - OnTheWay
     image: /img/ticktacklogo-main-black.png
