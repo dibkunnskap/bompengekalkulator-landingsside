@@ -45,5 +45,14 @@ apps:
 
       <a href="https://www.ticktack.no/ontheway/" type="button">Gå til
       nettside</a>
+  - heading: Norsk Energigjenvinning
+    image: /img/neg.jpg
+    text: >-
+      NEG bruker APIet til å beregne bom- og ferjekostnader for sin flåte av
+      lastebiler
+
+
+      <a href="http://www.norskenergigjenvinning.no/" type="button">Gå til
+      nettside</a>
 ---
 
