@@ -54,5 +54,11 @@ apps:
 
       <a href="http://www.norskenergigjenvinning.no/" type="button">Gå til
       nettside</a>
+  - heading: Invisio
+    image: /img/inviso_logo-2016_sort.png
+    text: >-
+      Invisio har et nettverk av 250+ fotografer som reiser rundt for å ta
+      bilder av boliger som skal selges. De bruker APIet for å komme frem totale
+      reisekostnader.
 ---
 
