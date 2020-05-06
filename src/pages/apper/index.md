@@ -1,9 +1,9 @@
 ---
 templateKey: apper-page
-title: Apper og kjørebøker
+title: Noen av de som bruker APIet
 description: >-
-  Hvis du bruker en av appene under, er du heldig. Da får du nemlig også
-  bompenger og ferjepriser med på reiseregningen.
+  APIet brukes av apper, kjørebøker og andre tjenester som ønsker å beregne
+  totale kostnader for en rute.
 apps:
   - heading: Simployer - Reise & utlegg
     image: /img/simployer_logo.png
