@@ -1,6 +1,8 @@
 backend:
     name: github
     repo: dibkunnskap/bompengekalkulator-landingsside
+    branch: azure
+    base_url: https://dib-cms-oauth-provider.azurewebsites.net
 media_folder: static/img
 public_folder: /img
 collections:
@@ -10,13 +12,23 @@ collections:
       create: true
       slug: "{{slug}}"
       fields:
-        - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
-        - {label: "Title", name: "title", widget: "string"}
-        - {label: "Publish Date", name: "date", widget: "datetime"}
-        - {label: "Description", name: "description", widget: "text"}
-        - {label: "Featured Post", name: "featuredpost", widget: "boolean", default: false}
-        - {label: "Body", name: "body", widget: "markdown"}
-        
+          - {
+                label: "Template Key",
+                name: "templateKey",
+                widget: "hidden",
+                default: "blog-post",
+            }
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Publish Date", name: "date", widget: "datetime"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {
+                label: "Featured Post",
+                name: "featuredpost",
+                widget: "boolean",
+                default: false,
+            }
+          - {label: "Body", name: "body", widget: "markdown"}
+
     - name: "side"
       label: "Side"
       folder: "src/pages"
@@ -24,10 +36,15 @@ collections:
       slug: "{{slug}}"
       identifier_field: slug
       fields:
-        - {label: "Template Key", name: "templateKey", widget: "hidden", default: "extra-page"}
-        - {label: "Slug", name: "slug", widget: "string"}
-        - {label: "Title", name: "title", widget: "string"}
-        - {label: "Body", name: "body", widget: "markdown"}
+          - {
+                label: "Template Key",
+                name: "templateKey",
+                widget: "hidden",
+                default: "extra-page",
+            }
+          - {label: "Slug", name: "slug", widget: "string"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
 
     - name: "pages"
       label: "Hovedsider"
