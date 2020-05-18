@@ -1,7 +1,9 @@
 module.exports = {
     siteMetadata: {
         title: "Bompengekalkulator",
-        description: "Bompengekalkulator landingsside"
+        description: "Bompengekalkulator landingsside",
+        author: `DIBkunnskap AS`,
+        siteUrl: `https://om.bompengekalkulator.no`
     },
     plugins: [
         `gatsby-plugin-sitemap`,
