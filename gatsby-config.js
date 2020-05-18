@@ -4,6 +4,14 @@ module.exports = {
         description: "Bompengekalkulator landingsside"
     },
     plugins: [
+        `gatsby-plugin-sitemap`,
+        {
+            resolve: `gatsby-plugin-canonical-urls`,
+            options: {
+                siteUrl: `https://om.bompengekalkulator.no`,
+                stripQueryString: true
+            }
+        },
         {
             resolve: "gatsby-plugin-typography",
             options: {
