@@ -4,7 +4,7 @@
     "parameters": {
         "blogStorage": {
             "type": "string",
-            "defaultValue": "bompengekalkulator-landingside-test"
+            "defaultValue": "bompengekalkulatorlandingsidetest"
         }
     },
     "variables": {
