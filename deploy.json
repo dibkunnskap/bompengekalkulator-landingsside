@@ -1,0 +1,33 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "blogStorage": {
+            "type": "string",
+            "defaultValue": "bompengekalkulator-landingside"
+        }
+    },
+    "variables": {
+    },
+    "resources": [
+        {
+            "name": "[parameters('blogStorage')]",
+            "type": "Microsoft.Storage/storageAccounts",
+            "apiVersion": "2018-02-01",
+            "location": "[resourceGroup().location]",
+            "tags": {
+                "displayName": "[parameters('blogStorage')]"
+            },
+            "properties": {
+                "accountType": "Standard_LRS"
+            },
+            "sku": {
+                "name": "Standard_LRS"
+            },
+            "kind": "StorageV2"
+
+        }
+    ],
+    "outputs": {
+    }
+}
