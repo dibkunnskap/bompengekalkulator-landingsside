@@ -54,6 +54,12 @@ apps:
 
 
       <a href="https://www.inviso.no/" type="button">Gå til nettside</a>
+  - heading: Ferdia
+    image: /img/ferdia.png
+    text: >-
+      Ferdia er et nettverk av busselskap som bruker innovative løsninger for å
+      sikre effektive kundereiser. Vårt API gir nøyaktige kostnadsberegning av
+      bussreisene.
   - heading: Norsk Energigjenvinning
     image: /img/neg.jpg
     text: >-
