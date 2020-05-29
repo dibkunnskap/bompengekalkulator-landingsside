@@ -60,6 +60,9 @@ apps:
       Ferdia er et nettverk av busselskap som bruker innovative løsninger for å
       sikre effektive kundereiser. Vårt API gir nøyaktige kostnadsberegning av
       bussreisene.
+
+
+      <a href="http://ferdia.no/" type="button">Gå til nettside</a>
   - heading: Norsk Energigjenvinning
     image: /img/neg.jpg
     text: >-
