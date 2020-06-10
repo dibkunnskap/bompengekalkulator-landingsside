@@ -26,6 +26,11 @@ apps:
       <a
       href="https://automile.no/?utm_source=bompengekalkulator.no&utm_medium=apper"
       type="button">Gå til nettside</a>
+  - heading: Nabobil.no
+    image: /img/nabobil.png
+    text: >-
+      Den innovative bildelingstjenesten får beregnet nøyaktige leiepriser
+      automatisk ved hjelp av vårt API.
   - heading: Sonya
     image: /img/sonya-logo.png
     text: >-
