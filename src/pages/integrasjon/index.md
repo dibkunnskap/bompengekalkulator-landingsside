@@ -23,7 +23,7 @@ Brukere av reiseregningsapper og kjørebøker forventer å få bompenger og ferj
 
 Som leverandør av kjørebok, reiseregningssystem eller bildelingstjeneste er du avhengig av datakvalitet som det offentlige ikke kan tilby. APIet holder vi oppdatert gjennom automatisk overvåkning og brukergenerert feedback fra alle bilistene som bruker bompengekalkulator.no
 
-<a href="https://dibkunnskapapi.portal.azure-api.net/" type="button">Test ut APIet her</a>
+<a href="https://dibkunnskapapi.developer.azure-api.net/" type="button">Test ut APIet her</a>
 
 <br>
 
