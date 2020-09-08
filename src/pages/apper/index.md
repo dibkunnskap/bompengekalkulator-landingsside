@@ -46,6 +46,14 @@ apps:
       <a
       href="https://sonya.com/?utm_source=bompengekalkulator.no&utm_medium=about"
       type="button">Gå til nettside</a>
+  - heading: otto
+    image: /img/otto.png
+    text: >-
+      Innovativ tjeneste som tilbyr leie av biler, sykler og elsparkesykler. Vi
+      hjelper dem å beregne korrekte leiepriser rett etter endt kjøretur.
+
+
+      <a href="https://otto.no/" type="button">Gå til nettside</a>
   - heading: TickTack - OnTheWay
     image: /img/ticktacklogo-main-black.png
     text: >-
