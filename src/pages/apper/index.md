@@ -90,5 +90,12 @@ apps:
 
       <a href="http://www.norskenergigjenvinning.no/" type="button">Gå til
       nettside</a>
+  - heading: Posten Norge
+    image: /img/posten-logo.jpg
+    text: >-
+      Posten bruker APIet til å kjøre prisberegninger på ruter, som ofte
+      inkluderer både bompasseringer og ferjer.\
+
+      <a href="http://www.posten.no/" type="button">Gå til nettside</a>
 ---
 
