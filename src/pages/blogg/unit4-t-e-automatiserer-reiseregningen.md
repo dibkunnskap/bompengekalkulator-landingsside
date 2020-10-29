@@ -13,3 +13,5 @@ De har i mange år jobbet systematisk med å automatisere registrering av utlegg
 [Les den fulle artikkelen om integrasjonen mellom Unit4 T&E og vårt API her](https://timeandexpense.unit4.com/nb/news/fjerner-tidkrevende-registrering-av-bompasseringer)
 
 For kjører du mye i jobbsammenheng kan du ende opp med å bruke mye unødvendig tid på manuell registrering. Tid du kunne brukt på andre mer verdiskapende ting. [APIet fra bompengekalkulator.no](https://om.bompengekalkulator.no/integrasjon) hjelper apper og kjørebøker med korrekt registrering av bompasseringer og ferjepriser. Som bruker sparer du tid og sikrer riktig rapportering og refusjon.
+
+![](/img/bomstasjon_shutterstock.jpg)
