@@ -5,6 +5,23 @@ description: >-
   APIet brukes av apper, kjørebøker og andre tjenester som ønsker å beregne
   totale kostnader for en rute.
 apps:
+  - heading: Xledger
+    image: /img/xledger.png
+    text: >-
+      ERP-skyløsningen er et av markedets mest komplette. APIet vårt gjør
+      registrering av reiser mye enklere.
+
+
+      <a href="https://xledger.com/" type="button">Gå til nettside</a>
+  - heading: Unit4 T&E
+    image: /img/unit4.png
+    text: >-
+      Automatiserer hele prosessen med utlegg, diett og reise. APIet vårt gjør
+      denne prosessen komplett
+
+
+      <a href="https://timeandexpense.unit4.com/nb/products/reiseregninger/"
+      type="button">Gå til nettside</a>
   - heading: Simployer - Reise & utlegg
     image: /img/simployer_logo.png
     text: >-
@@ -35,15 +52,6 @@ apps:
 
       <a
       href="https://nabobil.no/?utm_source=bompengekalkulator.no&utm_medium=about"
-      type="button">Gå til nettside</a>
-  - heading: Unit4 T&E
-    image: /img/unit4.png
-    text: >-
-      Automatiserer hele prosessen med utlegg, diett og reise. APIet vårt gjør
-      denne prosessen komplett
-
-
-      <a href="https://timeandexpense.unit4.com/nb/products/reiseregninger/"
       type="button">Gå til nettside</a>
   - heading: Posten Norge
     image: /img/posten-logo.jpg
@@ -107,13 +115,5 @@ apps:
 
       <a href="http://www.norskenergigjenvinning.no/" type="button">Gå til
       nettside</a>
-  - heading: Xledger
-    image: /img/xledger.png
-    text: >-
-      ERP-skyløsningen er et av markedets mest komplette. APIet vårt gjør
-      registrering av reiser mye enklere.
-
-
-      <a href="https://xledger.com/" type="button">Gå til nettside</a>
 ---
 
