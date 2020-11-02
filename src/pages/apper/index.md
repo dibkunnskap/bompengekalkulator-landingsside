@@ -107,5 +107,13 @@ apps:
 
       <a href="http://www.norskenergigjenvinning.no/" type="button">Gå til
       nettside</a>
+  - heading: Xledger
+    image: /img/xledger.png
+    text: >-
+      ERP-skyløsningen er et av markedets mest komplette. APIet vårt gjør
+      registrering av reiser mye enklere.
+
+
+      <a href="https://xledger.com/" type="button">Gå til nettside</a>
 ---
 
