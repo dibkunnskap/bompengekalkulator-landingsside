@@ -5,6 +5,14 @@ description: >-
   APIet brukes av apper, kjørebøker og andre tjenester som ønsker å beregne
   totale kostnader for en rute.
 apps:
+  - heading: PostNord
+    image: /img/postnord.png
+    text: >-
+      Med sin 1200 biler og 24 terminaler har en av Norges største
+      transportselskaper stor nytte av APIet vårt.
+
+
+      <a href="https://postnord.no/" type="button">Gå til nettside</a>
   - heading: Xledger
     image: /img/xledger.png
     text: >-
