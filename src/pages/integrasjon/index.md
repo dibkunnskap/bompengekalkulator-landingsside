@@ -25,10 +25,12 @@ Som leverandør av kjørebok, reiseregningssystem eller bildelingstjeneste er du
 
 <a href="https://dibkunnskapapi.developer.azure-api.net/" type="button">Test ut APIet her</a>
 
+<a href="../docs" type="button">API dokumentasjon</a>
+<br>
 <br>
 
 ### Spørsmål og priser
 
 Betal kun for det du bruker. Integrasjonen prises per API-kall, og enhetsprisen synker jo flere kall tjenesten din gjør. <a class="intercom" href>Kontakt oss via chatten</a> hvis du har spørsmål til priser eller SLA.
 
-<a href="../docs" type="button">API dokumentasjon</a>
+<a href="../priser" type="button">Priser og betingelser</a>
