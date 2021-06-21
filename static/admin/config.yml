@@ -1,6 +1,8 @@
 backend:
     name: github
     repo: dibkunnskap/bompengekalkulator-landingsside
+    branch: zzzbranchzzz
+    base_url: https://dib-cms-oauth-provider.azurewebsites.net
 media_folder: static/img
 public_folder: /img
 collections:

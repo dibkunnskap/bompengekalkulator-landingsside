@@ -1,0 +1,51 @@
+trigger:
+    - master
+
+pr: none
+
+pool:
+    name: Hosted Ubuntu 1604
+
+steps:
+    - task: UseNode@1
+      inputs:
+          version: "10.15.3"
+
+    - script: |
+          cd ./static/admin/
+          sed -i 's/zzzbranchzzz/development/g' config.yml
+      displayName: "Edit config.yml"
+
+    - script: |
+          npm install
+          npm run build
+      displayName: "Npm install and build"
+
+    - task: CopyFiles@2
+      displayName: "Copy generated content"
+      inputs:
+          SourceFolder: "$(Build.SourcesDirectory)/public"
+          contents: "**/*"
+          targetFolder: "$(Build.ArtifactStagingDirectory)/public"
+          cleanTargetFolder: true
+
+    - task: CopyFiles@2
+      displayName: "Copy arm template for test"
+      inputs:
+          SourceFolder: "$(Build.SourcesDirectory)"
+          contents: "deploy-dev.json"
+          targetFolder: "$(Build.ArtifactStagingDirectory)"
+          cleanTargetFolder: false
+
+    - task: CopyFiles@2
+      displayName: "Copy Post Release Job script"
+      inputs:
+          SourceFolder: "$(Build.SourcesDirectory)/post-release-job"
+          contents: "*"
+          targetFolder: "$(Build.ArtifactStagingDirectory)/post-release-job"
+          cleanTargetFolder: false
+
+    - task: PublishBuildArtifacts@1
+      displayName: "Publish Artifact"
+      inputs:
+          PathtoPublish: "$(build.artifactstagingdirectory)"
