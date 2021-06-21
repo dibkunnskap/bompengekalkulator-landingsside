@@ -13,7 +13,7 @@ steps:
 
     - script: |
           cd ./static/admin/
-          sed -i 's/zzzbranchzzz/master/g' config.yml
+          sed -i 's/zzzbranchzzz/main-temp/g' config.yml
       displayName: "Edit config.yml"
 
     - script: |
