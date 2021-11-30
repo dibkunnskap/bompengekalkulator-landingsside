@@ -51,16 +51,6 @@ apps:
       <a
       href="https://automile.no/?utm_source=bompengekalkulator.no&utm_medium=apper"
       type="button">Gå til nettside</a>
-  - heading: Nabobil.no
-    image: /img/nabobil.png
-    text: >-
-      Den innovative bildelingstjenesten får beregnet nøyaktige leiepriser
-      automatisk ved hjelp av vårt API.
-
-
-      <a
-      href="https://nabobil.no/?utm_source=bompengekalkulator.no&utm_medium=about"
-      type="button">Gå til nettside</a>
   - heading: Posten Norge
     image: /img/posten-logo.jpg
     text: >-
@@ -87,6 +77,14 @@ apps:
 
 
       <a href="https://otto.no/" type="button">Gå til nettside</a>
+  - heading: Share
+    image: /img/61798c020dcdcc468ed142b6_share-app-icon.png
+    text: >-
+      App som gjør det enklere å låne bil og låne bort bilen din. Kjørekostnader
+      og bompenger vippses enkelt til eier.
+
+
+      <a href="https://getshare.no/" type="button">Gå til nettside</a>
   - heading: TickTack - OnTheWay
     image: /img/ticktacklogo-main-black.png
     text: >-
@@ -123,5 +121,15 @@ apps:
 
       <a href="http://www.norskenergigjenvinning.no/" type="button">Gå til
       nettside</a>
+  - heading: Nabobil.no
+    image: /img/nabobil.png
+    text: >-
+      Den innovative bildelingstjenesten får beregnet nøyaktige leiepriser
+      automatisk ved hjelp av vårt API.
+
+
+      <a
+      href="https://nabobil.no/?utm_source=bompengekalkulator.no&utm_medium=about"
+      type="button">Gå til nettside</a>
 ---
 
