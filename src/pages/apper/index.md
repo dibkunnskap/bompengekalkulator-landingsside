@@ -121,15 +121,5 @@ apps:
 
       <a href="http://www.norskenergigjenvinning.no/" type="button">Gå til
       nettside</a>
-  - heading: Nabobil.no
-    image: /img/nabobil.png
-    text: >-
-      Den innovative bildelingstjenesten får beregnet nøyaktige leiepriser
-      automatisk ved hjelp av vårt API.
-
-
-      <a
-      href="https://nabobil.no/?utm_source=bompengekalkulator.no&utm_medium=about"
-      type="button">Gå til nettside</a>
 ---
 
