@@ -121,5 +121,14 @@ apps:
 
       <a href="http://www.norskenergigjenvinning.no/" type="button">Gå til
       nettside</a>
+  - heading: Nord Tolk
+    image: /img/nordtolk.png
+    text: >-
+      Tolkene sparer masse tid på innrapportering av godtgjørelse. Selskapet
+      sparer tid på kontroller og sikrer at kunden blir raskt og riktig
+      fakturert. Internsystem utviklet av AvantIT for Nord Tolk.
+
+
+      <a href="https://www.nordtolk.no/" type="button">Gå til nettside</a>
 ---
 
