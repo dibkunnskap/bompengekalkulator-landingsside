@@ -69,14 +69,6 @@ apps:
       <a
       href="https://sonya.com/?utm_source=bompengekalkulator.no&utm_medium=about"
       type="button">Gå til nettside</a>
-  - heading: otto
-    image: /img/otto.png
-    text: >-
-      Innovativ tjeneste som tilbyr leie av biler, sykler og elsparkesykler. Vi
-      hjelper dem å beregne korrekte leiepriser rett etter endt kjøretur.
-
-
-      <a href="https://otto.no/" type="button">Gå til nettside</a>
   - heading: Share
     image: /img/61798c020dcdcc468ed142b6_share-app-icon.png
     text: >-
@@ -85,15 +77,15 @@ apps:
 
 
       <a href="https://getshare.no/" type="button">Gå til nettside</a>
-  - heading: TickTack - OnTheWay
-    image: /img/ticktacklogo-main-black.png
+  - heading: Nord Tolk
+    image: /img/nordtolk.png
     text: >-
-      Elektronisk kjørebok som starter automatisk når du starter å kjøre. Med
-      integrert beregning av bompenger og ferjepriser på kjøreruten.
+      Tolkene sparer masse tid på innrapportering av godtgjørelse. Selskapet
+      sparer tid på kontroller og sikrer at kunden blir raskt og riktig
+      fakturert. Internsystem utviklet av AvantIT for Nord Tolk.
 
 
-      <a href="https://www.ticktack.no/ontheway/" type="button">Gå til
-      nettside</a>
+      <a href="https://www.nordtolk.no/" type="button">Gå til nettside</a>
   - heading: Invisio
     image: /img/inviso_logo-2016_sort.png
     text: >-
@@ -103,6 +95,15 @@ apps:
 
 
       <a href="https://www.inviso.no/" type="button">Gå til nettside</a>
+  - heading: TickTack - OnTheWay
+    image: /img/ticktacklogo-main-black.png
+    text: >-
+      Elektronisk kjørebok som starter automatisk når du starter å kjøre. Med
+      integrert beregning av bompenger og ferjepriser på kjøreruten.
+
+
+      <a href="https://www.ticktack.no/ontheway/" type="button">Gå til
+      nettside</a>
   - heading: Ferdia
     image: /img/ferdia.png
     text: >-
@@ -121,14 +122,5 @@ apps:
 
       <a href="http://www.norskenergigjenvinning.no/" type="button">Gå til
       nettside</a>
-  - heading: Nord Tolk
-    image: /img/nordtolk.png
-    text: >-
-      Tolkene sparer masse tid på innrapportering av godtgjørelse. Selskapet
-      sparer tid på kontroller og sikrer at kunden blir raskt og riktig
-      fakturert. Internsystem utviklet av AvantIT for Nord Tolk.
-
-
-      <a href="https://www.nordtolk.no/" type="button">Gå til nettside</a>
 ---
 
