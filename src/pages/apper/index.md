@@ -69,14 +69,6 @@ apps:
       <a
       href="https://sonya.com/?utm_source=bompengekalkulator.no&utm_medium=about"
       type="button">Gå til nettside</a>
-  - heading: Share
-    image: /img/61798c020dcdcc468ed142b6_share-app-icon.png
-    text: >-
-      App som gjør det enklere å låne bil og låne bort bilen din. Kjørekostnader
-      og bompenger vippses enkelt til eier.
-
-
-      <a href="https://getshare.no/" type="button">Gå til nettside</a>
   - heading: Nord Tolk
     image: /img/nordtolk.png
     text: >-
@@ -122,5 +114,13 @@ apps:
 
       <a href="http://www.norskenergigjenvinning.no/" type="button">Gå til
       nettside</a>
+  - heading: Exso
+    image: /img/exso.jpeg
+    text: >-
+      Exso bruker APIet til å beregne bompenger for sin landsomfattende flåte av
+      servicebiler.
+
+
+      <a href="https://www.exso.no/" type="button">Gå til nettside</a>
 ---
 
