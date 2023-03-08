@@ -122,5 +122,14 @@ apps:
 
       <a href="http://www.norskenergigjenvinning.no/" type="button">Gå til
       nettside</a>
+  - heading: Recover
+    image: /img/recover.jpeg
+    text: >-
+      Recover reiser mye rundt i Norge for å rydde opp etter brann-, vann- og
+      miljøskade. Vi gir selskapet en korrekt beregning av bompenger og
+      fergekostnader på veien. 
+
+
+      <a href="https://recover.no/" type="button">Gå til nettside</a>
 ---
 
