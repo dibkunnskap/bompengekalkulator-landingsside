@@ -69,6 +69,14 @@ apps:
       <a
       href="https://sonya.com/?utm_source=bompengekalkulator.no&utm_medium=about"
       type="button">Gå til nettside</a>
+  - heading: Exso
+    image: /img/exso.jpeg
+    text: >-
+      Exso bruker APIet til å beregne bompenger for sin landsomfattende flåte av
+      servicebiler.
+
+
+      <a href="https://www.exso.no/" type="button">Gå til nettside</a>
   - heading: Nord Tolk
     image: /img/nordtolk.png
     text: >-
@@ -114,13 +122,5 @@ apps:
 
       <a href="http://www.norskenergigjenvinning.no/" type="button">Gå til
       nettside</a>
-  - heading: Exso
-    image: /img/exso.jpeg
-    text: >-
-      Exso bruker APIet til å beregne bompenger for sin landsomfattende flåte av
-      servicebiler.
-
-
-      <a href="https://www.exso.no/" type="button">Gå til nettside</a>
 ---
 
