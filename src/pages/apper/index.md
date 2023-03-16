@@ -48,8 +48,12 @@ apps:
       <a href="https://automile.no/?utm_source=bompengekalkulator.no&utm_medium=apper" type="button">Gå til nettside</a>
   - heading: Visma.net Expense
     image: /img/vismanet_expense.png
-    text: A﻿pp for registrering av reiseregninger som får lever bom- og ferjepriser
+    text: >-
+      A﻿pp for registrering av reiseregninger som får lever bom- og ferjepriser
       via vårt API.
+
+
+      <a href="https://www.visma.no/" type="button">Gå til nettside</a>
   - heading: Recover
     image: /img/recover.jpeg
     text: >-
